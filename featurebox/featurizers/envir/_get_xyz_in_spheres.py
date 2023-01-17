@@ -1,22 +1,20 @@
 import itertools
-import math
 from collections import abc
 from typing import Tuple, Union, List
 
+import math
 import numpy as np
-from mgetool.tool import tt
-from pymatgen.core import Structure
 
 from featurebox.utils.predefined_typing import StructureOrMolecule
 
 
-def re_pbc(pbc: Union[bool, List[bool], np.ndarray], return_type="bool"):
+def _re_pbc(pbc: Union[bool, List[bool], np.ndarray], return_type="bool"):
     if pbc is True:
         pbc = [1, 1, 1]
     elif pbc is False:
         pbc = [0, 0, 0]
     elif isinstance(pbc, abc.Iterable):
-        pbc = [1 if i == True or i == 1 else 0 for i in pbc]
+        pbc = [1 if i is True or i == 1 else 0 for i in pbc]
     else:
         raise TypeError("Can't accept {}".format(pbc))
     if return_type == "bool":
@@ -28,7 +26,7 @@ def re_pbc(pbc: Union[bool, List[bool], np.ndarray], return_type="bool"):
 
 def get_xyz_in_spheres(structure: StructureOrMolecule, nn_strategy=None, cutoff: float = 5.0,
                        numerical_tol: float = 1e-8,
-                       pbc=False,
+                       pbc=True,
                        ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """
     Get graph representations from structure within cutoff.
@@ -38,12 +36,12 @@ def get_xyz_in_spheres(structure: StructureOrMolecule, nn_strategy=None, cutoff:
         cutoff (float): cutoff radius
         pbc:bool or list of bool
         numerical_tol (float): numerical tolerance
-        nn_strategy(str):not used
+        nn_strategy(str,None):not used
     Returns:
         center_indices, neighbor_indices, images, distances,center_prop
     """
     _ = nn_strategy
-    pbc = re_pbc(pbc, return_type="bool")
+    pbc = _re_pbc(pbc, return_type="bool")
     return not_structure_get_xyz_in_spheres(structure.cart_coords,
                                             reciprocal_lattice_abc=structure.lattice.reciprocal_lattice.abc,
                                             matrix=structure.lattice.matrix,
@@ -72,7 +70,7 @@ def not_structure_get_xyz_in_spheres(
         pbc: (bool or a list of bool) whether to set periodic boundaries
         numerical_tol: (float) numerical tolerance
         matrix:lattice.matrix
-        inv_matrix；lattice.inv_matrix
+        inv_matrix: lattice.inv_matrix
         reciprocal_lattice_abc:lattice.reciprocal_lattice.abc
     Returns:
         center_indices, neighbor_indices, images, distances,center_prop
@@ -127,7 +125,7 @@ def not_structure_get_xyz_in_spheres(
                 valid_images.append(np.tile(image, [np.sum(valid_index_bool), 1]) - image_offsets[valid_index_bool])
                 valid_indices.extend([k for k in ind if valid_index_bool[k]])
         if len(valid_coords) < 1:
-            return [[]] * len(center_coords)
+            raise ValueError("No valid coords element, in cutcoff {}".format(cutoff))
         valid_coords = np.concatenate(valid_coords, axis=0)
         valid_images = np.concatenate(valid_images, axis=0)
         valid_indices = np.array(valid_indices)
@@ -159,25 +157,16 @@ def not_structure_get_xyz_in_spheres(
     images = np.concatenate(images, axis=0)
     distances = np.concatenate(coords, axis=0)
 
-    exclude_self = (center_indices != neighbor_indices) | (distances[:, 0] > numerical_tol)
-
-    # include_index = center_indices < neighbor_indices
-    #
-    # exclude_self = exclude_self * ~ include_index
+    exclude_self = (distances[:, 0] > numerical_tol)
 
     return center_indices[exclude_self], neighbor_indices[exclude_self], images[exclude_self], distances[
-        exclude_self], None
+        exclude_self], np.array(np.NaN)
 
-
-if __name__ == "__main__":
-    structure = Structure.from_file("S2-CONTCAR")
-    tt.t
-    get_points_ = get_xyz_in_spheres(structure,
-                                     cutoff=5.0, pbc=True,
-                                     )
-    tt.t  # tt.t
-    get_points_ = get_xyz_in_spheres(structure.cart_coords,
-                                     cutoff=5.0, pbc=True,
-                                     )
-    tt.t  #
-    tt.p
+# if __name__ == "__main__":
+#     structure = Structure.from_file("../../data/temp_test_structure/W2C.cif")
+#     tt.t
+#     get_points_ = get_xyz_in_spheres(structure,
+#                                      cutoff=5.0, pbc=True,
+#                                      )
+#     tt.t  #
+#     tt.p

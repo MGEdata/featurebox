@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, boliqq07
 # This file is distributed under the same license as the featurebox package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: featurebox \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 20:12+0800\n"
+"POT-Creation-Date: 2022-05-18 12:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,25 +64,25 @@ msgstr ""
 msgid "Be"
 msgstr ""
 
-#: ../../Examples/sample_fea2.rst:16
-msgid "Then run the code. ::"
+#: ../../Examples/sample_fea2.rst:17
+msgid "Then run the code."
 msgstr ""
 
-#: ../../Examples/sample_fea2.rst:26
+#: ../../Examples/sample_fea2.rst:27
 msgid ""
 "In default, the proportion would be multiplied in data, also you can "
-"neglect weight. ::"
+"neglect weight."
 msgstr ""
 
 #: ../../Examples/sample_fea2.rst:36
-msgid "Index by structure ::"
+msgid "Index by structure"
 msgstr ""
 
-#: ../../Examples/sample_fea2.rst:43
+#: ../../Examples/sample_fea2.rst:42
 msgid "Note ::"
 msgstr ""
 
-#: ../../Examples/sample_fea2.rst:48
+#: ../../Examples/sample_fea2.rst:47
 msgid "or"
 msgstr ""
 

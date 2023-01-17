@@ -1,0 +1,11 @@
+#!/bin/sh
+#SBATCH -N 1
+#SBATCH -n 36
+#SBATCH --ntasks-per-node=36
+#SBATCH --output=%j.out
+#SBATCH --error=%j.err
+source /data/home/qian1/intel/bin/compilervars.sh intel64
+source /data/home/qian1/intel/mkl/bin/mklvars.sh intel64
+export PATH=$PATH:/data/home/qian1/app/vasp/vasp.5.4.4/bin
+scontrol show hostname $SLURM_JOB_NODELIST > host
+mpirun -np 36 vasp_std

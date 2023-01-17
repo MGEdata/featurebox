@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-08 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../Examples/sample_fea3.rst:2
+msgid "Pymatgen Data"
+msgstr "Pymatgen数据"
+
+#: ../../Examples/sample_fea3.rst:5
+msgid ""
+"The data are using the inner periodical_data.json in pymatgen elemental "
+"data. ::"
+msgstr "数据使用内部的periodical_data.json,(在pymatgen的元素数据)。"
+
+#: ../../Examples/sample_fea3.rst:10
+msgid ""
+"...                                                         "
+"\"min_oxidation_state\", \"row\", \"group\", "
+"\"atomic_radius_calculated\", ..."
+"                                                         "
+"\"mendeleev_no\", \"critical_temperature\", \"density_of_solid\", ..."
+"                                                         "
+"\"average_ionic_radius\", \"average_cationic_radius\", "
+"\"average_anionic_radius\",]) >>> s = [{\"H\": 2, }, {\"Po\": 1}, {\"C\":"
+" 2}] # [i.species.as_dict() for i in pymatgen.structure.sites] >>> a2 = "
+"tmps.convert(s) # or >>> a2 = tmps.convert(structurei)"
+msgstr ""
+
+#: ../../Examples/sample_fea3.rst:17
+msgid "In addition, we could get structure state data by structure. ::"
+msgstr "此外，我们还可以通过结构得到化合物总体状态特征。"
+
+#: ../../Examples/sample_fea3.rst:24
+msgid ""
+"This second class is for structure but for atoms, and the first one "
+"return the each atom features and the second return the whole feature of "
+"structure."
+msgstr "第二个类针对结构而不是原子，第一个类是返回每个原子的特征，第二个返回整个化合物的状态特征。"
+

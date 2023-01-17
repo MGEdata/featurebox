@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-07 23:36+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../Guide/bind_selection.rst:2
+msgid "Binding Selection"
+msgstr "绑定筛选"
+
+#: ../../Guide/bind_selection.rst:4
+msgid ""
+"For material problems, some features may need to appear together to make "
+"sense. such as the hole radius and atomic radius of inner atoms."
+msgstr ""
+"对于材料问题，一些特征可能需要同时出现，才能具有意义。"
+"比如孔隙半径和其内部原子的半径。"
+
+#: ../../Guide/bind_selection.rst:7
+msgid ""
+"Or we use the depart element features to model the composition properties"
+" directly. rather than combine element features, and filter. such as "
+"A-site properties and B-site properties in AB2-type compound should be "
+"selected and dropped simultaneously."
+msgstr ""
+"或者我们使用独立的元素特征来建模，"
+"而不是组合元素特征为整体特征。"
+"例如：ab2型化合物的a位性质和b位性质"
+"被同时选择和丢弃。"
+
+#: ../../Guide/bind_selection.rst:11
+msgid ""
+"All the selection method of featurebox are with ``Binding``, of course, "
+"if without setting any bindings, they can degenerate to normal "
+"algorithms."
+msgstr ""
+"featurebox的所有选择方法都可以 ``Binding`` ，"
+"当然，如果没有设置任何绑定，它们就会退化为普通的"
+"算法。"
+#: ../../Guide/bind_selection.rst:18
+msgid "Example:"
+msgstr "示例："
+
+#: ../../Guide/bind_selection.rst:29
+msgid "The ``multi_index`` parameter means the bonded primary feature index."
+msgstr "参数 ``multi_index`` 表示绑定的特征索引。"
+
+#: ../../Guide/bind_selection.rst:31
+msgid ""
+"All the selection tools are ``sklearn-type``, with ``fit``, "
+"``fit_transform`` methods .etc."
+msgstr ""
+"所有的选择工具都是 ``sklearn-type``, 有 ``fit``, "
+" ``fit_transform`` 方法等。"
+
+#: ../../Guide/bind_selection.rst:33
+msgid "More:"
+msgstr "更多例子："
+
+#: ../../Guide/bind_selection.rst:35
+msgid ":class:`featurebox.selection.backforward.BackForward`"
+msgstr "前进后退法： :class:`featurebox.selection.backforward.BackForward`"
+
+#: ../../Guide/bind_selection.rst:37
+msgid ":class:`featurebox.selection.corr.Corr`"
+msgstr "相关系数： :class:`featurebox.selection.corr.Corr`"
+
+#: ../../Guide/bind_selection.rst:39
+msgid ":class:`featurebox.selection.exhaustion.Exhaustion`"
+msgstr "穷举： :class:`featurebox.selection.exhaustion.Exhaustion`"
+
+#: ../../Guide/bind_selection.rst:41
+msgid ":class:`featurebox.selection.ga.GA`"
+msgstr "遗传算法： :class:`featurebox.selection.ga.GA`"
+
+

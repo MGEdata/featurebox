@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 23:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.featurizers.atom.rst:2
+msgid "featurebox.featurizers.atom package"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.atom.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.atom.rst:13
+msgid "featurebox.featurizers.atom.mapper module"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper:1 of
+msgid "Get pure atom properties."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper:3 of
+msgid ""
+"Embedded data: \"ele_table.csv\", \"ele_megnet.json\", \"ie.json\", "
+"\"oe.csv\""
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap:1
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap:1
+#: featurebox.featurizers.atom.mapper.AtomTableMap:1 of
+msgid "Bases: :class:`featurebox.featurizers.atom.mapper.BinaryMap`"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap:1 of
+msgid "Fixed Atom json map."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap:4
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap:19
+#: featurebox.featurizers.atom.mapper.AtomTableMap:20 of
+msgid "Examples"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap
+#: featurebox.featurizers.atom.mapper.AtomMap
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap
+#: featurebox.featurizers.atom.mapper.AtomTableMap
+#: featurebox.featurizers.atom.mapper.BinaryMap
+#: featurebox.featurizers.atom.mapper.get_atom_fea_name
+#: featurebox.featurizers.atom.mapper.get_atom_fea_number
+#: featurebox.featurizers.atom.mapper.get_ion_fea_name of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap:16 of
+msgid ""
+"(str,dict) Name of file or dict,element to element vector dictionary  "
+"Provides the pre-trained elemental embeddings using formation energies, "
+"which can be used to speed up the training of other models_geo. The "
+"embeddings are also extremely useful elemental descriptors that encode "
+"chemical similarity that may be used in other ways."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap:16 of
+msgid "(str,dict) Name of file or dict,element to element vector dictionary"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap:19 of
+msgid ""
+"Provides the pre-trained elemental embeddings using formation energies, "
+"which can be used to speed up the training of other models_geo. The "
+"embeddings are also extremely useful elemental descriptors that encode "
+"chemical similarity that may be used in other ways."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap.convert_dict:1
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap.convert_dict:1
+#: featurebox.featurizers.atom.mapper.AtomTableMap.convert_dict:1 of
+msgid "Convert atom {symbol: fraction} list to numeric features"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomJsonMap.convert_number:1
+#: featurebox.featurizers.atom.mapper.BinaryMap.convert_number:1 of
+msgid "convert list of number to data"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap:1 of
+msgid "Bases: :class:`featurebox.featurizers.base_feature.BaseFeature`"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap:1 of
+msgid ""
+"Base class for atom converter. Map the element type and weight to element"
+" data."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap:3 of
+msgid "size of batch."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap:5 of
+msgid "batch_calculate or not."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap:7 of
+msgid "Parallel number."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap:9 of
+msgid ""
+"How to handle the exceptions in a feature calculations. Can be ``nan``, "
+"``keep``, ``raise``. When 'nan', return a column with np.nan. The length "
+"of column corresponding to the number of feature labs. The default is "
+"'raise' which will raise up the exception."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap:14 of
+msgid ""
+"Specific the return type. Can be ``any``, ``np``,``array`` and ``df``. "
+"'array' and 'df' force return type to np.ndarray and pd.DataFrame "
+"respectively. If 'any', without type conversion . Default is 'any'"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap.get_csv_embeddings:1 of
+msgid "get csv preprocessing"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomMap.get_json_embeddings:1 of
+msgid "get json preprocessing"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap:1 of
+msgid ""
+"Get pymatgen element preprocessing. prop_name = [ \"atomic_radius\", "
+"\"atomic_mass\", \"number\", \"max_oxidation_state\", "
+"\"min_oxidation_state\", \"row\", \"group\", "
+"\"atomic_radius_calculated\", \"mendeleev_no\", \"critical_temperature\","
+" \"density_of_solid\", \"average_ionic_radius\", "
+"\"average_cationic_radius\", \"average_anionic_radius\",]"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap:30 of
+msgid "(str,list of str) prop name or list of prop name"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap:32 of
+msgid ""
+"(callable or list of callable) please make sure the size of it is the "
+"same with prop_name."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap:34 of
+msgid "(str) location method. \"name\" for dict \"number\" for int."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap.convert_number:1 of
+msgid "Convert int list to numeric features"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap.feature_labels:1
+#: featurebox.featurizers.atom.mapper.AtomTableMap.feature_labels:1 of
+msgid "Generate attribute names."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap.feature_labels
+#: featurebox.featurizers.atom.mapper.AtomTableMap.feature_labels
+#: featurebox.featurizers.atom.mapper.get_atom_fea_name
+#: featurebox.featurizers.atom.mapper.get_atom_fea_number
+#: featurebox.featurizers.atom.mapper.get_ion_fea_name of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap.feature_labels:3
+#: featurebox.featurizers.atom.mapper.AtomTableMap.feature_labels:3 of
+msgid "([str]) attribute labels."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:1 of
+msgid ""
+"Fixed Atom embedding map. Default table is oe.csv. you can change the "
+"table yourself for different preprocessing. The table contains elemental "
+"features for 92 U elements at least. Please check all your data is int or"
+" float!!!"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:7 of
+msgid "Such as:"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:10 of
+msgid "Data"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:10 of
+msgid "F0"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:10 of
+msgid "F1"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:10
+#: featurebox.featurizers.atom.mapper.AtomTableMap:12
+#: featurebox.featurizers.atom.mapper.AtomTableMap:13
+#: featurebox.featurizers.atom.mapper.AtomTableMap:14
+#: featurebox.featurizers.atom.mapper.AtomTableMap:15
+#: featurebox.featurizers.atom.mapper.AtomTableMap:16 of
+msgid "..."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:12 of
+msgid "H"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:12
+#: featurebox.featurizers.atom.mapper.AtomTableMap:13
+#: featurebox.featurizers.atom.mapper.AtomTableMap:14
+#: featurebox.featurizers.atom.mapper.AtomTableMap:15 of
+msgid "V"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:13 of
+msgid "He"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:14 of
+msgid "Li"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:15 of
+msgid "Be"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:40 of
+msgid ""
+"1. Name of table in bgnet.preprocessing.resources. if tablename is None, "
+"use the embedding \"ele_table.csv\".  2. np.ndarray, search_tp = "
+"\"number\".  3. pd.dataframe, search_tp = \"name\""
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:41 of
+msgid ""
+"1. Name of table in bgnet.preprocessing.resources. if tablename is None, "
+"use the embedding \"ele_table.csv\"."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:44 of
+msgid "np.ndarray, search_tp = \"number\"."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:46 of
+msgid "pd.dataframe, search_tp = \"name\""
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap:48 of
+msgid "Name"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap.convert_number:1 of
+msgid "Convert atom number list to numeric features"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.AtomTableMap.get_ele_embeddings:1 of
+msgid "get CSV preprocessing"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.BinaryMap:1 of
+msgid "Bases: :class:`featurebox.featurizers.atom.mapper.AtomMap`"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.BinaryMap:1 of
+msgid "Base converter with 2 different search_tp."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.BinaryMap:5 of
+msgid "(str)"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.BinaryMap:6 of
+msgid "(bool) , For true,the same key data are summed together."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.BinaryMap.convert_dict:1 of
+msgid "convert list of dict to data"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.get_atom_fea_name:1 of
+msgid ""
+"For a structure return the list of dictionary for the site occupancy for "
+"example, Fe0.5Ni0.5 site will be returned as {\"Fe\": 0.5, \"Ni\": 0.5}"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.get_atom_fea_name:4
+#: featurebox.featurizers.atom.mapper.get_ion_fea_name:4 of
+msgid "pymatgen Structure with potential site disorder"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.get_atom_fea_name:7
+#: featurebox.featurizers.atom.mapper.get_ion_fea_name:7 of
+msgid "a list of site fraction description"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.get_atom_fea_number:1 of
+msgid "Get atom features from structure, may be overwritten."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.get_atom_fea_number:3 of
+msgid "(Pymatgen.Structure) pymatgen structure"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.get_atom_fea_number:5 of
+msgid "List of atomic numbers"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.get_ion_fea_name:1 of
+msgid ""
+"For a structure return the list of dictionary for the site occupancy for "
+"example, Fe0.5Ni0.5 site will be returned as {\"Fe2+\": 0.5, \"Ni2+\": "
+"0.5}"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.process_atomic_orbitals:1 of
+msgid "Post-processing for dict preprocessing with \"1s\", \"2p\", ..."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.process_bool_transition_metal:1 of
+msgid "Post-processing for bool preprocessing"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.process_tuple_full_electronic_structure:1
+#: of
+msgid ""
+"Post-processing for electronic_structure preprocessing ( (1,\"s\",2),..."
+"   )"
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.process_tuple_oxidation_states:1 of
+msgid "Post-processing for tuple of float preprocessing."
+msgstr ""
+
+#: featurebox.featurizers.atom.mapper.process_uni:1 of
+msgid "Post-processing for bool preprocessing General properties."
+msgstr ""
+

@@ -2,15 +2,10 @@ import unittest
 
 import numpy as np
 
-from featurebox.featurizers.base_transform import BaseFeature, DummyConverter
+from featurebox.featurizers.base_feature import BaseFeature, DummyConverter
 
 
 class MyTestCase(unittest.TestCase):
-    def test_json(self):
-        bf = BaseFeature()
-        bf.to_json()
-        d = bf.as_dict()
-        bf.from_dict(d)
 
     def test_transofrm(self):
         bf = BaseFeature(n_jobs=1)

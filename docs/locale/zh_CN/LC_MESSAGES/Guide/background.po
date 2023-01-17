@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-07 16:58+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../Guide/background.rst:2
+msgid "Sample Data and Background"
+msgstr "测试样本和背景"
+
+#: ../../Guide/background.rst:5
+msgid "Sample data"
+msgstr "测试样本"
+
+#: ../../Guide/background.rst:7
+msgid ""
+"Download data from the following link: `Structure List "
+"<https://github.com/boliqq07/featurebox/blob/master/test/structure_data/sample_data.pkl_pd>`_"
+" ."
+msgstr ""
+"下载必要的测试数据： `Structure List "
+"<https://github.com/boliqq07/featurebox/blob/master/test/structure_data/sample_data.pkl_pd>`_ ."
+
+#: ../../Guide/background.rst:9
+msgid "Usage:"
+msgstr "使用方法："
+
+#: ../../Guide/background.rst:18
+msgid "Background"
+msgstr "背景"
+
+#: ../../Guide/background.rst:20
+msgid ""
+"The ``Structure`` from ``pymatgen`` is one class to represent the crystal"
+" structure data, which contain all message of atoms and their sites. More"
+" details link: `pymatgen Structure <https://pymatgen.org/usage.html"
+"#reading-and-writing-structures-molecules>`_ ."
+msgstr ""
+"``pymatgen`` 中的 ``Structure`` 是代表晶体结构数据的一个类，包含原子及其位置的所有信息。"
+"细节参考网址: `pymatgen Structure <https://pymatgen.org/usage.html#reading-and-writing-structures-molecules>`_ 。"
+
+#: ../../Guide/background.rst:24
+
+msgid ""
+"From this type data, we could extract atom/element names and atom/element"
+" numbers message by following code."
+msgstr ""
+"从这个数据中，使用以下代码，我们能提取出很多原子/元素的序号和名称信息。"
+
+#: ../../Guide/background.rst:26
+msgid "Such as for single case (built in ``convert`` function):"
+msgstr "比如，对于单个数据 (已经内置于 ``convert`` ) ："
+
+#: ../../Guide/background.rst:32
+msgid "Such as for batch data (built in ``transform`` function):"
+msgstr "比如，对于批量数据 (已经内置于 ``transform`` ) ："
+
+#: ../../Guide/background.rst:37
+msgid ""
+"In this packages, we accept data with type like ``name_list`` , "
+"``number_list``  as input data for ``transform`` . Meanwhile, The above "
+"code are built in package, thus we could accept ``structure_list`` as "
+"input data directly."
+msgstr ""
+"在这个包中，``transform`` 原生接受类似 ``name_list`` ,"
+" ``number_list`` 类型的数据，"
+"同时，由于上述代码已经内置在包中，"
+"因此可以直接使用 ``structure_list`` 直接输入数据。"
+
+#: ../../Guide/background.rst:42
+msgid ""
+"In addition, the ``ase.Atoms`` could convert by Adaptor "
+"``AseAtomsAdaptor`` from pymatgen or ``featurebox.utils.general.AAA`` . "
+"Of course, The data ``name`` data , ``number`` data could build by "
+"yourself from you code."
+msgstr ""
+"此外 ``ase.Atoms`` 数据类型可以通过 ``AseAtomsAdaptor`` "
+"先转换为 ``structure`` 再进一步处理。"
+"并且 ``name_dict_data`` , ``number_data`` 可以自己生成，无论何种来源只要格式对应均可。"
+

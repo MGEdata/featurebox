@@ -17,6 +17,14 @@ featurebox.data.check\_data module
    :undoc-members:
    :show-inheritance:
 
+featurebox.data.data\_sep module
+--------------------------------
+
+.. automodule:: featurebox.data.data_sep
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 featurebox.data.mp\_access module
 ---------------------------------
 

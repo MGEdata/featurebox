@@ -7,7 +7,7 @@
 # @License: BSD 3-Clause
 
 """
-Calculate the the correction of columns.
+Calculate the correction of columns.
 """
 import copy
 from typing import List
@@ -15,23 +15,24 @@ from typing import List
 import numpy as np
 from mgetool.tool import name_to_name
 from sklearn.base import BaseEstimator, MetaEstimatorMixin
-from sklearn.datasets import load_boston
 from sklearn.feature_selection import SelectorMixin
 from sklearn.utils import check_random_state
 from sklearn.utils.validation import check_is_fitted
 
-from featurebox.selection.mutibase import MutiBase
+from featurebox.selection.multibase import MultiBase
 
 
-class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
+class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MultiBase):
     """
     Calculate correlation. (Where the result are changed with random state.)
 
     Examples
     ---------
-    >>> from sklearn.datasets import load_boston
-    >>> from featurebox import Corr
-    >>> x, y = load_boston(return_X_y=True)
+    >>> from sklearn.datasets import fetch_california_housing
+    >>> from featurebox.selection.corr import Corr
+    >>> x, y = fetch_california_housing(return_X_y=True)
+    >>> x = x[:100]
+    >>> y = y[:100]
     >>> co = Corr(threshold=0.5)
     >>> nx = co.fit_transform(x)
 
@@ -40,33 +41,37 @@ class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
     Examples
     ---------
 
-    >>> from sklearn.datasets import load_boston
-    >>> from featurebox import Corr
-    >>> x, y = load_boston(return_X_y=True)
-    >>> co = Corr(threshold=0.7)
+    >>> from sklearn.datasets import fetch_california_housing
+    >>> from featurebox.selection.corr import Corr
+    >>> x, y = fetch_california_housing(return_X_y=True)
+    >>> x = x[:100]
+    >>> y = y[:100]
+    >>> co = Corr(threshold=0.5)
     >>> groups = co.count_cof(np.corrcoef(x[:,:7], rowvar=False))
     >>> groups[1]
-    [[0], [1], [2, 4], [3], [2, 4, 6], [5], [4, 6]]
+    [[0, 6], [1], [2], [3], [4], [5], [0, 6]]
     >>> groups[0]
-    [[1.0], [1.0], [1.0, 0.764], [1.0], [0.764, 1.0, 0.731], [1.0], [0.731, 1.0]]
+    [[1.0, 0.554], [1.0], [1.0], [1.0], [1.0], [1.0], [0.554, 1.0]]
 
-    Where the (2,4), (2,4,6), (4,6) are with correlation more than 0.7.
+    Where the (0,6) are with correlation more than 0.7.
 
     **2. Used for filter automatically by machine**
 
     Examples
     -----------
-    >>> from sklearn.datasets import load_boston
-    >>> from featurebox import Corr
-    >>> x, y = load_boston(return_X_y=True)
-    >>> co = Corr(threshold=0.7)
+    >>> from sklearn.datasets import fetch_california_housing
+    >>> from featurebox.selection.corr import Corr
+    >>> x, y = fetch_california_housing(return_X_y=True)
+    >>> x = x[:100]
+    >>> y = y[:100]
+    >>> co = Corr(threshold=0.5)
     >>> co.fit(x)
-    Corr(threshold=0.7)
+    Corr(threshold=0.5)
     >>> group = co.count_cof()
     >>> group[1]
-    [[0], [1], [2, 4, 7, 9], [3], [2, 4, 6, 7], [5], [4, 6, 7], [2, 4, 6, 7], [8, 9], [2, 8, 9], [10], [11], [12]]
+    [[0, 6, 7], [1], [2], [3], [4], [5], [0, 6, 7], [0, 6, 7]]
     >>> co.remove_coef(group[1]) # Filter automatically by machine.
-    [0, 1, 2, 3, 5, 6, 8, 10, 11, 12]
+    [0, 1, 2, 3, 4, 5]
 
     Where the remove_coef are changed with random state.
 
@@ -74,25 +79,23 @@ class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
 
     Examples
     -----------
-    >>> from sklearn.datasets import load_boston
-    >>> from featurebox import Corr
-    >>> x, y = load_boston(return_X_y=True)
-    >>> co = Corr(threshold=0.7,muti_index=[0,8],muti_grade=2)
+    >>> from sklearn.datasets import fetch_california_housing
+    >>> from featurebox.selection.corr import Corr
+    >>> x, y = fetch_california_housing(return_X_y=True)
+    >>> x = x[:100]
+    >>> y = y[:100]
+    >>> co = Corr(threshold=0.3,multi_index=[0,8],multi_grade=2)
     >>> # in range [0,8], the features are binding in to 2 sized: [[0,1],[2,3],[4,5],[6,7]]
     >>> co.fit(x)
-    Corr(muti_index=[0, 8], threshold=0.7)
+    Corr(multi_index=[0, 8], threshold=0.3)
     >>> group = co.count_cof()
     >>> group[1]
-    [[0], [1], [2], [3], [4, 5], [4, 5], [6], [7], [8]]
+    [[0, 1, 3], [0, 1, 3], [2], [0, 1, 3]]
     >>> co.remove_coef(group[1]) # Filter automatically by machine.
-    [0, 1, 2, 3, 4, 6, 7, 8]
-
-    Where 4 is filtered , Corresponding to the initial feature 8.
-
-    [0,1] -> 0; [2,3] -> 1; [4,5]->2; [6,7]->3, 8->4; 9->5; 10->6; 11->7; 12->8; 13->9;
+    [0, 2]
     """
 
-    def __init__(self, threshold: float = 0.85, muti_grade: int = 2, muti_index: List = None, must_index: List = None,
+    def __init__(self, threshold: float = 0.85, multi_grade: int = 2, multi_index: List = None, must_index: List = None,
                  random_state: int = 0):
         """
 
@@ -100,22 +103,22 @@ class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
         ----------
         threshold:float
             ranking threshold.
-        muti_grade:
+        multi_grade:
             binding_group size, calculate the correction between binding.
-        muti_index:list
-            the range of muti_grade:[min,max).
+        multi_index:list
+            the range of multi_grade:[min,max).
         must_index:list
             the columns force to index.
-        random_state:int
-            int
+        random_state: int
         """
 
-        super().__init__(muti_grade=muti_grade, muti_index=muti_index, must_index=must_index)
+        super().__init__(multi_grade=multi_grade, multi_index=multi_index, must_index=must_index)
         self.threshold = threshold
         self.cov = None
         self.cov_shrink = None
         self.shrink_list = []
         self.random_state = random_state
+        self.nan_index_mark = None
 
     def fit(self, data, pre_cal=None, method="mean"):
         if pre_cal is None:
@@ -126,7 +129,14 @@ class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
             cov = pre_cal
         else:
             raise TypeError("pre_cal is None or coef of data_cluster with shape(data_cluster[0],data_cluster[0])")
-        cov = np.nan_to_num(cov - 1) + 1
+
+        # for nan
+        self.nan_index_mark = ~np.array([np.all(np.isnan(cov[i])) for i in range(cov.shape[0])])
+        if not np.all(self.nan_index_mark):
+            print("There are some NAN values in correlation coefficient matrix, which could be constant features.\n"
+                  "The NAN features would removed later. See more in 'nan_index_mark' attribute.")
+
+        cov = np.nan_to_num(cov)
         self.cov = cov
         self.data = data
         self.shrink_list = list(range(self.cov.shape[0]))
@@ -136,28 +146,28 @@ class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
 
     def _shrink_coef(self, method="mean" or "max"):
 
-        if self.check_muti:
+        if self.check_multi:
             self.shrink_list = list(range(self.cov.shape[0]))
             self.shrink_list = list(self.feature_fold(self.shrink_list))
 
             cov = self.cov
-            single = tuple([i for i in self.shrink_list if i not in self.check_muti])
-            muti = tuple([i for i in self.shrink_list if i in self.check_muti])
+            single = tuple([i for i in self.shrink_list if i not in self.multi_index])
+            multi = tuple([i for i in self.shrink_list if i in self.multi_index])
 
-            cov_muti_all = []
-            le = self.muti_grade
+            cov_multi_all = []
+            le = self.multi_grade
             while le:
                 index = []
                 index.extend(single)
-                index.extend([i + le - 1 for i in muti])
+                index.extend([i + le - 1 for i in multi])
                 index.sort()
-                cov_muti_all.append(cov[index][:, index])
+                cov_multi_all.append(cov[index][:, index])
                 le -= 1
-            cov_muti_all = np.array(cov_muti_all)
+            cov_multi_all = np.array(cov_multi_all)
             if method == "mean":
-                cov_new = np.mean(cov_muti_all, axis=0)
+                cov_new = np.mean(cov_multi_all, axis=0)
             else:
-                cov_new = np.max(cov_muti_all, axis=0)
+                cov_new = np.max(cov_multi_all, axis=0)
             self.cov_shrink = cov_new
             return self.cov_shrink
         else:
@@ -222,7 +232,11 @@ class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
         index = self.remove_coef(list_count)
         support_ = [self.shrink_list[i] for i in index]
         support_ = self.feature_unfold(support_)
-        self.support_ = np.array([True if i in support_ else False for i in range(self.data.shape[1])])
+        support_ = np.array([True if i in support_ else False for i in range(self.data.shape[1])])
+        if self.nan_index_mark is None:
+            self.support_ = support_
+        else:
+            self.support_ = support_ * self.nan_index_mark
         return support_
 
     @staticmethod
@@ -249,37 +263,41 @@ class Corr(BaseEstimator, MetaEstimatorMixin, SelectorMixin, MutiBase):
         check_is_fitted(self, 'support_')
         return self.support_
 
-    # def transform_index(self, data):
-    #     if isinstance(data, int):
-    #         return self.shrink_list.index(data)
-    #     elif isinstance(data, (list, tuple)):
-    #         return [self.shrink_list.index(i) for i in data]
-    #
-    # def inverse_transform_index(self, data):
-    #     if isinstance(data, int):
-    #         return self.shrink_list[data]
-    #     elif isinstance(data, (list, tuple)):
-    #         return [self.shrink_list[i] for i in data]
-    #     else:
-    #         pass
-    #
-    # def transform(self, data):
-    #     if isinstance(data, (list, tuple)):
-    #         return data[self.shrink_list]
-    #     elif isinstance(data, np.ndarray) and data.ndim == 1:
-    #         return data[self.shrink_list]
-    #     elif isinstance(data, np.ndarray) and data.ndim == 2:
-    #         return data[:, self.shrink_list]
-    #     else:
-    #         pass
+    def inverse_transform_index(self, index):
+        """inverse the selected index to origin index by support."""
+        if isinstance(index, np.ndarray) and index.dtype == np.bool_:
+            index = np.where(index)[0]
+        index = np.array(list(index))
 
+        return np.where(self.support_)[0][index]
 
-if __name__ == "__main__":
-    # x, y = load_boston(return_X_y=True)
-    # co = Corr(threshold=0.7)
-    # c = co.count_cof(np.corrcoef(x, rowvar=False))[1]
+    def transform_index(self, index):
+        """Get support index."""
+        if isinstance(index, np.ndarray) and index.dtype == np.bool_:
+            index = np.where(index)[0]
 
-    x, y = load_boston(return_X_y=True)
-    co = Corr(threshold=0.5, muti_index=[0, 8], muti_grade=2)
+        return np.array([i for i in index if self.support_[i]])
 
-    nx = co.fit_transform(x)
+    def transform(self, data):
+        if isinstance(data, (list, tuple)):
+            return data[self.support_]
+        elif isinstance(data, np.ndarray) and data.ndim == 1:
+            return data[self.support_]
+        elif isinstance(data, np.ndarray) and data.ndim == 2:
+            return data[:, self.support_]
+        else:
+            pass
+
+#
+# if __name__ == "__main__":
+#     # x, y = fetch_california_housing(return_X_y=True)
+#     # co = Corr(threshold=0.7)
+#     # c = co.count_cof(np.corrcoef(x, rowvar=False))[1]
+#     from sklearn.datasets import fetch_california_housing
+#
+#     x, y = fetch_california_housing(return_X_y=True)
+#     x = x[:100]
+#     y = y[:100]
+#     co = Corr(threshold=0.5, multi_index=[0, 8], multi_grade=2)
+#
+#     nx = co.fit_transform(x)

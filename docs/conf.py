@@ -25,7 +25,7 @@ copyright = '2021, boliqq07'
 author = 'boliqq07'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.938'
+release = '0.0.993'
 
 # -- General configuration ---------------------------------------------------
 

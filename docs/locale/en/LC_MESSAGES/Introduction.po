@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, boliqq07
 # This file is distributed under the same license as the featurebox package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: featurebox \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 20:12+0800\n"
+"POT-Creation-Date: 2022-08-07 16:58+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../Introduction.rst:2
 msgid "Introduction"
@@ -23,195 +23,249 @@ msgstr ""
 
 #: ../../Introduction.rst:6
 msgid ""
-"Featurebox contains some tools for material feature **Generation** and "
-"**Selection**."
+"Featurebox contains some tools (**Generation** and **Selection**) for "
+"material features. **Generation** is used for feature generation in batch"
+" model. **Selection** is used for feature selection."
 msgstr ""
 
-#: ../../Introduction.rst:8
-msgid "The main tools are:"
+#: ../../Introduction.rst:9
+msgid ""
+"And one **Extractor** in command line mode is add to obtain some special "
+"properties in batch model. The special properties need certain subsequent"
+" computational processing or third-party software participation."
 msgstr ""
 
-#: ../../Introduction.rst:11 ../../Introduction.rst:28
-#: ../../Introduction.rst:48
+#: ../../Introduction.rst:12
+msgid ""
+"In total, ``Batching`` is the central idea of this module. All works are "
+"for convenient data manipulation."
+msgstr ""
+
+#: ../../Introduction.rst:15
+msgid "Generation tools"
+msgstr ""
+
+#: ../../Introduction.rst:18 ../../Introduction.rst:39
+#: ../../Introduction.rst:61
 msgid "Name"
 msgstr ""
 
-#: ../../Introduction.rst:11 ../../Introduction.rst:28
-#: ../../Introduction.rst:48
+#: ../../Introduction.rst:18 ../../Introduction.rst:39
+#: ../../Introduction.rst:61
 msgid "Application"
 msgstr ""
 
-#: ../../Introduction.rst:13
+#: ../../Introduction.rst:20
 msgid ":mod:`featurebox.featurizers.atom.mapper`"
 msgstr ""
 
-#: ../../Introduction.rst:13
+#: ../../Introduction.rst:20
 msgid "``atom`` Getting each element data of compound."
 msgstr ""
 
-#: ../../Introduction.rst:14
+#: ../../Introduction.rst:21
 msgid ":mod:`featurebox.featurizers.envir`"
 msgstr ""
 
-#: ../../Introduction.rst:14
-msgid "``bond`` Getting local environment data (bond and state) of compound."
-msgstr ""
-
-#: ../../Introduction.rst:15
-msgid ":mod:`featurebox.featurizers.state`"
-msgstr ""
-
-#: ../../Introduction.rst:15
-msgid "``state`` Getting holistic compound data."
-msgstr ""
-
-#: ../../Introduction.rst:16
-msgid ":mod:`featurebox.featurizers.bond.expander`"
-msgstr ""
-
-#: ../../Introduction.rst:16
-msgid "Tools to transforming pure bond data."
-msgstr ""
-
-#: ../../Introduction.rst:17
-msgid ":mod:`featurebox.featurizers.batch_feature`"
-msgstr ""
-
-#: ../../Introduction.rst:17
-msgid "A built-in goofy tool for generating features."
-msgstr ""
-
-#: ../../Introduction.rst:18
-msgid ":class:`featurebox.data.namesplit.NameSplit`"
-msgstr ""
-
-#: ../../Introduction.rst:18
-msgid "Dividing compound names to elemental proportion table."
-msgstr ""
-
-#: ../../Introduction.rst:19
-msgid ":class:`featurebox.data.mp_access.MpAccess`"
-msgstr ""
-
-#: ../../Introduction.rst:19
-msgid "Getting data from pymatgen conveniently."
+#: ../../Introduction.rst:21
+msgid "``bond`` Getting local environment data of compound."
 msgstr ""
 
 #: ../../Introduction.rst:22
-msgid ""
-"All the feature tools with  ``convert`` method for single case. and "
-"``fit_transform`` methods for case list."
+msgid ":mod:`featurebox.featurizers.state`"
+msgstr ""
+
+#: ../../Introduction.rst:22
+msgid "``state`` Getting holistic compound data."
+msgstr ""
+
+#: ../../Introduction.rst:23
+msgid ":mod:`featurebox.featurizers.bond.expander`"
+msgstr ""
+
+#: ../../Introduction.rst:23
+msgid "Tools to transforming pure bond data."
+msgstr ""
+
+#: ../../Introduction.rst:24
+msgid ":mod:`featurebox.featurizers.batch_feature`"
+msgstr ""
+
+#: ../../Introduction.rst:24
+msgid "A built-in goofy tool for generating features."
 msgstr ""
 
 #: ../../Introduction.rst:25
-msgid "The main binding selection tools are:"
+msgid ":class:`featurebox.data.namesplit.NameSplit`"
 msgstr ""
 
-#: ../../Introduction.rst:30
-msgid ":class:`featurebox.selection.backforward.BackForward`"
+#: ../../Introduction.rst:25
+msgid "Dividing compound names to elemental proportion table."
 msgstr ""
 
-#: ../../Introduction.rst:30
-msgid "Backforward selection"
+#: ../../Introduction.rst:26
+msgid ":class:`featurebox.data.mp_access.MpAccess`"
 msgstr ""
 
-#: ../../Introduction.rst:31
-msgid ":class:`featurebox.selection.corr.Corr`"
+#: ../../Introduction.rst:26
+msgid "Getting data from pymatgen conveniently."
 msgstr ""
 
-#: ../../Introduction.rst:31
-msgid "Correlation selection."
+#: ../../Introduction.rst:29
+msgid ""
+"All the **Generation** tools with  ``convert`` method for single case. "
+"and ``fit_transform`` methods for case list."
 msgstr ""
 
 #: ../../Introduction.rst:32
-msgid ":class:`featurebox.selection.exhaustion.Exhaustion`"
-msgstr ""
-
-#: ../../Introduction.rst:32
-msgid "Exhaustion selection."
-msgstr ""
-
-#: ../../Introduction.rst:33
-msgid ":class:`featurebox.selection.ga.GA`"
-msgstr ""
-
-#: ../../Introduction.rst:33
-msgid "Genetic algorithm selection."
+msgid "Guide: :doc:`Guide/data_type`"
 msgstr ""
 
 #: ../../Introduction.rst:36
+msgid "Binding selection tools"
+msgstr ""
+
+#: ../../Introduction.rst:41
+msgid ":class:`featurebox.selection.backforward.BackForward`"
+msgstr ""
+
+#: ../../Introduction.rst:41
+msgid "Backforward selection"
+msgstr ""
+
+#: ../../Introduction.rst:42
+msgid ":class:`featurebox.selection.corr.Corr`"
+msgstr ""
+
+#: ../../Introduction.rst:42
+msgid "Correlation selection."
+msgstr ""
+
+#: ../../Introduction.rst:43
+msgid ":class:`featurebox.selection.exhaustion.Exhaustion`"
+msgstr ""
+
+#: ../../Introduction.rst:43
+msgid "Exhaustion selection."
+msgstr ""
+
+#: ../../Introduction.rst:44
+msgid ":class:`featurebox.selection.ga.GA`"
+msgstr ""
+
+#: ../../Introduction.rst:44
+msgid "Genetic algorithm selection."
+msgstr ""
+
+#: ../../Introduction.rst:47
 msgid ""
-"All the selection tools are ``sklearn-type``, with ``fit``, "
+"All the **Selection** tools are ``sklearn-type``, with ``fit``, "
 "``fit_transform`` methods .etc."
 msgstr ""
 
-#: ../../Introduction.rst:40
+#: ../../Introduction.rst:51
 msgid ""
 "Where the binding means treat the binding features as one feature. And "
 "the binding features are selected or deleted synchronously."
 msgstr ""
 
-#: ../../Introduction.rst:43
-msgid "Featurebox integrated with **Graph neural network**."
-msgstr ""
-
-#: ../../Introduction.rst:45
-msgid "The main Graph neural network tools are:"
-msgstr ""
-
-#: ../../Introduction.rst:50
-msgid ":class:`featurebox.featurizers.base_graph_geo.StructureGraphGEO`"
-msgstr ""
-
-#: ../../Introduction.rst:50
-msgid "Integrated structure data tool. (high dimensional data)"
-msgstr ""
-
-#: ../../Introduction.rst:51
-msgid ":class:`featurebox.models_geo.cgcnn.CrystalGraphConvNet`"
-msgstr ""
-
-#: ../../Introduction.rst:51
-msgid "Traditional graph neural network."
-msgstr ""
-
-#: ../../Introduction.rst:52
-msgid ":class:`featurebox.models_geo.schnet.SchNet`"
-msgstr ""
-
-#: ../../Introduction.rst:52 ../../Introduction.rst:53
-msgid "Graph neural network with state features."
-msgstr ""
-
-#: ../../Introduction.rst:53
-msgid ":class:`featurebox.models_geo.megnet.MEGNet`"
-msgstr ""
-
 #: ../../Introduction.rst:54
-msgid ":class:`featurebox.models_geo.flow_geo.LearningFlow`"
+msgid "Guide: :doc:`Guide/bind_selection`"
 msgstr ""
 
-#: ../../Introduction.rst:54
-msgid "Script for modeling (recommended customization by user)."
+#: ../../Introduction.rst:58
+msgid "Property batching extractor"
 msgstr ""
 
-#: ../../Introduction.rst:55
-msgid ":class:`featurebox.featurizers.generator_geo.InMemoryDatasetGeo`"
+#: ../../Introduction.rst:63
+msgid ":mod:`featurebox.cli.vasp_bader`"
 msgstr ""
 
-#: ../../Introduction.rst:55
-msgid "``Dataset`` for data data in a non-uniform format. (Torch-like)"
+#: ../../Introduction.rst:63
+msgid "Bader Charge"
 msgstr ""
 
-#: ../../Introduction.rst:59
+#: ../../Introduction.rst:64
+msgid ":mod:`featurebox.cli.vasp_cohp`"
+msgstr ""
+
+#: ../../Introduction.rst:64
+msgid "COHP"
+msgstr ""
+
+#: ../../Introduction.rst:65
+msgid ":mod:`featurebox.cli.vasp_dbc`"
+msgstr ""
+
+#: ../../Introduction.rst:65
+msgid "band center"
+msgstr ""
+
+#: ../../Introduction.rst:66
+msgid ":mod:`featurebox.cli.vasp_dos`"
+msgstr ""
+
+#: ../../Introduction.rst:66
+msgid "DOS for plot"
+msgstr ""
+
+#: ../../Introduction.rst:67
+msgid ":mod:`featurebox.cli`"
+msgstr ""
+
+#: ../../Introduction.rst:67
+msgid "**More** ..."
+msgstr ""
+
+#: ../../Introduction.rst:70
 msgid ""
-"The neural network tools are ``torch-type``, with ``forward`` methods "
-".etc."
+"All the **Extractor**  tools with  ``convert`` method for single case. "
+"and ``fit_transform`` methods for case list."
 msgstr ""
 
-#: ../../Introduction.rst:61
-msgid ""
-"The **Graph neural network** employ **base_graph_base**, **bond** and "
-"**atom** .etc to build input data."
+#: ../../Introduction.rst:73
+msgid "Guide: :doc:`Guide/command_mode`"
 msgstr ""
+
+#: ../../Introduction.rst:77
+msgid ""
+"The properties batching extractor are suggested to use ``Command line "
+"mode`` . But interactive model is still available for more customized "
+"operation."
+msgstr ""
+
+#: ../../Introduction.rst:82
+msgid ""
+"The **Graph neural network** have been removed to ``pyg_extension`` "
+"package, which employ **envir**, **bond** and **atom** .etc to build "
+"input data."
+msgstr ""
+
+#~ msgid ""
+#~ "Featurebox contains some tools (**Generation**"
+#~ " and **Selection**) for material features."
+#~ " **Generation** is used for feature "
+#~ "generation. **Selection** is used for "
+#~ "feature selection. And one **Extractor** "
+#~ "in command line mode is add to "
+#~ "obtain some special properties in "
+#~ "batches. The special properties need "
+#~ "certain subsequent computational processing or"
+#~ " third-party software participation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Featurebox contains some tools (**Generation**"
+#~ " and **Selection**) for material features."
+#~ " **Generation** is used for feature "
+#~ "generation in batch model. **Selection** "
+#~ "is used for feature selection in "
+#~ "batch model."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All the selection tools are "
+#~ "``sklearn-type``, with ``fit``, ``fit_transform``"
+#~ " methods .etc."
+#~ msgstr ""
 

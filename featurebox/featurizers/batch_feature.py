@@ -1,16 +1,16 @@
 from typing import List
 
 from featurebox.featurizers.atom.mapper import AtomPymatgenPropMap
-from featurebox.featurizers.base_transform import BaseFeature
+from featurebox.featurizers.base_feature import BaseFeature
 from featurebox.featurizers.state.state_mapper import StructurePymatgenPropMap
 from featurebox.featurizers.state.statistics import WeightedAverage
 
 
-class BatchFeature(BaseFeature):
+class BatchFeature:
     """Script for generate batch_data, could be copied and user-defined."""
 
     def __init__(self, data_type: str = "compositions", user_convert: BaseFeature = None, n_jobs: int = 1,
-                 on_errors: str = 'raise', return_type: str = 'any', batch_calculate: bool = False,
+                 on_errors: str = 'raise', return_type: str = 'df', batch_calculate: bool = False,
                  batch_size: int = 30):
         """
 
@@ -21,22 +21,25 @@ class BatchFeature(BaseFeature):
         user_convert:BatchFeature
             which contain `convert` method.
         """
-        super(BatchFeature, self).__init__(n_jobs, on_errors=on_errors, return_type=return_type,
-                                           batch_calculate=batch_calculate, batch_size=batch_size)
+        prop_name = ["density",
+                     "volume",
+                     "ntypesp",
 
-        self.structure_c = StructurePymatgenPropMap(prop_name=["density",
-                                                               "volume",
-                                                               "ntypesp",
+                     "_lattice.lengths",
+                     "_lattice.angles",
 
-                                                               "_lattice.lengths",
-                                                               "_lattice.angles",
-
-                                                               "composition.average_electroneg",
-                                                               "composition.num_atoms",
-                                                               "composition.total_electrons",
-                                                               "composition.weight",
-
-                                                               ], n_jobs=1)
+                     "composition.average_electroneg",
+                     "composition.num_atoms",
+                     "composition.total_electrons",
+                     "composition.weight",
+                     ]
+        self.structure_c = StructurePymatgenPropMap(prop_name=prop_name,
+                                                    batch_size=batch_size,
+                                                    on_errors=on_errors,
+                                                    batch_calculate=batch_calculate,
+                                                    n_jobs=n_jobs,
+                                                    return_type=return_type)
+        self.structure_c.set_feature_labels(prop_name)
 
         func_map = [
             "atomic_radius",
@@ -62,12 +65,10 @@ class BatchFeature(BaseFeature):
             "average_anionic_radius",
         ]
         appm = AtomPymatgenPropMap(prop_name=func_map, n_jobs=1, search_tp="name")
-        self.composition_c = WeightedAverage(appm, n_jobs=1, return_type="df")
-        self.composition_c.set_feature_labels(func_map)
+        self.composition_c = WeightedAverage(appm, n_jobs=n_jobs, on_errors=on_errors, return_type=return_type)
+        self.composition_c.set_feature_labels([f"Mean-{i}" for i in func_map])
 
-        self.element_c = AtomPymatgenPropMap(prop_name=func_map, n_jobs=1,
-                                             search_tp="name",
-                                             return_type="df")
+        self.element_c = AtomPymatgenPropMap(prop_name=func_map, n_jobs=n_jobs, search_tp="name", on_errors=on_errors)
 
         if user_convert is not None:
             self.data_type = "user-defined"
@@ -87,12 +88,13 @@ class BatchFeature(BaseFeature):
             self.convert_method = self.maps[self.data_type]
 
     def convert(self, d):
-        if self.data_type == "compositions":
-            return self.convert_method.convert(d)
-        elif self.data_type == "elements":
-            return self.convert_method.convert(d)
-        elif self.data_type == "structures":
-            return self.convert_method.convert(d)
+        return self.convert_method.convert(d)
+
+    def transform(self, entries: List):
+        return self.convert_method.transform(entries)
+
+    def fit_transform(self, entries: List):
+        return self.transform(entries)
 
     @property
     def feature_labels(self):

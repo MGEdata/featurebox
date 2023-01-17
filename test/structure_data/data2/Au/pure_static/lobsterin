@@ -1,0 +1,27 @@
+! This is an example for the lobster control file lobsterin.
+! (See, here we are using the comment function!)
+!
+! First, enter the energetic window in eV (relative to the Fermi level):
+COHPStartEnergy -10
+COHPEndEnergy 5
+!
+! Then, specify which types of valence orbitals to use:
+includeOrbitals s p d
+! You can also specify the basis functions per element manually, e.g.:
+! basisFunctions Ga 4s 4p
+! basisFunctions Sr 5s 4s 4p ! Sr_sv potential
+!
+! Now define the pairs for which COHP analysis etc. should be done.
+! The atoms are numbered as per order in the PAW-code control file.
+cohpBetween atom 45 atom 31
+!
+! If you are interested in single orbital COHPs, you can get all the pairs
+! like s-s, s-p_x, ..., p_z-p_z. Uncomment this line to switch it on:
+! cohpBetween atom 1 atom 2 orbitalWise
+!
+12
+! If you want to generate the COHP pairs automatically, use this to include
+! all pairs in a given distance range (in Angstrom, not in atomic units):
+! cohpGenerator from 1.4 to 1.5
+! cohpGenerator from 1.4 to 1.5 type Ga type Sr
+! and in the latter case only between the specified elements

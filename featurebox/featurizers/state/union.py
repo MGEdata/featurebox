@@ -14,8 +14,8 @@ import pandas as pd
 from sklearn.utils import check_array
 from sklearn.utils.validation import check_is_fitted
 
-from featurebox.featurizers.base_transform import BaseFeature
-from featurebox.featurizers.extrastats import PropertyStats
+from featurebox.featurizers.base_feature import BaseFeature
+from featurebox.featurizers.state.extrastats import PropertyStats
 from featurebox.featurizers.state.statistics import DepartElementFeature
 
 
@@ -130,14 +130,14 @@ class PolyFeature(BaseFeature, ABC):
     >>> ps = pd.DataFrame(n,columns=["f1","f2"],index= ["x0","x1","x2","x3","x4","x5"])
     >>> pf = PolyFeature(degree=[1,2])
     >>> pf.fit_transform(n)
-       f0^1      f1^1  f0^2  f0^1*f1^1      f1^2
+
+    n   f0^1     f1^1  f0^2  f0^1*f1^1      f1^2
     0   0.0  0.422068   0.0   0.000000  0.178141
     1   1.0  0.360958   1.0   0.360958  0.130291
     2   2.0  0.201433   4.0   0.402866  0.040575
     3   3.0 -0.459164   9.0  -1.377492  0.210832
     4   4.0 -0.064783  16.0  -0.259132  0.004197
     5   5.0 -0.250939  25.0  -1.254695  0.062970
-
 
     """
 

@@ -41,10 +41,10 @@ featurebox.selection.ga module
    :undoc-members:
    :show-inheritance:
 
-featurebox.selection.mutibase module
+featurebox.selection.multibase module
 ------------------------------------
 
-.. automodule:: featurebox.selection.mutibase
+.. automodule:: featurebox.selection.multibase
    :members:
    :undoc-members:
    :show-inheritance:

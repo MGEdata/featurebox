@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, boliqq07
 # This file is distributed under the same license as the featurebox package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: featurebox \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 20:12+0800\n"
+"POT-Creation-Date: 2022-08-11 16:49+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../src/featurebox.featurizers.envir.rst:2
 msgid "featurebox.featurizers.envir package"
@@ -28,284 +28,30 @@ msgid ""
 msgstr ""
 
 #: ../../src/featurebox.featurizers.envir.rst:10
+msgid "Subpackages"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.envir.rst:18
 msgid "Submodules"
 msgstr ""
 
-#: ../../src/featurebox.featurizers.envir.rst:13
+#: ../../src/featurebox.featurizers.envir.rst:21
 msgid "featurebox.featurizers.envir.desc\\_env module"
 msgstr ""
 
-#: featurebox.featurizers.envir.desc_env:1 of
-msgid ""
-"Use descriptors form ``pyXtal_FF``, in "
-":mod:`featurebox.test_featurizers.descriptors`"
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:1
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:1
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:1 of
-msgid ""
-"Change each center atoms has fill_size neighbors. More neighbors would be"
-" abandoned. Insufficient neighbors would be duplicated."
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:5 of
-msgid "# todo There is a problem with deleting atoms"
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des
-#: featurebox.featurizers.envir.environment.BaseDesGet
-#: featurebox.featurizers.envir.environment.BaseDesGet.convert
-#: featurebox.featurizers.envir.environment.BaseNNGet
-#: featurebox.featurizers.envir.environment.BaseNNGet.convert
-#: featurebox.featurizers.envir.environment.GEONNGet
-#: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll
-#: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll.get_nn_info
-#: featurebox.featurizers.envir.local_env.UserVoronoiNN
-#: featurebox.featurizers.envir.local_env.geo_refine_nn
-#: featurebox.featurizers.envir.local_env.universe_refine_nn of
-msgid "Parameters"
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:7 of
-msgid "dict, dict of descriptor. at lest contain \"x\" and \"dxdr\""
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:8 of
-msgid "int, unstable."
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des
-#: featurebox.featurizers.envir.environment.BaseDesGet.convert
-#: featurebox.featurizers.envir.environment.BaseNNGet.convert
-#: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll.get_nn_info
-#: featurebox.featurizers.envir.local_env.geo_refine_nn
-#: featurebox.featurizers.envir.local_env.universe_refine_nn of
-msgid "Returns"
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:10 of
-msgid ""
-"(center_indices,center_prop, neighbor_indices, images, distances)  "
-"center_indices: np.ndarray 1d(N,).  neighbor_indices: np.ndarray "
-"2d(N,fill_size).  images: np.ndarray 2d(N,fill_size,l).  distance: "
-"np.ndarray 2d(N,fill_size), None. center_prop: np.ndarray 1d(N,l_c)."
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:10 of
-msgid "(center_indices,center_prop, neighbor_indices, images, distances)"
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:12
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:18
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:17 of
-msgid "center_indices: np.ndarray 1d(N,)."
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:14
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:20
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:19 of
-msgid "neighbor_indices: np.ndarray 2d(N,fill_size)."
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:16
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:22
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:21 of
-msgid "images: np.ndarray 2d(N,fill_size,l)."
-msgstr ""
-
-#: featurebox.featurizers.envir.desc_env.universe_refine_des:18 of
-msgid ""
-"distance: np.ndarray 2d(N,fill_size), None. center_prop: np.ndarray "
-"1d(N,l_c)."
-msgstr ""
-
-#: ../../src/featurebox.featurizers.envir.rst:21
+#: ../../src/featurebox.featurizers.envir.rst:29
 msgid "featurebox.featurizers.envir.environment module"
 msgstr ""
 
-#: featurebox.featurizers.envir.environment.BaseDesGet:1
-#: featurebox.featurizers.envir.environment.BaseNNGet:1 of
-msgid "Bases: :class:`featurebox.featurizers.envir.environment._BaseEnvGet`"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:1 of
-msgid ""
-"Get properties from Pymatgen.Structure. Where the nn_strategy is from "
-"``pyXtal_FF``. And each structure is convert to data as following :"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:5
-#: featurebox.featurizers.envir.environment.BaseNNGet:5 of
-msgid "``center_indices``:np.ndarray of shape(n,)"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:6
-#: featurebox.featurizers.envir.environment.BaseNNGet:6 of
-msgid "center indexes."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:8
-#: featurebox.featurizers.envir.environment.BaseNNGet:8 of
-msgid "``neighbor_indices``:np.ndarray of shape(n,fill_size)"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:8
-#: featurebox.featurizers.envir.environment.BaseNNGet:8 of
-msgid ""
-"neighbor_indexes for each center_index. `fill_size` is the parameter of "
-"`refine` function."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:10
-#: featurebox.featurizers.envir.environment.BaseNNGet:10 of
-msgid "``images``:np.ndarray of shape(n,lb>=3)"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:11
-#: featurebox.featurizers.envir.environment.BaseNNGet:11 of
-msgid "offset vector in 3 orientations or more bond properties."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:12
-#: featurebox.featurizers.envir.environment.BaseNNGet:12 of
-msgid "``distances``:np.ndarray of shape(n,fill_size)"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:13
-#: featurebox.featurizers.envir.environment.BaseNNGet:13 of
-msgid "distance of neighbor_indexes for each center_index."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:15 of
-msgid "``center_properties``:np.ndarray of shape(n,l_c)"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:15
-#: featurebox.featurizers.envir.environment.BaseNNGet:15 of
-msgid "center properties."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:17 of
-msgid ""
-"pyXtelff descriptors, which has calculate method. See Also: "
-":mod:`featurebox.test_featurizers.descriptors`, "
-":class:`featurebox.test_featurizers.descriptors.SOAP.SOAP`,"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:21 of
-msgid ""
-"sort method for neighbors of each atom. all the refine_method should "
-"return 5 result. See Also: :func:`universe_refine_des`"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:26
-#: featurebox.featurizers.envir.environment.BaseNNGet:25
-#: featurebox.featurizers.envir.environment.GEONNGet:9 of
-msgid "parameters for refine"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:28
-#: featurebox.featurizers.envir.environment.BaseNNGet:27
-#: featurebox.featurizers.envir.environment.GEONNGet:11 of
-msgid "numerical_tol"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet:30 of
-msgid ""
-"periodicity in 3 direction 3-length list,each one is 1 or 0. such as "
-"[0,0,0],The 1 mean in this direction is with periodicity."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet.convert:1
-#: featurebox.featurizers.envir.environment.BaseNNGet.convert:1 of
-msgid "Structure,pymatgen Structure"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet.convert:3
-#: featurebox.featurizers.envir.environment.BaseNNGet.convert:3 of
-msgid "center_indices,center_prop,neighbor_indices,images,distances"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseDesGet.get_strategy:1 of
-msgid ""
-"For get bond distance with different strategy, for different nn_stagy "
-"could be rewrite"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:1 of
-msgid ""
-"Get properties from Pymatgen.Structure. Where the nn_strategy is from "
-"``Pymatgen``. And each structure is convert to data as following :"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:15 of
-msgid "``center_indices``:np.ndarray of shape(n,l_c)"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:17
-#: featurebox.featurizers.envir.environment.GEONNGet:1 of
-msgid ""
-"search method for local_env for each atom. See Also: "
-":class:`featurebox.test_featurizers.envir.local_env.MinimumDistanceNNAll`,"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:21
-#: featurebox.featurizers.envir.environment.GEONNGet:5 of
-msgid ""
-"sort method for neighbors of each atom. See Also: "
-":func:`universe_refine_nn`"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:29
-#: featurebox.featurizers.envir.environment.GEONNGet:13 of
-msgid ""
-"only for find \"find_points_in_spheres\". periodicity in 3 direction "
-"3-length list,each one is 1 or 0. such as [0,0,0],The 1 mean in this "
-"direction is with periodicity."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:33
-#: featurebox.featurizers.envir.environment.GEONNGet:17 of
-msgid ""
-"if offered, the nn_strategy would be neglect and find neighbors using"
-"     ``find_points_in_spheres`` in pymatgen."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:36
-#: featurebox.featurizers.envir.environment.GEONNGet:18 of
-msgid "if offered, the nn_strategy would be neglect and find neighbors using"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet:35
-#: featurebox.featurizers.envir.environment.GEONNGet:19 of
-msgid "``find_points_in_spheres`` in pymatgen."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet.get_radius:1
-#: featurebox.featurizers.envir.environment.BaseNNGet.get_xyz:1 of
-msgid "For quick get bond distance"
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.BaseNNGet.get_strategy:1 of
-msgid ""
-"For get bond distance with different strategy, for different nn_staagy "
-"could be rewrite."
-msgstr ""
-
-#: featurebox.featurizers.envir.environment.GEONNGet:1 of
-msgid "Bases: :class:`featurebox.featurizers.envir.environment.BaseNNGet`"
-msgstr ""
-
-#: ../../src/featurebox.featurizers.envir.rst:29
+#: ../../src/featurebox.featurizers.envir.rst:37
 msgid "featurebox.featurizers.envir.local\\_env module"
 msgstr ""
 
 #: featurebox.featurizers.envir.local_env:1 of
-msgid "Use NearNeighbors from ``pymatgen``."
+msgid "Use NearNeighbors from ``pymatgen``. all with ``get_all_nn_info`` method."
 msgstr ""
 
-#: featurebox.featurizers.envir.local_env:3 of
+#: featurebox.featurizers.envir.local_env:4 of
 msgid ""
 "Most in :mod:`pymatgen.analysis.local_env` or in "
 ":func:`pymatgen.optimization.neighbors.find_points_in_spheres` The "
@@ -314,7 +60,7 @@ msgstr ""
 
 #: featurebox.featurizers.envir.local_env.AllAtomPairs:1
 #: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll:1 of
-msgid "Bases: :class:`pymatgen.analysis.local_env.NearNeighbors`"
+msgid "Bases: :py:class:`pymatgen.analysis.local_env.NearNeighbors`"
 msgstr ""
 
 #: featurebox.featurizers.envir.local_env.AllAtomPairs:1 of
@@ -333,6 +79,12 @@ msgstr ""
 
 #: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll:1 of
 msgid "Determine bonded sites by fixed cutoff."
+msgstr ""
+
+#: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll
+#: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll.get_nn_info
+#: featurebox.featurizers.envir.local_env.UserVoronoiNN of
+msgid "Parameters"
 msgstr ""
 
 #: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll:3 of
@@ -354,6 +106,10 @@ msgstr ""
 
 #: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll.get_nn_info:7 of
 msgid "index of site for which to determine near neighbors."
+msgstr ""
+
+#: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll.get_nn_info of
+msgid "Returns"
 msgstr ""
 
 #: featurebox.featurizers.envir.local_env.MinimumDistanceNNAll.get_nn_info:11
@@ -378,7 +134,7 @@ msgid "Return type"
 msgstr ""
 
 #: featurebox.featurizers.envir.local_env.UserVoronoiNN:1 of
-msgid "Bases: :class:`pymatgen.analysis.local_env.VoronoiNN`"
+msgid "Bases: :py:class:`pymatgen.analysis.local_env.VoronoiNN`"
 msgstr ""
 
 #: featurebox.featurizers.envir.local_env.UserVoronoiNN:1 of
@@ -416,61 +172,18 @@ msgstr ""
 msgid "adjacent. Turn off for faster performance"
 msgstr ""
 
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:5
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:6
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:10
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:5
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:6
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:10 of
-msgid "np.ndarray 1d"
-msgstr ""
+#~ msgid "基类：:py:class:`pymatgen.analysis.local_env.NearNeighbors`"
+#~ msgstr ""
 
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:7
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:7 of
-msgid "np.ndarray 1d or np.ndarray 2d"
-msgstr ""
+#~ msgid "参数"
+#~ msgstr ""
 
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:8
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:9
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:8
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:9 of
-msgid "np.ndarray 2d"
-msgstr ""
+#~ msgid "返回"
+#~ msgstr ""
 
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:11 of
-msgid "float, not use,"
-msgstr ""
+#~ msgid "返回类型"
+#~ msgstr ""
 
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:13
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:12 of
-msgid "bool sort neighbors with distance."
-msgstr ""
-
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:16
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:15 of
-msgid ""
-"(center_indices,center_indices,  neighbor_indices, images, distances)  "
-"center_indices: np.ndarray 1d(N,).  neighbor_indices: np.ndarray "
-"2d(N,fill_size).  images: np.ndarray 2d(N,fill_size,l).  distance: "
-"np.ndarray 2d(N,fill_size,1). center_prop: np.ndarray 1d(N,l_c)."
-msgstr ""
-
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:16
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:15 of
-msgid "(center_indices,center_indices,  neighbor_indices, images, distances)"
-msgstr ""
-
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:24
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:23 of
-msgid "distance: np.ndarray 2d(N,fill_size,1). center_prop: np.ndarray 1d(N,l_c)."
-msgstr ""
-
-#: featurebox.featurizers.envir.local_env.geo_refine_nn:27
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:26 of
-msgid "where l, and l_c >= 1"
-msgstr ""
-
-#: featurebox.featurizers.envir.local_env.universe_refine_nn:11 of
-msgid "float"
-msgstr ""
+#~ msgid "基类：:py:class:`pymatgen.analysis.local_env.VoronoiNN`"
+#~ msgstr ""
 

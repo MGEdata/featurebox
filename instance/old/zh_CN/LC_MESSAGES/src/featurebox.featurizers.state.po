@@ -1,0 +1,883 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-08 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.featurizers.state.rst:2
+msgid "featurebox.featurizers.state package"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.state.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.state.rst:13
+msgid "featurebox.featurizers.state.extrastats module"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats:1 of
+msgid "General methods for computing property statistics from a list of values"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats:1
+#: featurebox.featurizers.state.kpath.HighSymPoints:1
+#: featurebox.featurizers.state.kpath.HighSymPointsCPP:1 of
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats:1 of
+msgid ""
+"This class contains statistical operations that are commonly employed "
+"when computing features. The primary way for interacting with this class "
+"is to call the ``calc_stat`` function, which takes the x_name of the "
+"statistic you would like to compute and the weights/values of datamnist "
+"to be assessed. For example, computing the mean of a list looks like:"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats:12 of
+msgid ""
+"Some of the statistics functions take options (e.g., Holder means). You "
+"can pass them to the the statistics functions by adding them after the "
+"x_name and two colons. For example, the 0th Holder mean would be:"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats:16 of
+msgid ">>>PropertyStats.calc_stat(x, 'holder_mean::0')"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats:18 of
+msgid ""
+"You can, of course, call the statistical functions directly. All take at "
+"least two arguments.  The first is the datamnist being assessed and the "
+"second, optional, argument is the weights."
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.avg_dev:1 of
+msgid ""
+"Mean absolute deviation of list of element datamnist. This is computed by"
+" first calculating the mean of the list, and then computing the average "
+"absolute difference between each value and the mean. :param data_lst: "
+"List of values to be assessed :type data_lst: list of floats :param "
+"weights: Weights for each value :type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.avg_dev
+#: featurebox.featurizers.state.extrastats.PropertyStats.calc_stat
+#: featurebox.featurizers.state.extrastats.PropertyStats.geom_std_dev
+#: featurebox.featurizers.state.extrastats.PropertyStats.inverse_mean
+#: featurebox.featurizers.state.extrastats.PropertyStats.kurtosis
+#: featurebox.featurizers.state.extrastats.PropertyStats.maximum
+#: featurebox.featurizers.state.extrastats.PropertyStats.mean
+#: featurebox.featurizers.state.extrastats.PropertyStats.minimum
+#: featurebox.featurizers.state.extrastats.PropertyStats.mode
+#: featurebox.featurizers.state.extrastats.PropertyStats.quantile
+#: featurebox.featurizers.state.extrastats.PropertyStats.range
+#: featurebox.featurizers.state.extrastats.PropertyStats.skewness
+#: featurebox.featurizers.state.extrastats.PropertyStats.std_dev
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_conventional_standard_structure
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_conventional_to_primitive_transformation_matrix
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_primitive_standard_structure
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.mix_function
+#: featurebox.featurizers.state.statistics.DepartElementFeature.mix_function
+#: featurebox.featurizers.state.statistics.DepartElementFeature.set_feature_labels
+#: featurebox.featurizers.state.statistics.ExtraMix.mix_function
+#: featurebox.featurizers.state.statistics.GeometricMean.mix_function
+#: featurebox.featurizers.state.statistics.HarmonicMean.mix_function
+#: featurebox.featurizers.state.statistics.MaxPooling.mix_function
+#: featurebox.featurizers.state.statistics.MinPooling.mix_function
+#: featurebox.featurizers.state.statistics.WeightedAverage.mix_function
+#: featurebox.featurizers.state.statistics.WeightedSum.mix_function
+#: featurebox.featurizers.state.statistics.WeightedVariance.mix_function
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform
+#: featurebox.featurizers.state.union.PolyFeature.set_feature_labels
+#: featurebox.featurizers.state.union.UnionFeature.convert
+#: featurebox.featurizers.state.union.UnionFeature.set_feature_labels
+#: featurebox.featurizers.state.union.UnionFeature.transform of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.avg_dev:10 of
+msgid "mean absolute deviation"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.calc_stat:1 of
+msgid "Compute a property statistic"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.calc_stat
+#: featurebox.featurizers.state.kpath.HSPConverter
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser
+#: featurebox.featurizers.state.state_mapper.StructurePymatgenPropMap
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.mix_function
+#: featurebox.featurizers.state.statistics.DepartElementFeature.mix_function
+#: featurebox.featurizers.state.statistics.ExtraMix.mix_function
+#: featurebox.featurizers.state.statistics.GeometricMean.mix_function
+#: featurebox.featurizers.state.statistics.HarmonicMean.mix_function
+#: featurebox.featurizers.state.statistics.MaxPooling.mix_function
+#: featurebox.featurizers.state.statistics.MinPooling.mix_function
+#: featurebox.featurizers.state.statistics.WeightedAverage.mix_function
+#: featurebox.featurizers.state.statistics.WeightedSum.mix_function
+#: featurebox.featurizers.state.statistics.WeightedVariance.mix_function
+#: featurebox.featurizers.state.union.PolyFeature
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform
+#: featurebox.featurizers.state.union.UnionFeature
+#: featurebox.featurizers.state.union.UnionFeature.convert
+#: featurebox.featurizers.state.union.UnionFeature.set_feature_labels
+#: featurebox.featurizers.state.union.UnionFeature.transform of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.calc_stat:3 of
+msgid "list of values"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.calc_stat:10 of
+msgid "(Optional) weights for each element in data_lst"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.calc_stat:13 of
+msgid "float - Desired statistic"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.eigenvalues:1 of
+msgid ""
+"Return the eigenvalues of a matrix as a numpy array :param data_lst: "
+"(matrix-like) of values :param symm: whether to assume the matrix is "
+"symmetric :param sort: wheter to sort the eigenvalues"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.eigenvalues:6 of
+msgid "Returns: eigenvalues"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.flatten:1 of
+msgid "Returns a flattened copy of data_lst-as a numpy array"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.geom_std_dev:1 of
+msgid ""
+"Geometric standard deviation :param data_lst: List of values to be "
+"assessed :type data_lst: list of floats :param weights: Weights for each "
+"value :type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.geom_std_dev:7 of
+msgid "geometric standard deviation"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.holder_mean:1 of
+msgid ""
+"Get Holder mean :param data_lst: (list/array) of values :param weights: "
+"(list/array) of weights :param power: (int/float/str) which holder mean "
+"to compute"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.holder_mean:6 of
+msgid "Returns: Holder mean"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.inverse_mean:1 of
+msgid ""
+"Mean of the inverse of each entry :param data_lst: List of values to be "
+"assessed :type data_lst: list of floats :param weights: Weights for each "
+"value :type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.inverse_mean:7 of
+msgid "inverse mean"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.kurtosis:1 of
+msgid ""
+"Kurtosis of a list of datamnist :param data_lst: List of values to be "
+"assessed :type data_lst: list of floats :param weights: Weights for each "
+"value :type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.kurtosis:7 of
+msgid "kurtosis"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.maximum:1 of
+msgid ""
+"Maximum value in a list :param data_lst: List of values to be assessed "
+":type data_lst: list of floats :param weights: (ignored)"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.maximum:6 of
+msgid "maximum value"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.mean:1 of
+msgid ""
+"Arithmetic mean of list :param data_lst: List of values to be assessed "
+":type data_lst: list of floats :param weights: Weights for each value "
+":type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.mean:7 of
+msgid "mean value"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.minimum:1 of
+msgid ""
+"Minimum value in a list :param data_lst: List of values to be assessed "
+":type data_lst: list of floats :param weights: (ignored)"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.minimum:6 of
+msgid "minimum value"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.mode:1 of
+msgid ""
+"Mode of a list of datamnist. If multiple elements occur equally-"
+"frequently (or same weight, if weights are provided), this function will "
+"return the minimum of those values. :param data_lst: List of values to be"
+" assessed :type data_lst: list of floats :param weights: Weights for each"
+" value :type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.mode:10 of
+msgid "mode"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.quantile:1 of
+msgid ""
+"Return a specific quantile. :param data_lst: 1D datamnist list to be used"
+" for computing, quantiles :type data_lst: list or np.ndarray :param q: "
+"The quantile, as a fraction between 0 and 1. :type q: float"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.quantile:7 of
+msgid "(float) The computed quantile of the data_lst."
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.range:1 of
+msgid ""
+"Range of a list :param data_lst: List of values to be assessed :type "
+"data_lst: list of floats :param weights: (ignored)"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.range:6 of
+msgid "range"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.skewness:1 of
+msgid ""
+"Skewness of a list of datamnist :param data_lst: List of values to be "
+"assessed :type data_lst: list of floats :param weights: Weights for each "
+"value :type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.skewness:7 of
+msgid "shewness"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.sorted:1 of
+msgid "Returns the sorted data_lst"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.std_dev:1 of
+msgid ""
+"Standard deviation of a list of element datamnist :param data_lst: List "
+"of values to be assessed :type data_lst: list of floats :param weights: "
+"Weights for each value :type weights: list of floats"
+msgstr ""
+
+#: featurebox.featurizers.state.extrastats.PropertyStats.std_dev:7 of
+msgid "standard deviation"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.state.rst:21
+msgid "featurebox.featurizers.state.kpath module"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter:1
+#: featurebox.featurizers.state.union.UnionFeature:1 of
+msgid "Bases: :class:`featurebox.featurizers.base_feature.BaseFeature`"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter:1 of
+msgid "Get K points."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter:3
+#: featurebox.featurizers.state.union.PolyFeature:20
+#: featurebox.featurizers.state.union.UnionFeature:35 of
+msgid "size of batch."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter:5
+#: featurebox.featurizers.state.union.PolyFeature:22
+#: featurebox.featurizers.state.union.UnionFeature:37 of
+msgid "batch_calculate or not."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter:7
+#: featurebox.featurizers.state.union.PolyFeature:24
+#: featurebox.featurizers.state.union.UnionFeature:39 of
+msgid "Parallel number."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter:9
+#: featurebox.featurizers.state.union.PolyFeature:26
+#: featurebox.featurizers.state.union.UnionFeature:41 of
+msgid ""
+"How to handle the exceptions in a feature calculations. Can be ``nan``, "
+"``keep``, ``raise``. When 'nan', return a column with np.nan. The length "
+"of column corresponding to the number of feature labs. The default is "
+"'raise' which will raise up the exception."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter:14
+#: featurebox.featurizers.state.union.PolyFeature:31
+#: featurebox.featurizers.state.union.UnionFeature:46 of
+msgid ""
+"Specific the return type. Can be ``any``, ``np``,``array`` and ``df``. "
+"'array' and 'df' force return type to np.ndarray and pd.DataFrame "
+"respectively. If 'any', without type conversion . Default is 'any'"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HSPConverter.convert:1 of
+msgid "Get kps shape (n,20,3)"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints:1 of
+msgid "Get High K point"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.bcc:1 of
+msgid "BCC Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.bctet1:1 of
+msgid "BCT1 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.bctet2:1 of
+msgid "BCT2 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.cubic:1 of
+msgid "CUB Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.fcc:1 of
+msgid "FCC Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.hex:1 of
+msgid "HEX Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.mcl:1 of
+msgid "MCL Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.mclc1:1 of
+msgid "MCLC1 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.mclc2:1 of
+msgid "MCLC2 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.mclc3:1 of
+msgid "MCLC3 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.mclc4:1 of
+msgid "MCLC4 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.mclc5:1 of
+msgid "MCLC5 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.orc:1 of
+msgid "ORC Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.orcc:1 of
+msgid "ORCC Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.orcf1:1 of
+msgid "ORFC1 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.orcf2:1 of
+msgid "ORFC2 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.orcf3:1 of
+msgid "ORFC3 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.orci:1 of
+msgid "ORCI Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.rhl1:1 of
+msgid "RHL1 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.rhl2:1 of
+msgid "RHL2 Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.tet:1 of
+msgid "TET Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.tria:1 of
+msgid "TRI1a Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPoints.trib:1 of
+msgid "TRI1b Path"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPointsCPP:1 of
+msgid "Quick for get k points by cpp method."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPointsCPP.kps:1 of
+msgid "Get kps shape(n,20,3)"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.HighSymPointsCPP.kps_tensor:1 of
+msgid "get kps shape(n,20,3)"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser:1 of
+msgid "Bases: :class:`pymatgen.symmetry.analyzer.SpacegroupAnalyzer`"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser:1 of
+msgid ""
+"A copy from pymatgen. The change is for quick return the preprocessing: "
+"[type_number,a, b, c, alpha_prim, alpha_conv]"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser:4 of
+msgid ""
+"The result of SpacegroupAnalyzerUser and input of HighSymPoints are "
+"matched."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser:6 of
+msgid "(Structure)"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser:7
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser:8 of
+msgid "(float)"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.decide:1 of
+msgid "get type number by message"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_conventional_standard_structure:1
+#: of
+msgid ""
+"Gives a structure with a conventional cell according to certain "
+"standards. The standards are defined in Setyawan, W., & Curtarolo, S. "
+"(2010). High-throughput electronic band structure calculations: "
+"Challenges and tools. Computational Materials Science, 49(2), 299-312. "
+"doi:10.1016/j.commatsci.2010.05.010 They basically enforce as much as "
+"possible norm(a1)<norm(a2)<norm(a3)"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_conventional_standard_structure:9
+#: of
+msgid "The structure in a conventional standardized cell"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_conventional_to_primitive_transformation_matrix:1
+#: of
+msgid ""
+"Gives the transformation matrix to transform a conventional unit cell to "
+"a primitive cell according to certain standards the standards are defined"
+" in Setyawan, W., & Curtarolo, S. (2010). High-throughput electronic band"
+" structure calculations: Challenges and tools. Computational Materials "
+"Science, 49(2), 299-312. doi:10.1016/j.commatsci.2010.05.010"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_conventional_to_primitive_transformation_matrix:8
+#: of
+msgid "Transformation matrix to go from conventional to primitive cell"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_primitive_standard_structure:1
+#: of
+msgid ""
+"Gives a structure with a primitive cell according to certain standards "
+"the standards are defined in Setyawan, W., & Curtarolo, S. (2010). High-"
+"throughput electronic band structure calculations: Challenges and tools. "
+"Computational Materials Science, 49(2), 299-312. "
+"doi:10.1016/j.commatsci.2010.05.010"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_primitive_standard_structure:7
+#: of
+msgid "The structure in a primitive standardized cell"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.get_sgt:1 of
+msgid "return 7 member. [type_number, a, b, c, alpha_prim, alpha_conv]"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.SpacegroupAnalyzerUser.message:1 of
+msgid ""
+"return lattice_type, spg_symbol, a, b, c, alpha_prim, alpha_conv, "
+"alpha_rec_lattice, beta_rec_lattice, gamma_rec_lattice]"
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.get_angles:1 of
+msgid "Returns the angles (alpha, beta, gamma) of the lattice."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.get_lengths:1 of
+msgid "Return The lengths (a, b, c) of the lattice."
+msgstr ""
+
+#: featurebox.featurizers.state.kpath.reciprocal_lattice_angle:1 of
+msgid "Return the angle of reciprocal lattice."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.state.rst:29
+msgid "featurebox.featurizers.state.state\\_mapper module"
+msgstr ""
+
+#: featurebox.featurizers.state.state_mapper.StructurePymatgenPropMap:1 of
+msgid ""
+"Bases: "
+":class:`featurebox.featurizers.atom.mapper._StructurePymatgenPropMap`"
+msgstr ""
+
+#: featurebox.featurizers.state.state_mapper.StructurePymatgenPropMap:1 of
+msgid ""
+"Get property of pymatgen structure preprocessing. default [\"density\", "
+"\"volume\", \"ntypesp\"]"
+msgstr ""
+
+#: featurebox.featurizers.state.state_mapper.StructurePymatgenPropMap:5
+#: featurebox.featurizers.state.statistics.DepartElementFeature:4
+#: featurebox.featurizers.state.statistics.WeightedAverage:2
+#: featurebox.featurizers.state.statistics.WeightedSum:2
+#: featurebox.featurizers.state.union.PolyFeature:6
+#: featurebox.featurizers.state.union.UnionFeature:4 of
+msgid "Examples"
+msgstr ""
+
+#: featurebox.featurizers.state.state_mapper.StructurePymatgenPropMap:9 of
+msgid ""
+"(str,list of str) prop name or list of prop name default [\"density\", "
+"\"volume\", \"ntypesp\"]"
+msgstr ""
+
+#: featurebox.featurizers.state.state_mapper.StructurePymatgenPropMap:12 of
+msgid ""
+"(callable or list of callable) please make sure the size of it is the "
+"same with prop_name."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.state.rst:37
+msgid "featurebox.featurizers.state.statistics module"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature:1 of
+msgid "Bases: :class:`featurebox.featurizers.atom.mapper.BinaryMap`"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature:1 of
+msgid ""
+"BaseCompositionFeature is the basis for composition data. the subclass "
+"should be re-implemented, such as: ::"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature:10
+#: featurebox.featurizers.state.statistics.DepartElementFeature:20
+#: featurebox.featurizers.state.statistics.ExtraMix:3
+#: featurebox.featurizers.state.statistics.GeometricMean:3
+#: featurebox.featurizers.state.statistics.HarmonicMean:3
+#: featurebox.featurizers.state.statistics.MaxPooling:3
+#: featurebox.featurizers.state.statistics.MinPooling:3
+#: featurebox.featurizers.state.statistics.WeightedAverage:22
+#: featurebox.featurizers.state.statistics.WeightedSum:22
+#: featurebox.featurizers.state.statistics.WeightedVariance:3 of
+msgid "Base class for composition feature."
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.convert_dict:1
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.convert_number:1
+#: featurebox.featurizers.state.statistics.DepartElementFeature.convert_dict:1
+#: featurebox.featurizers.state.statistics.DepartElementFeature.convert_number:1
+#: of
+msgid "Convert atom {symbol: fraction} list to numeric features"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.mix_function:1
+#: featurebox.featurizers.state.statistics.DepartElementFeature.mix_function:1
+#: featurebox.featurizers.state.statistics.ExtraMix.mix_function:1
+#: featurebox.featurizers.state.statistics.GeometricMean.mix_function:1
+#: featurebox.featurizers.state.statistics.HarmonicMean.mix_function:1
+#: featurebox.featurizers.state.statistics.MaxPooling.mix_function:1
+#: featurebox.featurizers.state.statistics.MinPooling.mix_function:1
+#: featurebox.featurizers.state.statistics.WeightedAverage.mix_function:1
+#: featurebox.featurizers.state.statistics.WeightedSum.mix_function:1
+#: featurebox.featurizers.state.statistics.WeightedVariance.mix_function:1 of
+msgid "Elements in compound."
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.mix_function:3
+#: featurebox.featurizers.state.statistics.DepartElementFeature.mix_function:3
+#: featurebox.featurizers.state.statistics.ExtraMix.mix_function:3
+#: featurebox.featurizers.state.statistics.GeometricMean.mix_function:3
+#: featurebox.featurizers.state.statistics.HarmonicMean.mix_function:3
+#: featurebox.featurizers.state.statistics.MaxPooling.mix_function:3
+#: featurebox.featurizers.state.statistics.MinPooling.mix_function:3
+#: featurebox.featurizers.state.statistics.WeightedAverage.mix_function:3
+#: featurebox.featurizers.state.statistics.WeightedSum.mix_function:3
+#: featurebox.featurizers.state.statistics.WeightedVariance.mix_function:3 of
+msgid "Number of each element."
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.mix_function:6
+#: featurebox.featurizers.state.statistics.DepartElementFeature.mix_function:6
+#: featurebox.featurizers.state.statistics.ExtraMix.mix_function:6
+#: featurebox.featurizers.state.statistics.GeometricMean.mix_function:6
+#: featurebox.featurizers.state.statistics.HarmonicMean.mix_function:6
+#: featurebox.featurizers.state.statistics.MaxPooling.mix_function:6
+#: featurebox.featurizers.state.statistics.MinPooling.mix_function:6
+#: featurebox.featurizers.state.statistics.WeightedAverage.mix_function:6
+#: featurebox.featurizers.state.statistics.WeightedSum.mix_function:6
+#: featurebox.featurizers.state.statistics.WeightedVariance.mix_function:6 of
+msgid "**descriptor**"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.BaseCompositionFeature.mix_function
+#: featurebox.featurizers.state.statistics.DepartElementFeature.mix_function
+#: featurebox.featurizers.state.statistics.ExtraMix.mix_function
+#: featurebox.featurizers.state.statistics.GeometricMean.mix_function
+#: featurebox.featurizers.state.statistics.HarmonicMean.mix_function
+#: featurebox.featurizers.state.statistics.MaxPooling.mix_function
+#: featurebox.featurizers.state.statistics.MinPooling.mix_function
+#: featurebox.featurizers.state.statistics.WeightedAverage.mix_function
+#: featurebox.featurizers.state.statistics.WeightedSum.mix_function
+#: featurebox.featurizers.state.statistics.WeightedVariance.mix_function
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform
+#: featurebox.featurizers.state.union.UnionFeature.convert
+#: featurebox.featurizers.state.union.UnionFeature.set_feature_labels
+#: featurebox.featurizers.state.union.UnionFeature.transform of
+msgid "Return type"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.DepartElementFeature:1
+#: featurebox.featurizers.state.statistics.ExtraMix:1
+#: featurebox.featurizers.state.statistics.GeometricMean:1
+#: featurebox.featurizers.state.statistics.HarmonicMean:1
+#: featurebox.featurizers.state.statistics.MaxPooling:1
+#: featurebox.featurizers.state.statistics.MinPooling:1
+#: featurebox.featurizers.state.statistics.WeightedAverage:1
+#: featurebox.featurizers.state.statistics.WeightedSum:1
+#: featurebox.featurizers.state.statistics.WeightedVariance:1 of
+msgid ""
+"Bases: "
+":class:`featurebox.featurizers.state.statistics.BaseCompositionFeature`"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.DepartElementFeature:1 of
+msgid "Get the table of element data."
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.DepartElementFeature:14 of
+msgid "fea_0_0   fea_0_1   fea_1_0  ...  fea_14_1  fea_15_0  fea_15_1"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.DepartElementFeature:15 of
+msgid ""
+"0  0.352363  0.561478  0.635952  ... -0.236541 -0.270104 -0.212607 1 "
+"-0.067220  0.025758  0.141113  ... -0.092577 -0.042185  0.080350 "
+"<BLANKLINE> [2 rows x 32 columns]"
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.DepartElementFeature.set_feature_labels:1
+#: featurebox.featurizers.state.union.PolyFeature.set_feature_labels:1
+#: featurebox.featurizers.state.union.UnionFeature.set_feature_labels:1 of
+msgid "Generate attribute names."
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.DepartElementFeature.set_feature_labels:3
+#: featurebox.featurizers.state.union.PolyFeature.set_feature_labels:3 of
+msgid "([str]) attribute labels."
+msgstr ""
+
+#: featurebox.featurizers.state.statistics.ExtraMix:1
+#: featurebox.featurizers.state.statistics.GeometricMean:1
+#: featurebox.featurizers.state.statistics.HarmonicMean:1
+#: featurebox.featurizers.state.statistics.MaxPooling:1
+#: featurebox.featurizers.state.statistics.MinPooling:1
+#: featurebox.featurizers.state.statistics.WeightedVariance:1 of
+msgid ":class:`WeightedSum`"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.state.rst:45
+msgid "featurebox.featurizers.state.union module"
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature:1 of
+msgid ""
+"Bases: :class:`featurebox.featurizers.base_feature.BaseFeature`, "
+":class:`abc.ABC`"
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature:1 of
+msgid "Extension method."
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature:3 of
+msgid "Such as degree = 2 means (x1x2,x1**2,x2**2)"
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature:12 of
+msgid ""
+"n   f0^1     f1^1  f0^2  f0^1*f1^1      f1^2 0   0.0  0.422068   0.0   "
+"0.000000  0.178141 1   1.0  0.360958   1.0   0.360958  0.130291 2   2.0  "
+"0.201433   4.0   0.402866  0.040575 3   3.0 -0.459164   9.0  -1.377492  "
+"0.210832 4   4.0 -0.064783  16.0  -0.259132  0.004197 5   5.0 -0.250939  "
+"25.0  -1.254695  0.062970"
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:1 of
+msgid "If `convert` takes multiple inputs, supply inputs as a list of tuples."
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:3 of
+msgid ""
+"Copy from Mixin class for all transformers in scikit-learn. "
+"TransformerMixin"
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:5 of
+msgid "Fit to data, then transform it."
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:7 of
+msgid ""
+"Fits transformer to `X` and `y` with optional parameters `fit_params` and"
+" returns a transformed version of `X`."
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:10 of
+msgid "list of case."
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:12 of
+msgid "deprecated."
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:14 of
+msgid ""
+"Additional fit or transform parameters. feature_labels_mark: str, mark "
+"for each feature_labes. for return_type =='pd'. x_labels: list, mark for "
+"each row. for return_type =='pd'."
+msgstr ""
+
+#: featurebox.featurizers.state.union.PolyFeature.fit_transform:18 of
+msgid "result data."
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature:1 of
+msgid "Transform method should input0 comp_index rather than entries."
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.convert:1 of
+msgid "Get elemental property attributes"
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.convert:3 of
+msgid "Pymatgen composition object"
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.convert:5 of
+msgid "Specified property statistics of features :param comp_number:"
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.transform:1 of
+msgid ""
+"Transform a list of entries. Each iterable element of entries is "
+"corresponding to the parameter of ``convert``, If ``convert`` takes n "
+"multiple inputs, the transform inputs should be a list or tuple (size n),"
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.transform:4 of
+msgid "[(p1,p2),(p1,p2),(p1,p2),...,(p1,p2),(p1,p2)]"
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.transform:6 of
+msgid "which can be from `zip`` or used the built-in ``transform_with_zip``."
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.transform:8 of
+msgid "A list of entries to be featured."
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.transform:11 of
+msgid "**result** -- features for each entry."
+msgstr ""
+
+#: featurebox.featurizers.state.union.UnionFeature.set_feature_labels:3 of
+msgid "name"
+msgstr ""
+
+#~ msgid ""
+#~ "Main feature function, which has to "
+#~ "be implemented in any derived feature"
+#~ " subclass."
+#~ msgstr ""
+
+#~ msgid "Notes"
+#~ msgstr ""
+
+#~ msgid "It cannot be passed np.array in default unless:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "1. useful for bond_converter. For "
+#~ "np.array we check the ndim and for"
+#~ " ndim 2, or 3. we decide "
+#~ "whether to pass them the data to"
+#~ " ``_converter`` together or separately by"
+#~ " ``self.ndim`` attribute. Now max support"
+#~ " 3d. due to for some functions, "
+#~ "using ``ufunc`` in numpy is very "
+#~ "efficient."
+#~ msgstr ""
+
+#~ msgid "keep the size of data and simple the ``_convert``."
+#~ msgstr ""
+
+#~ msgid "one input data (one sample, one case),"
+#~ msgstr ""
+
+#~ msgid "new x."
+#~ msgstr ""
+

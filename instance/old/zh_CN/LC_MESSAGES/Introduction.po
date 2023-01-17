@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+# Translators:
+# changxin W <986798607@qq.com>, 2021
+msgid ""
+msgstr ""
+"Project-Id-Version:  featurebox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-08 11:09+0800\n"
+"PO-Revision-Date: 2021-08-06 06:13+0000\n"
+"Last-Translator: changxin W <986798607@qq.com>, 2021\n"
+"Language: zh\n"
+"Language-Team: Chinese (https://www.transifex.com/ustb/teams/123473/zh/)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../Introduction.rst:2
+msgid "Introduction"
+msgstr "介绍"
+
+#: ../../Introduction.rst:6
+msgid ""
+"Featurebox contains some tools (**Generation** and **Selection**) for "
+"material features."
+msgstr "Featurebox包含了一些工具，用于材料特征的 **生成** 和 **选择** 。 "
+
+#: ../../Introduction.rst:9
+msgid "Generation tools"
+msgstr "特征生成成工具"
+
+#: ../../Introduction.rst:12 ../../Introduction.rst:33
+#: ../../Introduction.rst:57
+msgid "Name"
+msgstr "名称"
+
+#: ../../Introduction.rst:12 ../../Introduction.rst:33
+#: ../../Introduction.rst:57
+msgid "Application"
+msgstr "应用"
+
+#: ../../Introduction.rst:14
+msgid ":mod:`featurebox.featurizers.atom.mapper`"
+msgstr ""
+
+#: ../../Introduction.rst:14
+msgid "``atom`` Getting each element data of compound."
+msgstr "获取化合物的每个元素数据特征。"
+
+#: ../../Introduction.rst:15
+msgid ":mod:`featurebox.featurizers.envir`"
+msgstr ""
+
+#: ../../Introduction.rst:15
+msgid "``bond`` Getting local environment data (bond and state) of compound."
+msgstr "获取化合物的局域环境特征（包括元素，键和状态）。"
+
+#: ../../Introduction.rst:16
+msgid ":mod:`featurebox.featurizers.state`"
+msgstr ""
+
+#: ../../Introduction.rst:16
+msgid "``state`` Getting holistic compound data."
+msgstr "获得化合物整体的状态特征。"
+
+#: ../../Introduction.rst:17
+msgid ":mod:`featurebox.featurizers.bond.expander`"
+msgstr ""
+
+#: ../../Introduction.rst:17
+msgid "Tools to transforming pure bond data."
+msgstr "转换键特征。"
+
+#: ../../Introduction.rst:18
+msgid ":mod:`featurebox.featurizers.batch_feature`"
+msgstr ""
+
+#: ../../Introduction.rst:18
+msgid "A built-in goofy tool for generating features."
+msgstr "生成特征的一键式”傻瓜“工具。"
+
+#: ../../Introduction.rst:19
+msgid ":class:`featurebox.data.namesplit.NameSplit`"
+msgstr ""
+
+#: ../../Introduction.rst:19
+msgid "Dividing compound names to elemental proportion table."
+msgstr "将复杂的纯文本化学式名称分割成元素比例表格。"
+
+#: ../../Introduction.rst:20
+msgid ":class:`featurebox.data.mp_access.MpAccess`"
+msgstr ""
+
+#: ../../Introduction.rst:20
+msgid "Getting data from pymatgen conveniently."
+msgstr "pymatgen API 数据工具。"
+
+#: ../../Introduction.rst:23
+msgid ""
+"All the **Generation** tools with  ``convert`` method for single case. "
+"and ``fit_transform`` methods for case list."
+msgstr "所有的特征产生工具，使用 ``convert`` 方法处理单一数据。并且使用 ``fit_transform`` 方法批量处理数据列表。"
+
+#: ../../Introduction.rst:26
+msgid "Guide: :doc:`Guide/data_type`"
+msgstr "指南： :doc:`Guide/data_type`"
+
+#: ../../Introduction.rst:30
+msgid "Binding selection tools"
+msgstr "绑定选择工具"
+
+#: ../../Introduction.rst:35
+msgid ":class:`featurebox.selection.backforward.BackForward`"
+msgstr ""
+
+#: ../../Introduction.rst:35
+msgid "Backforward selection"
+msgstr "前进后退筛选"
+
+#: ../../Introduction.rst:36
+msgid ":class:`featurebox.selection.corr.Corr`"
+msgstr ""
+
+#: ../../Introduction.rst:36
+msgid "Correlation selection."
+msgstr "相关系数筛选"
+
+#: ../../Introduction.rst:37
+msgid ":class:`featurebox.selection.exhaustion.Exhaustion`"
+msgstr ""
+
+#: ../../Introduction.rst:37
+msgid "Exhaustion selection."
+msgstr "穷举筛选"
+
+#: ../../Introduction.rst:38
+msgid ":class:`featurebox.selection.ga.GA`"
+msgstr ""
+
+#: ../../Introduction.rst:38
+msgid "Genetic algorithm selection."
+msgstr "遗传算法筛选"
+
+#: ../../Introduction.rst:41
+msgid ""
+"All the selection tools are ``sklearn-type``, with ``fit``, "
+"``fit_transform`` methods .etc."
+msgstr "所有的选择类工具为 ``sklearn-type``，有 ``fit``，``fit_transform`` 等方法。"
+
+#: ../../Introduction.rst:43
+msgid "Guide: :doc:`Guide/bind_selection`"
+msgstr "指南： :doc:`Guide/bind_selection`"
+
+#: ../../Introduction.rst:47
+msgid ""
+"Where the binding means treat the binding features as one feature. And "
+"the binding features are selected or deleted synchronously."
+msgstr "其中绑定意味着将绑定特征视为一个整体，并同步筛选或删除绑定特征。"
+
+#: ../../Introduction.rst:52
+msgid "Graph neural network tools"
+msgstr "图神经网络工具"
+
+#: ../../Introduction.rst:54
+msgid "Featurebox integrated with **Graph neural network**."
+msgstr "Featurebox集成了 **图神经网络**。"
+
+#: ../../Introduction.rst:59
+msgid ":class:`featurebox.featurizers.base_graph_geo.StructureGraphGEO`"
+msgstr ""
+
+#: ../../Introduction.rst:59
+msgid "Integrated structure data tool. (high dimensional data)"
+msgstr "从pymatgen结构产生图神将网络输入数据（多种形式）。"
+
+#: ../../Introduction.rst:60
+msgid ":class:`featurebox.models_geo.cgcnn.CrystalGraphConvNet`"
+msgstr ""
+
+#: ../../Introduction.rst:60
+msgid "Traditional graph neural network."
+msgstr "传统的图神经网络。"
+
+#: ../../Introduction.rst:61
+msgid ":class:`featurebox.models_geo.flow_geo.LearningFlow`"
+msgstr ""
+
+#: ../../Introduction.rst:61
+msgid "Script for modeling (recommended customization by user)."
+msgstr "用于网络建模的脚本(推荐用户自定义)。"
+
+#: ../../Introduction.rst:62
+msgid ":class:`featurebox.featurizers.generator_geo.InMemoryDatasetGeo`"
+msgstr ""
+
+#: ../../Introduction.rst:62
+msgid "``Dataset`` for data data in a non-uniform format. (Torch-like)"
+msgstr "网络输入数据格式转换（对接torch_geometrics）。"
+
+#: ../../Introduction.rst:66
+msgid ""
+"The neural network tools are ``torch-type``, with ``forward`` methods "
+".etc."
+msgstr "所有的网络是 ``torch-type``, 例如有 ``forward`` 方法等。"
+
+#: ../../Introduction.rst:68
+msgid "Guide: :doc:`Guide/geo_data`"
+msgstr "指南： :doc:`Guide/geo_data`"
+
+#: ../../Introduction.rst:72
+msgid ""
+"The **Graph neural network** employ **envir**, **bond** and **atom** .etc"
+" to build input data."
+msgstr "神经网络的输入建立在特征生成成工具的基础上，使用其中的 **envir** , **bond** , **atom** 等生成。"
+

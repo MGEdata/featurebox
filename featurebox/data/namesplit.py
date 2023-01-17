@@ -8,10 +8,14 @@
 import copy
 import os
 import re
+import warnings
 from itertools import chain
 from typing import List
 
 import pandas as pd
+
+warnings.warn("This namesplit part is would be delete in future. "
+              "please using: \nfrom featurebox.data.name_split import NameSplit")
 
 
 class _Ele:
@@ -217,7 +221,7 @@ class NameSplit:
 
     Examples
     --------
-    >>> from featurebox.data.namesplit import NameSplit
+    >>> from featurebox.data.name_split import NameSplit
     >>> import os
     >>> os.chdir(r'.')
     >>> name = ['(Ti1.24La3)2',"((Ti1.24)2P2)1H0.2", "((Ti1.24)2)1H0.2",

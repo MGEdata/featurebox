@@ -20,7 +20,7 @@ class MpAccess:
 
     Examples
     --------
-    >>> mpa = MpAccess("Di28ZMunseR8vr57")
+    >>> mpa = MpAccess("Di28ZMunseR8vr57") # change yourself key.
     >>> ids = mpa.get_ids({"elements": {"$in": ["Al","O"]},'nelements': {"$lt": 2, "$gte": 1}})
     number 29
     >>> df = mpa.data_fetcher(mp_ids=ids, mp_props=['material_id', "cif"])
@@ -30,7 +30,7 @@ class MpAccess:
 
     """
 
-    def __init__(self, api_key: str = "Di28ZMunseR8vr56"):
+    def __init__(self, api_key: str = "Di28ZMunseR8vr46"):
         """
 
         Parameters
@@ -158,9 +158,9 @@ class MpAccess:
         ... 'crystal_system': "cubic",
         ... 'nsites': {"$lt": 20},
         ... 'formation_energy_per_atom': {"$lt": 0},
-        ... "elements": {"$all": "O"},
-        ... "piezo":{"$ne": None}
-        ... "elements": {"$all": "O"},
+        ... # "elements": {"$all": "O"},
+        ... # "piezo":{"$ne": None}
+        ... # "elements": {"$all": "O"},
         ... "elements": {"$in": list(combinations(["Al", "Co", "Cr", "Cu", "Fe", 'Ni'], 5))}}
 
         where, ``"$gt"`` >,  ``"$gte"`` >=,  ``"$lt"`` <,  ``"$lte"`` <=,  ``"$ne"`` !=,  ``"$in"``,  ``"$nin"`` (not in),
@@ -179,7 +179,7 @@ class MpAccess:
         return ids
 
     def get_ids_from_web_table(self, path_file: str = None) -> List[str]:
-        """This is a add method to read csv file download from web,the file name is '_Materials Project.csv',
+        """This is method to read csv file download from web,the file name is '_Materials Project.csv',
         which contains "Materials Id" columns.
         """
         if path_file is None:

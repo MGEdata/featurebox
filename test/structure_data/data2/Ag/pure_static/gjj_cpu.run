@@ -1,0 +1,25 @@
+
+#!/bin/sh
+#JSUB -J ym       
+#JSUB -n 64
+#JSUB -R span[ptile=64]        
+#JSUB -q cpu
+#JSUB -o out.%J                  
+#JSUB -e err.%J
+
+source /opt/intel/compilers_and_libraries_2020.1.217/linux/mkl/bin/mklvars.sh intel64
+source /opt/intel/compilers_and_libraries_2020.1.217/linux/mpi/intel64/bin/mpivars.sh intel64
+source /opt/intel/compilers_and_libraries_2020/linux/bin/compilervars.sh intel64
+
+ulimit -s 5120000
+
+source /beegfs/jhinno/unischeduler/conf/unisched
+export PATH=~/app/vasp.5.4.4.fix/bin:$PATH
+
+########################################################
+#   $JH_NCPU:         Number of CPU cores              #
+#   $JH_HOSTFILE:     List of computer hostfiles       #
+########################################################
+
+mpirun -np $JH_NCPU -machinefile $JH_HOSTFILE vasp_std  > vasp.log
+

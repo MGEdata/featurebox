@@ -1,0 +1,2216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-08 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.cli.rst:2
+msgid "featurebox.cli package"
+msgstr ""
+
+#: featurebox.cli:1 of
+msgid "The ``cli`` part include:"
+msgstr ""
+
+#: featurebox.cli:3 of
+msgid "\"batchrun\", \"main\", \"bgefvk\", \"bader\", \"dbcvk\",\"nebmake\""
+msgstr ""
+
+#: featurebox.cli:5 of
+msgid "which run in command line mode. All message (help) could get by ``'-h'`` ."
+msgstr ""
+
+#: featurebox.cli:7 of
+msgid "1.Run in featurebox: featurebox bgefvk -h"
+msgstr ""
+
+#: featurebox.cli:9 of
+msgid "2.Copy the script and run the single file: python bgefvk.py -h"
+msgstr ""
+
+#: featurebox.cli:11 featurebox.cli.bader.CLICommand:28
+#: featurebox.cli.bader.CLICommand:34 of
+msgid "Example:"
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:13
+msgid "featurebox.cli.autoincar module"
+msgstr ""
+
+#: featurebox.cli.autoincar.CLICommand:1 featurebox.cli.bader.CLICommand:1
+#: featurebox.cli.batchrun.CLICommand:1 featurebox.cli.bgefvk.CLICommand:1
+#: featurebox.cli.dbcvk.CLICommand:1 featurebox.cli.nebmake.Atom:1
+#: featurebox.cli.nebmake.Atoms:1 featurebox.cli.nebmake.CLICommand:1
+#: featurebox.cli.nebmake.Calculator:1 featurebox.cli.nebmake.DummyMPI:1
+#: featurebox.cli.nebmake.Dynamics:1 featurebox.cli.nebmake.FixConstraint:1
+#: featurebox.cli.nebmake.LineSearch:1 featurebox.cli.nebmake.NEB:1
+#: featurebox.cli.nebmake.SinglePointCalculator:1
+#: featurebox.cli.nebmake.SinglePointKPoint:1 featurebox.cli.nebmake.Units:1
+#: featurebox.cli.see.CLICommand:1 of
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: featurebox.cli.autoincar.CLICommand:1 of
+msgid ""
+"自动产生 INCAR 脚本（仅供参考）. (-n 内容不要留有空格) 最方便用法: featurebox autoincar -n 半导体静态计算"
+" -p {\"NSW\":100} featurebox autoincar -n 金属弛豫计算"
+msgstr ""
+
+#: featurebox.cli.autoincar.CLICommand:7 featurebox.cli.batchrun.CLICommand:42
+#: featurebox.cli.bgefvk.CLICommand:13 featurebox.cli.bgefvk.CLICommand:19
+#: featurebox.cli.dbcvk.CLICommand:12 featurebox.cli.dbcvk.CLICommand:18
+#: featurebox.cli.nebmake.CLICommand:29 featurebox.cli.nebmake.CLICommand:35 of
+msgid "Example"
+msgstr ""
+
+#: featurebox.cli.autoincar.CLICommand:8 of
+msgid "$ featurebox autoincar -n 金属弛豫"
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:21
+msgid "featurebox.cli.bader module"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:1 of
+msgid ""
+"批量提取 bader，保存到当前工作文件夹。 查看参数帮助使用 -h。 在 featurebox 中运行，请使用 featurebox bader"
+" ... 若复制本脚本并单运行，请使用 python bader.py ..."
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:5 featurebox.cli.bgefvk.CLICommand:5
+#: featurebox.cli.dbcvk.CLICommand:6 featurebox.cli.nebmake.CLICommand:6 of
+msgid "首先，请确保 运算子文件夹(sample_i_dir)包含应有 vasp 输入输出文件。 parent_dir(为上层目录，或者上n层目录)"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:9 featurebox.cli.nebmake.CLICommand:10 of
+msgid "Notes"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:10 of
+msgid ""
+"1. 前期准备 需要以下文件：~/bin/bader, ~/bin/chgsum.pl 并赋予权限: # chmod u+x "
+"~/bin/chgsum.pl # chmod u+x ~/bin/bader"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:16 featurebox.cli.nebmake.CLICommand:17 of
+msgid "# INCAR文件参数要求： # LAECHG= .TRUE. # LCHARG = 11 # NSW = 0 # IBRION = -1"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:22 of
+msgid "2.运行文件要求: chgsum.pl,bader, AECCAR0，AECCAR2，CHGCAR"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:26 of
+msgid "如果在 featurebox 中运行多个案例，请指定顶层文件夹:"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:30 of
+msgid "$ featurebox bader -p /home/parent_dir -if AECCAR0"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:32 featurebox.cli.bgefvk.CLICommand:16
+#: featurebox.cli.dbcvk.CLICommand:15 featurebox.cli.nebmake.CLICommand:32 of
+msgid "如果在 featurebox 中运行单个案例，请指定运算子文件夹:"
+msgstr ""
+
+#: featurebox.cli.bader.CLICommand:36 of
+msgid "$ featurebox bader -t s -p /home/parent_dir/***/sample_i_dir -if AECCAR0"
+msgstr ""
+
+#: featurebox.cli.bader.cal:1 featurebox.cli.bader.read:1
+#: featurebox.cli.bgefvk.cal:1 featurebox.cli.dbcvk.cal:1
+#: featurebox.cli.dbcvk.read:1 of
+msgid "Run linux cmd and return result, make sure the vaspkit is installed."
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:29
+msgid "featurebox.cli.batchrun module"
+msgstr ""
+
+#: featurebox.cli.batchrun:1 of
+msgid "以 featurebox 中版本为准，若在其它处更改，请更新 featurebox。"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:1 of
+msgid ""
+"产生任务批处理文件,请保证 -r,-e 至少存在一个. 最方便用法: 1.把该文件放到算例文件夹们的 父文件夹下，并提供 pbs, lsf "
+"等文件模板给 -r 参数."
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:5 of
+msgid "$ featurebox batchrun -p /***/data -r /***/pbs.run"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:7 featurebox.cli.batchrun.CLICommand:22
+#: of
+msgid "文件格式："
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:9 featurebox.cli.batchrun.CLICommand:24
+#: of
+msgid "---- data/"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:11 featurebox.cli.batchrun.CLICommand:26
+#: of
+msgid "|-- data1/"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:13 featurebox.cli.batchrun.CLICommand:34
+#: of
+msgid "|-- data2/"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:15 of
+msgid "|-- pbs.run"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:18 of
+msgid "2.若算例中已经存在pbs, lsf 模板，请提供模板名字（不会包含路径）给 -e 参数."
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:20 of
+msgid "$ featurebox batchrun -p /***/data -e pbs.run"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:28 featurebox.cli.batchrun.CLICommand:36
+#: of
+msgid "||- pbs.run"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:30 of
+msgid "||- POSCAR"
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:32 featurebox.cli.batchrun.CLICommand:38
+#: of
+msgid "||- ...."
+msgstr ""
+
+#: featurebox.cli.batchrun.CLICommand:43 of
+msgid "$ featurebox batchrun -p /home/dir_name -if POSCAR"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:1 of
+msgid ""
+"产生批处理提交文件。 最方便用法: 把该文件放到算例同一文件夹下，并提供 pbs or lsf 模板给 run_tem 参数. :param "
+"store_name: str"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:4 of
+msgid "存储名称"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload featurebox.cli.nebmake.FixAtoms of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:5 of
+msgid "str, file, None pbs,lsf 模板。可以是文件，也可以是复制过来的字符串,该文件会复制到每个子文件夹."
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:7 of
+msgid ""
+"str,None 1.不需要批量复制时, 使用每个子文件下已经存在 pbs,lsf 模板 该模板的名字必须提供 （run_tem=None, "
+"existed_run ！= None）。 2.使用批量复制时, existed_run_tem 为每个文件夹下新 pbs,lsf 模板名字 "
+"（run_tem！=None, existed_run != None） 3.使用批量复制时, 每个文件夹下新 pbs,lsf "
+"模板名字默认使用源文件名字, 可能会覆盖！ （run_tem!=None, existed_run == None） 4.不使用批量复制, "
+"也不提供 pbs,lsf 模板名字,你用个 p!（run_tem==None, existed_run == None）"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:12 of
+msgid "path,None 数据路径"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:14 of
+msgid ""
+"list,str,None 文件夹过滤条件，默认全选子文件夹 如果为字符串，数据路径的子文件夹中包含该字符串被选择 "
+"如果为列表，数据路径的子文件夹名在列表中的被选择"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:18 of
+msgid "list,str,None 如果为字符串，数据路径的子文件夹中包含该字符串被忽略 如果为列表，数据路径的子文件夹名在该列表中的被忽略"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:21 of
+msgid "INCAR:str     若提供，在每个子文件夹下加入该 INCAR 文件"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:23 of
+msgid "INCAR:str"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:23 of
+msgid "若提供，在每个子文件夹下加入该 INCAR 文件"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.cli.batchrun.upload:25 of
+msgid "./bash.sh 文件"
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:37
+msgid "featurebox.cli.bgefvk module"
+msgstr ""
+
+#: featurebox.cli.bgefvk.CLICommand:1 of
+msgid ""
+"批量提取带隙,费米能级， 保存到当前工作文件夹。 查看参数帮助使用 -h。 在 featurebox 中运行，请使用 featurebox "
+"bgefvk ... 若复制本脚本并单运行，请使用 python bgefvk ..."
+msgstr ""
+
+#: featurebox.cli.bgefvk.CLICommand:8 of
+msgid "EIGENVAL is need for vaspkit."
+msgstr ""
+
+#: featurebox.cli.bgefvk.CLICommand:10 featurebox.cli.dbcvk.CLICommand:9
+#: featurebox.cli.nebmake.CLICommand:26 of
+msgid "如果在 featurebox 中运行多个案例,请指定顶层文件夹:"
+msgstr ""
+
+#: featurebox.cli.bgefvk.CLICommand:14 of
+msgid "$ featurebox bgefvk -p /home/parent_dir"
+msgstr ""
+
+#: featurebox.cli.bgefvk.CLICommand:20 of
+msgid "$ featurebox bgefvk -t s -p /home/parent_dir/***/sample_i_dir"
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:45
+msgid "featurebox.cli.dbcvk module"
+msgstr ""
+
+#: featurebox.cli.dbcvk.CLICommand:1 of
+msgid "批量提取d band centor， 保存到当前工作文件夹。 查看参数帮助使用 -h。"
+msgstr ""
+
+#: featurebox.cli.dbcvk.CLICommand:3 of
+msgid "在 featurebox 中运行，请使用 featurebox dbcvk ... 若复制本脚本并单运行，请使用 python dbcvk ..."
+msgstr ""
+
+#: featurebox.cli.dbcvk.CLICommand:13 of
+msgid "$ featurebox dbcvk -p /home/parent_dir -if POSCAR"
+msgstr ""
+
+#: featurebox.cli.dbcvk.CLICommand:19 of
+msgid "$ featurebox dbcvk -t s -p /home/parent_dir/***/sample_i_dir"
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:53
+msgid "featurebox.cli.main module"
+msgstr ""
+
+#: featurebox.cli.main.CLIError:1 of
+msgid "Bases: :class:`Exception`"
+msgstr ""
+
+#: featurebox.cli.main.CLIError:1 of
+msgid "Error for CLI commands."
+msgstr ""
+
+#: featurebox.cli.main.CLIError:3 of
+msgid ""
+"A subcommand may raise this.  The message will be forwarded to the "
+"error() method of the argument args."
+msgstr ""
+
+#: featurebox.cli.main.Formatter:1 of
+msgid "Bases: :class:`argparse.HelpFormatter`"
+msgstr ""
+
+#: featurebox.cli.main.Formatter:1 of
+msgid "Improved help formatter."
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:61
+msgid "featurebox.cli.nebmake module"
+msgstr ""
+
+#: featurebox.cli.nebmake:1 of
+msgid ""
+"Copy from VTST aselite is a striped down single file version of ase that "
+"retains the following features: atom and atoms objects, some of ase.io "
+"and some of ase.constraints."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:1 of
+msgid "Class for representing a single atom."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:3 featurebox.cli.nebmake.Atoms:15
+#: featurebox.cli.nebmake.Atoms.center:6
+#: featurebox.cli.nebmake.Atoms.rotate_euler:5
+#: featurebox.cli.nebmake.Atoms.set_cell:3 featurebox.cli.nebmake.BFGS:3
+#: featurebox.cli.nebmake.Dynamics:5 featurebox.cli.nebmake.FIRE:1
+#: featurebox.cli.nebmake.LBFGS:8 featurebox.cli.nebmake.MDMin:1
+#: featurebox.cli.nebmake.Optimizer:5 of
+msgid "Parameters:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:5 of
+msgid "symbol: str or int"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:6 of
+msgid "Can be a chemical symbol (str) or an atomic number (int)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:7 of
+msgid "position: sequence of 3 floats"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:8 of
+msgid "Atomi position."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:9 of
+msgid "tag: int"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:10 of
+msgid "Special purpose tag."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:11 of
+msgid "momentum: sequence of 3 floats"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:12 of
+msgid "Momentum for atom."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:13 of
+msgid "mass: float"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:14 of
+msgid "Atomic mass in atomic units."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:15 of
+msgid "magmom: float or 3 floats"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:16 of
+msgid "Magnetic moment."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:19 of
+msgid "charge: float"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom:18 of
+msgid "Atomic charge."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.charge:1 of
+msgid "Atomic charge"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.cut_reference_to_atoms:1 of
+msgid "Cut reference to atoms object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.delete:1 of
+msgid "Delete attribute."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.get:1 of
+msgid "Get attribute, return default if not explicitely set."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.get_raw:1 of
+msgid "Get attribute, return None if not explicitely set."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.magmom:1 of
+msgid "Initial magnetic moment"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.mass:1 of
+msgid "Atomic mass"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.momentum:1 of
+msgid "XYZ-momentum"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.number:1 of
+msgid "Atomic number"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.position:1 of
+msgid "XYZ-coordinates"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.set:1 of
+msgid "Set attribute."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.symbol:1 of
+msgid "Chemical symbol"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.tag:1 of
+msgid "Integer tag"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.x:1 of
+msgid "X-coordinate"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.y:1 of
+msgid "Y-coordinate"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atom.z:1 of
+msgid "Z-coordinate"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:1 of
+msgid "Atoms object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:3 of
+msgid ""
+"The Atoms object can represent an isolated molecule, or a periodically "
+"repeated structure.  It has a unit cell and there may be periodic "
+"boundary conditions along any of the three unit cell axes."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:8 of
+msgid ""
+"Information about the atoms (atomic numbers and position) is stored in "
+"ndarrays.  Optionally, there can be information about tags, momenta, "
+"masses, magnetic moments and charges."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:12 of
+msgid ""
+"In order to calculate energies, forces and stresses, a calculator object "
+"has to attached to the atoms object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:19 of
+msgid "symbols: str (formula) or list of str"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:18 of
+msgid ""
+"Can be a string formula, a list of symbols or a list of Atom objects.  "
+"Examples: 'H2O', 'COPt12', ['H', 'H', 'O'], [Atom('Ne', (x, y, z)), ...]."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:23 of
+msgid "positions: list of xyz-positions"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:22 of
+msgid ""
+"Atomic positions.  Anything that can be converted to an ndarray of shape "
+"(n, 3) will do: [(x1,y1,z1), (x2,y2,z2), ...]."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:26 of
+msgid "scaled_positions: list of scaled-positions"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:26 of
+msgid ""
+"Like positions, but given in units of the unit cell. Can not be set at "
+"the same time as positions."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:28 of
+msgid "numbers: list of int"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:29 of
+msgid "Atomic numbers (use only one of symbols/numbers)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:30 of
+msgid "tags: list of int"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:31 of
+msgid "Special purpose tags."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:32 of
+msgid "momenta: list of xyz-momenta"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:33 of
+msgid "Momenta for all atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:34 of
+msgid "masses: list of float"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:35 of
+msgid "Atomic masses in atomic units."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:38 of
+msgid "magmoms: list of float or list of xyz-values"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:37 of
+msgid ""
+"Magnetic moments.  Can be either a single value for each atom for "
+"collinear calculations or three numbers for each atom for non-collinear "
+"calculations."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:40 of
+msgid "charges: list of float"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:41 of
+msgid "Atomic charges."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:43 of
+msgid "cell: 3x3 matrix"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:43 of
+msgid ""
+"Unit cell vectors.  Can also be given as just three numbers for "
+"orthorhombic cells.  Default value: [1, 1, 1]."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:47 of
+msgid "pbc: one or three bool"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:46 of
+msgid ""
+"Periodic boundary conditions flags.  Examples: True, False, 0, 1, (1, 1, "
+"0), (True, False, False).  Default value: False."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:50 of
+msgid "constraint: constraint object(s)"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:50 of
+msgid "Used for applying one or more constraints during structure optimization."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:53 of
+msgid "calculator: calculator object"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:53 of
+msgid "Used to attach a calculator for calculating energies and atomic forces."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:67 of
+msgid "info: dict of key-value pairs"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:56 of
+msgid ""
+"Dictionary of key-value pairs with additional information about the "
+"system.  The following keys may be used by ase:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:59 of
+msgid "spacegroup: Spacegroup instance"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:60 of
+msgid "unit_cell: 'conventional' | 'primitive' | int | 3 ints"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:61 of
+msgid "adsorbate_info:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:63 of
+msgid ""
+"Items in the info attribute survives copy and slicing and can be store to"
+" and retrieved from trajectory files given that the key is a string, the "
+"value is picklable and, if the value is a user-defined object, its base "
+"class is importable.  One should not make any assumptions about the "
+"existence of keys."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:69 featurebox.cli.nebmake.Atoms.rotate:9
+#: featurebox.cli.nebmake.Atoms.set_cell:12
+#: featurebox.cli.nebmake.Calculator.set_label:3 of
+msgid "Examples:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:71 of
+msgid "These three are equivalent:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:78 of
+msgid "FCC gold:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms:86 of
+msgid "Hydrogen wire:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.append:1 of
+msgid "Append atom to end."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.calc:1 of
+msgid "Calculator object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.cell:1 of
+msgid "Attribute for direct manipulation of the unit cell."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.center:1 of
+msgid "Center atoms in unit cell."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.center:3 of
+msgid ""
+"Centers the atoms in the unit cell, so there is the same amount of vacuum"
+" on all sides."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.center:8 of
+msgid ""
+"vacuum (default: None): If specified adjust the amount of vacuum when "
+"centering.  If vacuum=10.0 there will thus be 10 Angstrom of vacuum on "
+"each side."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.center:12 of
+msgid ""
+"axis (default: None): If specified, only act on the specified axis.  "
+"Default: Act on all axes."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.constraints:1 of
+msgid "Constraints of the atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.copy:1 of
+msgid "Return a copy."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.extend:1 of
+msgid "Extend atoms object by appending atoms from *other*."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_all_distances:1 of
+msgid "Return distances of all of the atoms with all of the atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_all_distances:3
+#: featurebox.cli.nebmake.Atoms.get_distance:3 of
+msgid "Use mic=True to use the Minimum Image Convention."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_angle:1 of
+msgid "Get angle formed by three atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_angle:3 of
+msgid ""
+"calculate angle between the vectors list[0]->list[1] and "
+"list[1]->list[2], where list contains the atomic indexes in question."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_angular_momentum:1 of
+msgid "Get total angular momentum with respect to the center of mass."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_array:1 of
+msgid "Get an array."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_array:3 of
+msgid "Returns a copy unless the optional argument copy is false."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_atomic_numbers:1 of
+msgid "Get integer array of atomic numbers."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_calculation_done:1 of
+msgid "Let the calculator calculate its thing, using the current input."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_calculator:1 of
+msgid "Get currently attached calculator object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_cell:1 of
+msgid "Get the three unit cell vectors as a 3x3 ndarray."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_center_of_mass:1 of
+msgid "Get the center of mass."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_center_of_mass:3 of
+msgid "If scaled=True the center of mass in scaled coordinates is returned."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_charges:1 of
+msgid "Get array of charges."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_chemical_symbols:1 of
+msgid "Get list of chemical symbol strings."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_chemical_symbols:3 of
+msgid ""
+"If reduce is True, a single string is returned, where repeated elements "
+"have been contracted to a single symbol and a number. E.g. instead of "
+"['C', 'O', 'O', 'H'], the string 'CO2H' is returned."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_dihedral:1 of
+msgid "Calculate dihedral angle."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_dihedral:3 of
+msgid ""
+"Calculate dihedral angle between the vectors list[0]->list[1] and "
+"list[2]->list[3], where list contains the atomic indexes in question."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_dipole_moment:1 of
+msgid "Calculate the electric dipole moment for the atoms object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_dipole_moment:3 of
+msgid "Only available for calculators which has a get_dipole_moment() method."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_distance:1 of
+msgid "Return distance between two atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_forces:1 of
+msgid "Calculate atomic forces."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_forces:3 of
+msgid ""
+"Ask the attached calculator to calculate the forces and apply "
+"constraints.  Use *apply_constraint=False* to get the raw forces."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_initial_charges:1 of
+msgid "Get array of initial charges."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_initial_magnetic_moments:1 of
+msgid "Get array of initial magnetic moments."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_isotropic_pressure:1 of
+msgid "Get the current calculated pressure, assume isotropic medium. in Bar"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_kinetic_energy:1 of
+msgid "Get the kinetic energy."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_magnetic_moment:1 of
+msgid "Get calculated total magnetic moment."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_magnetic_moments:1 of
+msgid "Get calculated local magnetic moments."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_masses:1 of
+msgid "Get array of masses."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_momenta:1 of
+msgid "Get array of momenta."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_moments_of_inertia:1 of
+msgid "Get the moments of inertia along the principal axes."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_moments_of_inertia:3 of
+msgid ""
+"The three principal moments of inertia are computed from the eigenvalues "
+"of the symmetric inertial tensor. Periodic boundary conditions are "
+"ignored. Units of the moments of inertia are amu*angstrom**2."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_name:1 of
+msgid "Return a name extracted from the elements."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_number_of_atoms:1 of
+msgid "Returns the number of atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_number_of_atoms:3 of
+msgid "Equivalent to len(atoms) in the standard ASE Atoms class."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_pbc:1 of
+msgid "Get periodic boundary condition flags."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_positions:1 of
+msgid "Get array of positions."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_potential_energies:1 of
+msgid "Calculate the potential energies of all the atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_potential_energies:3 of
+msgid ""
+"Only available with calculators supporting per-atom energies (e.g. "
+"classical potentials)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_potential_energy:1 of
+msgid "Calculate potential energy."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_reciprocal_cell:1 of
+msgid "Get the three reciprocal lattice vectors as a 3x3 ndarray."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_reciprocal_cell:3 of
+msgid ""
+"Note that the commonly used factor of 2 pi for Fourier transforms is not "
+"included here."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_scaled_positions:1 of
+msgid "Get positions relative to unit cell."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_scaled_positions:3 of
+msgid ""
+"Atoms outside the unit cell will be wrapped into the cell in those "
+"directions with periodic boundary conditions so that the scaled "
+"coordinates are between zero and one."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_stress:1 of
+msgid "Calculate stress tensor."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_stress:3 of
+msgid ""
+"Returns an array of the six independent components of the symmetric "
+"stress tensor, in the traditional order (s_xx, s_yy, s_zz, s_yz, s_xz, "
+"s_xy)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_stresses:1 of
+msgid "Calculate the stress-tensor of all the atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_stresses:3 of
+msgid ""
+"Only available with calculators supporting per-atom energies and stresses"
+" (e.g. classical potentials).  Even for such calculators there is a "
+"certain arbitrariness in defining per-atom stresses."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_tags:1 of
+msgid "Get integer array of tags."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_temperature:1 of
+msgid "Get the temperature. in Kelvin"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_total_energy:1 of
+msgid "Get the total energy - potential plus kinetic energy."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_velocities:1 of
+msgid "Get array of velocities."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.get_volume:1 of
+msgid "Get volume of unit cell."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.has:1 of
+msgid "Check for existence of array."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.has:3 of
+msgid "name must be one of: 'tags', 'momenta', 'masses', 'magmoms', 'charges'."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.new_array:1 of
+msgid "Add new array."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.new_array:3 of
+msgid "If *shape* is not *None*, the shape of *a* will be checked."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.numbers:1 of
+msgid "Attribute for direct manipulation of the atomic numbers."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.pbc:1 of
+msgid ""
+"Attribute for direct manipulation of the periodic boundary condition "
+"flags."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.pop:1 of
+msgid "Remove and return atom at index *i* (default last)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.positions:1 of
+msgid "Attribute for direct manipulation of the positions."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rattle:1 of
+msgid "Randomly displace atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rattle:3 of
+msgid ""
+"This method adds random displacements to the atomic positions, taking a "
+"possible constraint into account.  The random numbers are drawn from a "
+"normal distribution of standard deviation stdev."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rattle:7 of
+msgid ""
+"For a parallel calculation, it is important to use the same seed on all "
+"processors!"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.repeat:1 of
+msgid "Create new repeated atoms object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.repeat:3 of
+msgid ""
+"The *rep* argument should be a sequence of three positive integers like "
+"*(2,3,1)* or a single integer (*r*) equivalent to *(r,r,r)*."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate:1 of
+msgid "Rotate atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate:3 of
+msgid ""
+"Rotate the angle *a* around the vector *v*.  If *a* is not given, the "
+"length of *v* is used as the angle.  If *a* is a vector, then *v* is "
+"rotated into *a*.  The point at *center* is fixed.  Use *center='COM'* to"
+" fix the center of mass. Vectors can also be strings: 'x', '-x', 'y', ..."
+" ."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate:11 of
+msgid ""
+"Rotate 90 degrees around the z-axis, so that the x-axis is rotated into "
+"the y-axis:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_dihedral:1 of
+msgid "Rotate dihedral angle."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_dihedral:3 of
+msgid ""
+"Complementing the two routines above: rotate a group by a predefined "
+"dihedral angle, starting from its current configuration"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:1 of
+msgid "Rotate atoms via Euler angles."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:3 of
+msgid "See e.g http://mathworld.wolfram.com/EulerAngles.html for explanation."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:8 of
+msgid "center :"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:8 of
+msgid ""
+"The point to rotate about. A sequence of length 3 with the coordinates, "
+"or 'COM' to select the center of mass."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:10 of
+msgid "phi :"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:11 of
+msgid "The 1st rotation angle around the z axis."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:12 of
+msgid "theta :"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:13 of
+msgid "Rotation around the x axis."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:14 of
+msgid "psi :"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.rotate_euler:15 of
+msgid "2nd rotation around the z axis."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_angle:1 of
+msgid "Set angle formed by three atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_angle:3 of
+msgid "Sets the angle between vectors list[1]->list[0] and list[1]->list[2]."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_angle:6 of
+msgid "Same usage as in set_dihedral."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_array:1 of
+msgid "Update array."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_array:3 of
+msgid ""
+"If *shape* is not *None*, the shape of *a* will be checked. If *a* is "
+"*None*, then the array is deleted."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_atomic_numbers:1 of
+msgid "Set atomic numbers."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_calculator:1 of
+msgid "Attach calculator object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_cell:1 of
+msgid "Set unit cell vectors."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_cell:6 of
+msgid "cell :"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_cell:6 of
+msgid ""
+"Unit cell.  A 3x3 matrix (the three unit cell vectors) or just three "
+"numbers for an orthorhombic cell."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_cell:10 of
+msgid "scale_atoms"
+msgstr ""
+
+#: of
+msgid "bool"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_cell:9 of
+msgid ""
+"Fix atomic positions or move atoms with the unit cell? Default behavior "
+"is to *not* move the atoms (scale_atoms=False)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_cell:14 of
+msgid "Two equivalent ways to define an orthorhombic cell:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_cell:19 of
+msgid "FCC unit cell:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_charges:1 of
+msgid "Set charges."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_chemical_symbols:1 of
+msgid "Set chemical symbols."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_constraint:1 of
+msgid "Apply one or more constrains."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_constraint:3 of
+msgid ""
+"The *constraint* argument must be one constraint object or a list of "
+"constraint objects."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_dihedral:1 of
+msgid ""
+"set the dihedral angle between vectors list[0]->list[1] and "
+"list[2]->list[3] by changing the atom indexed by list[3] if mask is not "
+"None, all the atoms described in mask (read: the entire subgroup) are "
+"moved"
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_dihedral:6 of
+msgid ""
+"example: the following defines a very crude ethane-like molecule and "
+"twists one half of it by 30 degrees."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_distance:1 of
+msgid "Set the distance between two atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_distance:3 of
+msgid ""
+"Set the distance between atoms *a0* and *a1* to *distance*. By default, "
+"the center of the two atoms will be fixed.  Use *fix=0* to fix the first "
+"atom, *fix=1* to fix the second atom and *fix=0.5* (default) to fix the "
+"center of the bond."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_initial_magnetic_moments:1 of
+msgid "Set the initial magnetic moments."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_initial_magnetic_moments:3 of
+msgid ""
+"Use either one or three numbers for every atom (collinear or non-"
+"collinear spins)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_masses:1 of
+msgid "Set atomic masses."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_masses:3 of
+msgid ""
+"The array masses should contain a list of masses.  In case the masses "
+"argument is not given or for those elements of the masses list that are "
+"None, standard values are set."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_momenta:1 of
+msgid "Set momenta."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_pbc:1 of
+msgid "Set periodic boundary condition flags."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_positions:1 of
+msgid "Set positions."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_scaled_positions:1 of
+msgid "Set positions relative to unit cell."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_tags:1 of
+msgid "Set tags for all atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.set_velocities:1 of
+msgid "Set the momenta by specifying the velocities."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.translate:1 of
+msgid "Translate atomic positions."
+msgstr ""
+
+#: featurebox.cli.nebmake.Atoms.translate:3 of
+msgid ""
+"The displacement argument can be a float an xyz vector or an nx3 array "
+"(where n is the number of atoms)."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:1 featurebox.cli.nebmake.FIRE:1
+#: featurebox.cli.nebmake.LBFGS:1 featurebox.cli.nebmake.MDMin:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.Optimizer`"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:1 of
+msgid "BFGS optimizer."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:6 featurebox.cli.nebmake.Calculator:26
+#: featurebox.cli.nebmake.Calculator.read:8 featurebox.cli.nebmake.Dynamics:8
+#: featurebox.cli.nebmake.FIRE:4 featurebox.cli.nebmake.IDPP:25
+#: featurebox.cli.nebmake.LBFGS:11 featurebox.cli.nebmake.MDMin:4
+#: featurebox.cli.nebmake.Optimizer:8 of
+msgid "atoms: Atoms object"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:6 featurebox.cli.nebmake.FIRE:4
+#: featurebox.cli.nebmake.LBFGS:11 featurebox.cli.nebmake.MDMin:4
+#: featurebox.cli.nebmake.Optimizer:8 of
+msgid "The Atoms object to relax."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:11 featurebox.cli.nebmake.FIRE:9
+#: featurebox.cli.nebmake.LBFGS:16 featurebox.cli.nebmake.MDMin:9 of
+msgid "restart: string"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:9 featurebox.cli.nebmake.FIRE:7
+#: featurebox.cli.nebmake.MDMin:7 of
+msgid ""
+"Pickle file used to store hessian matrix. If set, file with such a name "
+"will be searched and hessian matrix stored will be used, if the file "
+"exists."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:14 featurebox.cli.nebmake.FIRE:12
+#: featurebox.cli.nebmake.LBFGS:23 featurebox.cli.nebmake.MDMin:12 of
+msgid "trajectory: string"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:14 featurebox.cli.nebmake.FIRE:12
+#: featurebox.cli.nebmake.LBFGS:23 featurebox.cli.nebmake.MDMin:12 of
+msgid "Pickle file used to store trajectory of atomic movement."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:18 featurebox.cli.nebmake.Dynamics:12
+#: featurebox.cli.nebmake.FIRE:16 featurebox.cli.nebmake.LBFGS:20
+#: featurebox.cli.nebmake.Optimizer:15 of
+msgid "logfile: file object or str"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:17 featurebox.cli.nebmake.Dynamics:11
+#: featurebox.cli.nebmake.FIRE:15 featurebox.cli.nebmake.LBFGS:19
+#: featurebox.cli.nebmake.Optimizer:14 of
+msgid ""
+"If *logfile* is a string, a file with that name will be opened. Use '-' "
+"for stdout."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:22 featurebox.cli.nebmake.LBFGS:28
+#: featurebox.cli.nebmake.MDMin:16 of
+msgid "maxstep: float"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:21 of
+msgid ""
+"Used to set the maximum distance an atom can move per iteration (default "
+"value is 0.04 Å)."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:27 featurebox.cli.nebmake.Dynamics:22
+#: featurebox.cli.nebmake.FIRE:21 featurebox.cli.nebmake.LBFGS:47
+#: featurebox.cli.nebmake.MDMin:24 featurebox.cli.nebmake.Optimizer:25 of
+msgid "master: boolean"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS:25 featurebox.cli.nebmake.Dynamics:20
+#: featurebox.cli.nebmake.FIRE:19 featurebox.cli.nebmake.LBFGS:45
+#: featurebox.cli.nebmake.MDMin:22 featurebox.cli.nebmake.Optimizer:23 of
+msgid ""
+"Defaults to None, which causes only rank 0 to save files.  If set to "
+"true,  this rank will save files."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS.determine_step:1
+#: featurebox.cli.nebmake.LBFGS.determine_step:1 of
+msgid "Determine step to take according to maxstep"
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS.determine_step:3
+#: featurebox.cli.nebmake.LBFGS.determine_step:3 of
+msgid ""
+"Normalize all steps as the largest step. This way we still move along the"
+" eigendirection."
+msgstr ""
+
+#: featurebox.cli.nebmake.BFGS.replay_trajectory:1 of
+msgid "Initialize hessian from old trajectory."
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:1 of
+msgid "批量插值， 保存到当前工作文件夹。 查看参数帮助使用 -h。"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:3 of
+msgid ""
+"在 featurebox 中运行，请使用 featurebox nebmake ... 若复制本脚本并单运行，请使用 python "
+"nebmake.py ..."
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:11 of
+msgid ""
+"如果method=False,需要准备 nebmake.pl 1. 前期准备 需要以下文件：~/bin/nebmake.pl "
+"~/bin/Vasp.pm 并赋予权限: # chmod u+x ~/bin/nebmake.pl"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:23 of
+msgid "2.运行文件要求: nebmake.pl, Vasp.pm (可选), ini/POSCAR, fin/POSCAR,"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:30 of
+msgid ""
+"$ featurebox nebmake -p parent_dir -pos1 Prim_Mo2CO2_CONTCAR -pos2 "
+"Prim_Mo2CO2_CONTCAR -n 3"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:36 of
+msgid ""
+"$ featurebox nebmake -t s -p sample_i_dir -pos1 Prim_Mo2CO2_CONTCAR -pos2"
+" Prim_Mo2CO2_CONTCAR -n 3"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:38 of
+msgid "Incar （1）EDIFF=1E-7，这个参数非常关键！过渡态对力计算精度要求极高，更精准的电子"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:40 of
+msgid "步收敛会有更精准的力，可以加速收敛。好多过渡态计算不收敛原因都是因为力 的精度不够。（注：粗收敛可以适当放宽到1E-5）"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:44 of
+msgid "（2）EDIFFG = -0.03，过渡态可以适当放宽结构优化的收敛精度到-0.03，对于非常复"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:44 of
+msgid "杂难以收敛的体系可以放宽到-0.05。"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:46 of
+msgid "（3）IBRION = 3, POTIM = 0，这是VTST识别并启动VTST优化算法的标致。"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:48 of
+msgid ""
+"（4）IOPT = 1，根据建议，选择优化算法：IOPT设置成1。IOPT推荐7，2，或1。 "
+"0意味着启用VASP自带的优化算法，(比如：IOPT=0，则IBRION=1, POTIM=0.1)"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:51 of
+msgid "（5）ICHAIN=0开启NEB方法，"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:53 of
+msgid "（6）LCLIMB = .TRUE. 爬坡即CI-NEB"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:55 of
+msgid "（7）IMAGES = 1, 插点个数"
+msgstr ""
+
+#: featurebox.cli.nebmake.CLICommand:57 of
+msgid "（8）SPRING = -5, 弹簧力常数，用-5默认值即可"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:1 of
+msgid "Base-class for all ASE calculators."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:3 of
+msgid ""
+"A calculator must raise NotImplementedError if asked for a property that "
+"it can't calculate.  So, if calculation of the stress tensor has not been"
+" implemented, get_stress(atoms) should raise NotImplementedError.  This "
+"can be achieved simply by not including the string 'stress' in the list "
+"implemented_properties which is a class member.  These are the names of "
+"the standard properties: 'energy', 'forces', 'stress', 'dipole', "
+"'charges', 'magmom' and 'magmoms'."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:12 featurebox.cli.nebmake.IDPP:11 of
+msgid "Basic calculator implementation."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:15 featurebox.cli.nebmake.IDPP:14
+#: featurebox.cli.nebmake.Optimizer:11 of
+msgid "restart: str"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:15 featurebox.cli.nebmake.IDPP:14 of
+msgid ""
+"Prefix for restart file.  May contain a directory.  Default is None: "
+"don't restart."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:18 featurebox.cli.nebmake.IDPP:17 of
+msgid "ignore_bad_restart_file: bool"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:18 featurebox.cli.nebmake.IDPP:17 of
+msgid ""
+"Ignore broken or missing restart file.  By default, it is an error if the"
+" restart file is missing or broken."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:20 featurebox.cli.nebmake.IDPP:19 of
+msgid "label: str"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:21 featurebox.cli.nebmake.IDPP:20 of
+msgid "Name used for all files.  May contain a directory."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator:23 featurebox.cli.nebmake.IDPP:22 of
+msgid ""
+"Optional Atoms object to which the calculator will be attached.  When "
+"restarting, atoms will get its positions and unit-cell updated from file."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate:1
+#: featurebox.cli.nebmake.IDPP.calculate:1 of
+msgid "Do the calculation."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate:5
+#: featurebox.cli.nebmake.IDPP.calculate:5 of
+msgid "properties: list of str"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate:4
+#: featurebox.cli.nebmake.IDPP.calculate:4 of
+msgid ""
+"List of what needs to be calculated.  Can be any combination of 'energy',"
+" 'forces', 'stress', 'dipole', 'charges', 'magmom' and 'magmoms'."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate:10
+#: featurebox.cli.nebmake.IDPP.calculate:10 of
+msgid "system_changes: list of str"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate:8
+#: featurebox.cli.nebmake.IDPP.calculate:8 of
+msgid ""
+"List of what has changed since last calculation.  Can be any combination "
+"of these five: 'positions', 'numbers', 'cell', 'pbc', 'initial_charges' "
+"and 'initial_magmoms'."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate:12
+#: featurebox.cli.nebmake.IDPP.calculate:12 of
+msgid ""
+"Subclasses need to implement this, but can ignore properties and "
+"system_changes if they want.  Calculated properties should be inserted "
+"into results dictionary like shown in this dummy example::"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate:25
+#: featurebox.cli.nebmake.IDPP.calculate:25 of
+msgid ""
+"The subclass implementation should first call this implementation to set "
+"the atoms attribute."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate_numerical_forces:1 of
+msgid "Calculate numerical forces using finite difference."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate_numerical_forces:3 of
+msgid "All atoms will be displaced by +d and -d in all directions."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.calculate_numerical_stress:1 of
+msgid "Calculate numerical stress using finite difference."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.check_state:1 of
+msgid "Check for system changes since last calculation."
+msgstr ""
+
+#: ../../docstring featurebox.cli.nebmake.Calculator.default_parameters:1 of
+msgid "Default parameters"
+msgstr ""
+
+#: ../../docstring featurebox.cli.nebmake.Calculator.implemented_properties:1
+#: featurebox.cli.nebmake.IDPP.implemented_properties:1 of
+msgid "Properties calculator can handle (energy, forces, ...)"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:1 of
+msgid "Read atoms, parameters and calculated properties from output file."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:3 of
+msgid ""
+"Read result from self.label file.  Raise ReadError if the file is not "
+"there.  If the file is corrupted or contains an error message from the "
+"calculation, a ReadError should also be raised.  In case of succes, these"
+" attributes must set:"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:9 of
+msgid "The state of the atoms from last calculation."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:10 of
+msgid "parameters: Parameters object"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:11 of
+msgid "The parameter dictionary."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:13 of
+msgid "results: dict"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:13 of
+msgid "Calculated properties like energy and forces."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.read:15 of
+msgid ""
+"The FileIOCalculator.read() method will typically read atoms and "
+"parameters and get the results dict by calling the read_results() method."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.reset:1 of
+msgid "Clear all information from old calculation."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set:1 of
+msgid "Set parameters like set(key1=value1, key2=value2, ...)."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set:3 of
+msgid "A dictionary containing the parameters that have been changed is returned."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set:6 of
+msgid ""
+"Subclasses must implement a set() method that will look at the chaneged "
+"parameters and decide if a call to reset() is needed. If the changed "
+"parameters are harmless, like a change in verbosity, then there is no "
+"need to call reset()."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set:11 of
+msgid ""
+"The special keyword 'parameters' can be used to read parameters from a "
+"file."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set_label:1 of
+msgid "Set label and convert label to directory and prefix."
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set_label:5 of
+msgid "label='abc': (directory='.', prefix='abc')"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set_label:6 of
+msgid "label='dir1/abc': (directory='dir1', prefix='abc')"
+msgstr ""
+
+#: featurebox.cli.nebmake.Calculator.set_label:8 of
+msgid ""
+"Calculators that must write results to files with fixed names can "
+"overwrite this method so that the directory is set to all of label."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics:1 of
+msgid "Base-class for all MD and structure optimization classes."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics:3 of
+msgid "Dynamics object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics:8 of
+msgid "The Atoms object to operate on."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics:17 featurebox.cli.nebmake.Optimizer:20 of
+msgid "trajectory: Trajectory object or str"
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics:15 featurebox.cli.nebmake.Optimizer:18 of
+msgid ""
+"Attach trajectory object.  If *trajectory* is a string a Trajectory will "
+"be constructed.  Use *None* for no trajectory."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics.attach:1 of
+msgid "Attach callback function."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics.attach:3 of
+msgid ""
+"If *interval > 0*, at every *interval* steps, call *function* with "
+"arguments *args* and keyword arguments *kwargs*."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics.attach:6 of
+msgid ""
+"If *interval <= 0*, after step *interval*, call *function* with arguments"
+" *args* and keyword arguments *kwargs*.  This is currently zero indexed."
+msgstr ""
+
+#: featurebox.cli.nebmake.Dynamics.insert_observer:1 of
+msgid "Insert an observer."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:1 featurebox.cli.nebmake.FixBondLength:1
+#: featurebox.cli.nebmake.FixBondLengths:1
+#: featurebox.cli.nebmake.FixConstraintSingle:1
+#: featurebox.cli.nebmake.FixedMode:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.FixConstraint`"
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:1 of
+msgid "Constraint object for fixing some chosen atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:3 of
+msgid "Constrain chosen atoms."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:5 of
+msgid "Indices for those atoms that should be constrained."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:7 of
+msgid "One boolean per atom indicating if the atom should be constrained or not."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:12 of
+msgid "Examples"
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:13 of
+msgid "Fix all Copper atoms:"
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms:18 of
+msgid "Fix all atoms with z-coordinate less than 1.0 Angstrom:"
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms.delete_atom:1 of
+msgid ""
+"Removes atom number ind from the index array, if present. Required for "
+"removing atoms with existing FixAtoms constraints."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms.index_shuffle:1
+#: featurebox.cli.nebmake.FixConstraint.index_shuffle:1 of
+msgid "Change the indices."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms.index_shuffle:3
+#: featurebox.cli.nebmake.FixConstraint.index_shuffle:3 of
+msgid ""
+"When the ordering of the atoms in the Atoms object changes, this method "
+"can be called to shuffle the indices of the constraints."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms.index_shuffle:7
+#: featurebox.cli.nebmake.FixConstraint.index_shuffle:7 of
+msgid "ind -- List or tuple of indices."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixAtoms.repeat:1
+#: featurebox.cli.nebmake.FixConstraint.repeat:1 of
+msgid ""
+"basic method to multiply by m, needs to know the length of the underlying"
+" atoms object for the assignment of multiplied constraints to work."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixBondLength:1 of
+msgid "Constraint object for fixing a bond length."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixBondLength:3 of
+msgid "Fix distance between atoms with indices a1 and a2."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixBondLength.index_shuffle:1 of
+msgid "Shuffle the indices of the two atoms in this constraint"
+msgstr ""
+
+#: featurebox.cli.nebmake.FixCartesian:1 featurebox.cli.nebmake.FixScaled:1
+#: featurebox.cli.nebmake.FixedLine:1 featurebox.cli.nebmake.FixedPlane:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.FixConstraintSingle`"
+msgstr ""
+
+#: featurebox.cli.nebmake.FixCartesian:1 of
+msgid "Fix an atom in the directions of the cartesian coordinates."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixConstraint:1 of
+msgid "Base class for classes that fix one or more atoms in some way."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixConstraintSingle:1 of
+msgid "Base class for classes that fix a single atom."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixConstraintSingle.index_shuffle:1 of
+msgid "The atom index must be stored as self.a."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixScaled:1 of
+msgid "Fix an atom in the directions of the unit vectors."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixedLine:1 of
+msgid "Constrain an atom *a* to move on a given line only."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixedLine:3 of
+msgid "The line is defined by its *direction*."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixedMode:1 of
+msgid "Constrain atoms to move along directions orthogonal to a given mode only."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixedPlane:1 of
+msgid "Constrain an atom *a* to move in a given plane only."
+msgstr ""
+
+#: featurebox.cli.nebmake.FixedPlane:3 of
+msgid "The plane is defined by its normal: *direction*."
+msgstr ""
+
+#: featurebox.cli.nebmake.IDPP:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.Calculator`"
+msgstr ""
+
+#: featurebox.cli.nebmake.IDPP:1 of
+msgid "Image dependent pair potential."
+msgstr ""
+
+#: featurebox.cli.nebmake.IDPP:3 of
+msgid "See:"
+msgstr ""
+
+#: featurebox.cli.nebmake.IDPP:5 of
+msgid "Improved initial guess for minimum energy path calculations."
+msgstr ""
+
+#: featurebox.cli.nebmake.IDPP:7 of
+msgid "Søren Smidstrup, Andreas Pedersen, Kurt Stokbro and Hannes Jónsson"
+msgstr ""
+
+#: featurebox.cli.nebmake.IDPP:9 of
+msgid "Chem. Phys. 140, 214106 (2014)"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:1 of
+msgid "Limited memory BFGS optimizer."
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:3 of
+msgid ""
+"A limited memory version of the bfgs algorithm. Unlike the bfgs algorithm"
+" used in bfgs.py, the inverse of Hessian matrix is updated.  The inverse "
+"Hessian is represented only as a diagonal matrix to save memory"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:14 of
+msgid ""
+"Pickle file used to store vectors for updating the inverse of Hessian "
+"matrix. If set, file with such a name will be searched and information "
+"stored will be used, if the file exists."
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:26 of
+msgid ""
+"How far is a single atom allowed to move. This is useful for DFT "
+"calculations where wavefunctions can be reused if steps are small. "
+"Default is 0.04 Angstrom."
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:32 of
+msgid "memory: int"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:31 of
+msgid ""
+"Number of steps to be stored. Default value is 100. Three numpy arrays of"
+" this length containing floats are stored."
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:36 of
+msgid "damping: float"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:35 of
+msgid ""
+"The calculated step is multiplied with this number before added to the "
+"positions."
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:42 of
+msgid "alpha: float"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS:39 of
+msgid ""
+"Initial guess for the Hessian (curvature of energy surface). A "
+"conservative value of 70.0 is the default, but number of needed steps to "
+"converge might be less if a lower value is used. However, a lower value "
+"also means risk of instability."
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.fprime:1 of
+msgid "Gradient of the objective function for use of the optimizers"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.func:1 of
+msgid "Objective function for use of the optimizers"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.initialize:1 of
+msgid "Initialize everything so no checks have to be done in step"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.read:1 of
+msgid "Load saved arrays to reconstruct the Hessian"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.replay_trajectory:1 of
+msgid "Initialize history from old trajectory."
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.step:1 of
+msgid "Take a single step"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.step:3 of
+msgid ""
+"Use the given forces, update the history and calculate the next step -- "
+"then take it"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.update:1 of
+msgid "Update everything that is kept in memory"
+msgstr ""
+
+#: featurebox.cli.nebmake.LBFGS.update:3 of
+msgid "This function is mostly here to allow for replay_trajectory."
+msgstr ""
+
+#: featurebox.cli.nebmake.MDMin:15 of
+msgid ""
+"Used to set the maximum distance an atom can move per iteration (default "
+"value is 0.2 Angstroms)."
+msgstr ""
+
+#: featurebox.cli.nebmake.MDMin:19 of
+msgid "logfile: string"
+msgstr ""
+
+#: featurebox.cli.nebmake.MDMin:19 of
+msgid "Text file used to write summary information."
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:1 of
+msgid "Nudged elastic band."
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:3 of
+msgid "images: list of Atoms objects"
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:4 of
+msgid "Images defining path from initial to final state."
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:5 of
+msgid "k: float or list of floats"
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:6 of
+msgid "Spring constant(s) in eV/Ang.  One number or one for each spring."
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:7 of
+msgid "climb: bool"
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:8 of
+msgid "Use a climbing image (default is no climbing image)."
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:11 of
+msgid "parallel: bool"
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB:10 of
+msgid "Distribute images over processors."
+msgstr ""
+
+#: featurebox.cli.nebmake.NEB.get_forces:1 of
+msgid "Evaluate and return the forces."
+msgstr ""
+
+#: featurebox.cli.nebmake.Optimizer:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.Dynamics`"
+msgstr ""
+
+#: featurebox.cli.nebmake.Optimizer:1 of
+msgid "Base-class for all structure optimization classes."
+msgstr ""
+
+#: featurebox.cli.nebmake.Optimizer:3 of
+msgid "Structure optimizer object."
+msgstr ""
+
+#: featurebox.cli.nebmake.Optimizer:11 of
+msgid "Filename for restart file.  Default value is *None*."
+msgstr ""
+
+#: featurebox.cli.nebmake.Optimizer.converged:1 of
+msgid "Did the optimization converge?"
+msgstr ""
+
+#: featurebox.cli.nebmake.Optimizer.run:1 of
+msgid "Run structure optimization algorithm."
+msgstr ""
+
+#: featurebox.cli.nebmake.Optimizer.run:3 of
+msgid ""
+"This method will return when the forces on all individual atoms are less "
+"than *fmax* or when the number of steps exceeds *steps*."
+msgstr ""
+
+#: featurebox.cli.nebmake.Parameters:1 of
+msgid "Bases: :class:`dict`"
+msgstr ""
+
+#: featurebox.cli.nebmake.Parameters:1 of
+msgid "Dictionary for parameters."
+msgstr ""
+
+#: featurebox.cli.nebmake.Parameters:3 of
+msgid ""
+"Special feature: If param is a Parameters instance, then param.xc is a "
+"shorthand for param['xc']."
+msgstr ""
+
+#: featurebox.cli.nebmake.Parameters.read:1 of
+msgid "Read parameters from file."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointCalculator:1 of
+msgid "Special calculator for a single configuration."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointCalculator:3 of
+msgid ""
+"Used to remember the energy, force and stress for a given configuration."
+"  If the positions, atomic numbers, unit cell, or boundary conditions are"
+" changed, then asking for energy/forces/stress will raise an exception."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointCalculator:8
+#: featurebox.cli.nebmake.SinglePointDFTCalculator:1 of
+msgid "Save energy, forces and stresses for the current configuration."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.SinglePointCalculator`"
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_bz_k_points:1 of
+msgid "Return the k-points."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_eigenvalues:1 of
+msgid "Return eigenvalue array."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_fermi_level:1 of
+msgid "Return the Fermi-level(s)."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_ibz_k_points:1 of
+msgid "Return k-points in the irreducible part of the Brillouin zone."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_number_of_spins:1 of
+msgid "Return the number of spins in the calculation."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_number_of_spins:3 of
+msgid "Spin-paired calculations: 1, spin-polarized calculation: 2."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_occupation_numbers:1 of
+msgid "Return occupation number array."
+msgstr ""
+
+#: featurebox.cli.nebmake.SinglePointDFTCalculator.get_spin_polarized:1 of
+msgid "Is it a spin-polarized calculation?"
+msgstr ""
+
+#: math.sqrt:1 of
+msgid "Return the square root of x."
+msgstr ""
+
+#: featurebox.cli.nebmake.atomproperty:1 of
+msgid "Helper function to easily create Atom attribute property."
+msgstr ""
+
+#: featurebox.cli.nebmake.atomtypes_outpot:1 of
+msgid "Try to retreive chemical symbols from OUTCAR or POTCAR"
+msgstr ""
+
+#: featurebox.cli.nebmake.atomtypes_outpot:3 of
+msgid ""
+"If getting atomtypes from the first line in POSCAR/Prim_Mo2CO2_CONTCAR "
+"fails, it might be possible to find the data in OUTCAR or POTCAR, if "
+"these files exist."
+msgstr ""
+
+#: featurebox.cli.nebmake.atomtypes_outpot:6 of
+msgid ""
+"posfname -- The filename of the POSCAR/Prim_Mo2CO2_CONTCAR file we're "
+"trying to read"
+msgstr ""
+
+#: featurebox.cli.nebmake.atomtypes_outpot:8 of
+msgid "numsyms -- The number of symbols we must find"
+msgstr ""
+
+#: featurebox.cli.nebmake.default:1 of
+msgid "Helper function for setting default values."
+msgstr ""
+
+#: featurebox.cli.nebmake.equal:1 of
+msgid "ndarray-enabled comparison function."
+msgstr ""
+
+#: featurebox.cli.nebmake.find_mic:1 of
+msgid "Finds the minimum-image representation of vector(s) D"
+msgstr ""
+
+#: featurebox.cli.nebmake.fix_cartesian:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.FixCartesian`"
+msgstr ""
+
+#: featurebox.cli.nebmake.fix_cartesian:1 of
+msgid "Backwards compatibility for FixCartesian."
+msgstr ""
+
+#: featurebox.cli.nebmake.fix_scaled:1 of
+msgid "Bases: :class:`featurebox.cli.nebmake.FixScaled`"
+msgstr ""
+
+#: featurebox.cli.nebmake.fix_scaled:1 of
+msgid "Backwards compatibility for FixScaled."
+msgstr ""
+
+#: featurebox.cli.nebmake.get_atomtypes:1 of
+msgid "Given a file name, get the atomic symbols."
+msgstr ""
+
+#: featurebox.cli.nebmake.get_atomtypes:3 of
+msgid ""
+"The function can get this information from OUTCAR and POTCAR format "
+"files.  The files can also be compressed with gzip or bzip2."
+msgstr ""
+
+#: featurebox.cli.nebmake.get_atomtypes_from_formula:1 of
+msgid ""
+"Return atom types from chemical formula (optionally prepended with and "
+"underscore)."
+msgstr ""
+
+#: featurebox.cli.nebmake.interpolate:1 of
+msgid ""
+"Given a list of images, linearly interpolate the positions of the "
+"interior images."
+msgstr ""
+
+#: featurebox.cli.nebmake.ints2string:1 of
+msgid "Convert ndarray of ints to string."
+msgstr ""
+
+#: featurebox.cli.nebmake.read_vasp:1 of
+msgid "Import POSCAR/Prim_Mo2CO2_CONTCAR type file."
+msgstr ""
+
+#: featurebox.cli.nebmake.read_vasp:3 of
+msgid ""
+"Reads unitcell, atom positions and constraints from the "
+"POSCAR/Prim_Mo2CO2_CONTCAR file and tries to read atom types from "
+"POSCAR/Prim_Mo2CO2_CONTCAR header, if this fails the atom types are read "
+"from OUTCAR or POTCAR file."
+msgstr ""
+
+#: featurebox.cli.nebmake.read_vasp_out:1 of
+msgid "Import OUTCAR type file."
+msgstr ""
+
+#: featurebox.cli.nebmake.read_vasp_out:3 of
+msgid ""
+"Reads unitcell, atom positions, energies, and forces from the OUTCAR file"
+" and attempts to read constraints (if any) from "
+"Prim_Mo2CO2_CONTCAR/POSCAR, if present."
+msgstr ""
+
+#: featurebox.cli.nebmake.slice2enlist:1 of
+msgid "Convert a slice object into a list of (new, old) tuples."
+msgstr ""
+
+#: featurebox.cli.nebmake.string2symbols:1 of
+msgid "Convert string to list of chemical symbols."
+msgstr ""
+
+#: featurebox.cli.nebmake.write_vasp:1 of
+msgid "Method to write VASP position (POSCAR/Prim_Mo2CO2_CONTCAR) files."
+msgstr ""
+
+#: featurebox.cli.nebmake.write_vasp:3 of
+msgid ""
+"Writes label, scalefactor, unitcell, # of various kinds of atoms, "
+"positions in cartesian or scaled coordinates (Direct), and constraints to"
+" file. Cartesian coordiantes is default and default label is the atomic "
+"species, e.g. 'C N H Cu'."
+msgstr ""
+
+#: featurebox.cli.nebmake.xyzproperty:1 of
+msgid "Helper function to easily create Atom XYZ-property."
+msgstr ""
+
+#: ../../src/featurebox.cli.rst:69
+msgid "featurebox.cli.see module"
+msgstr ""

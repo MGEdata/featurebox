@@ -16,7 +16,6 @@ class MyTestCase(unittest.TestCase):
         sppm = StructurePymatgenPropMap()
         data = sppm.fit_transform(self.data0_3)
 
-
     def test_something2(self):
         sppm = StructurePymatgenPropMap(prop_name=["lengths", "angles", "get_brillouin_zone()"])
         data = sppm.fit_transform([i._lattice for i in self.data0_3])
@@ -25,7 +24,6 @@ class MyTestCase(unittest.TestCase):
         sppm = StructurePymatgenPropMap(
             prop_name=["_lattice.lengths", "_lattice.angles", "_lattice.get_brillouin_zone()"])
         data = sppm.fit_transform(self.data0_3)
-
 
 
 if __name__ == '__main__':

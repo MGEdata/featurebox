@@ -1,6 +1,6 @@
 """Get pure atom properties.
 
-Embedded data: "element_table.csv", "elemental_MEGNet.json", "ie.json", "oe.csv"
+Embedded data: "ele_table.csv", "ele_megnet.json", "ie.json", "oe.csv"
 
 """
 import functools
@@ -15,7 +15,7 @@ from monty.serialization import loadfn
 from pymatgen.core import Element, Structure, Lattice
 
 from featurebox.data.check_data import ALL_ELE_N_MAP, ALL_N_ELE_MAP
-from featurebox.featurizers.base_transform import Converter, BaseFeature
+from featurebox.featurizers.base_feature import BaseFeature
 
 MODULE_DIR = Path(__file__).parent.parent.parent.absolute()
 
@@ -66,7 +66,7 @@ def get_ion_fea_name(structure: Structure) -> List[dict]:
 
 ##############################################################
 
-class AtomMap(Converter):
+class AtomMap(BaseFeature):
     """
     Base class for atom converter. Map the element type and weight to element data.
     """
@@ -75,7 +75,7 @@ class AtomMap(Converter):
         super(AtomMap, self).__init__(n_jobs=n_jobs, on_errors=on_errors, return_type=return_type)
 
     @staticmethod
-    def get_json_embeddings(file_name: str = "elemental_MEGNet.json") -> Dict:
+    def get_json_embeddings(file_name: str = "ele_megnet.json") -> Dict:
         """get json preprocessing"""
         data = loadfn(MODULE_DIR / "data" / file_name)
         data = {i: np.array(j) for i, j in data.items()}
@@ -109,7 +109,7 @@ class BinaryMap(AtomMap):
         self.ndim = 1
 
     def _convert(self, d: Any) -> Any:
-        if self.search_tp == "name":
+        if self.search_tp in ["name", "name_dict"]:
             if isinstance(d, Structure):
                 d = get_atom_fea_name(d)
             return self.convert_dict(d)
@@ -170,7 +170,7 @@ class AtomJsonMap(BinaryMap):
                 Name of file or dict,element to element vector dictionary
 
                 Provides the pre-trained elemental embeddings using formation energies,
-                which can be used to speed up the training of other models_geo. The embeddings
+                which can be used to speed up the training. The embeddings
                 are also extremely useful elemental descriptors that encode chemical
                 similarity that may be used in other ways.
         """
@@ -182,7 +182,7 @@ class AtomJsonMap(BinaryMap):
             embedding_dict = self.get_json_embeddings(embedding_dict)
 
         assert len(set([len(i) for i in embedding_dict.values()])) == 1, \
-            "The element number should be same with `elemental_MEGNet.json`, " \
+            "The element number should be same with `ele_megnet.json`, " \
             "which contains elemental features for 89 elements (up to Z=94, excluding Po, At, Rn, Fr, Ra) "
 
         self.embedding_dict = embedding_dict
@@ -215,14 +215,14 @@ class AtomJsonMap(BinaryMap):
             emb = 0
             for k, v in atom.items():
                 if self.weight:
-                    emb += np.array(self.embedding_dict[k]).astype(np.float32) * v
+                    emb += np.array(self.embedding_dict[k]).astype(np.float64) * v
                 else:
-                    emb += np.array(self.embedding_dict[k]).astype(np.float32)
+                    emb += np.array(self.embedding_dict[k]).astype(np.float64)
             features.append(emb)
         if len(atoms) == 1:
-            return np.array(features).ravel().astype(np.float32)
+            return np.array(features).ravel().astype(np.float64)
         else:
-            return np.array(features).reshape((len(atoms), -1)).astype(np.float32)
+            return np.array(features).reshape((len(atoms), -1)).astype(np.float64)
 
     def convert_number(self, atoms: List[int]) -> np.ndarray:
 
@@ -230,9 +230,9 @@ class AtomJsonMap(BinaryMap):
         features = [self.embedding_dict[i] for i in atoms_name]
 
         if len(atoms) == 1:
-            return np.array(features).astype(np.float32).ravel()
+            return np.array(features).astype(np.float64).ravel()
         else:
-            return np.array(features).astype(np.float32).reshape((len(atoms), -1))
+            return np.array(features).astype(np.float64).reshape((len(atoms), -1))
 
 
 class AtomTableMap(BinaryMap):
@@ -259,8 +259,18 @@ class AtomTableMap(BinaryMap):
     --------
     >>> tmps = AtomTableMap(search_tp="number")
     >>> s = [1,76]
-    >>> a = tmps.convert(s)
-    ...
+    >>> tmps.convert(s)
+    array([[2.245000e+01, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+            0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+            0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+            0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+            0.000000e+00, 0.000000e+00, 0.000000e+00],
+           [2.383710e+03, 3.937715e+04, 3.783280e+03, 9.866700e+02,
+            8.349720e+03, 6.978800e+02, 1.861780e+03, 1.549970e+03,
+            9.784700e+02, 2.231900e+02, 2.633000e+02, 1.689800e+02,
+            2.854000e+01, 0.000000e+00, 1.841000e+01, 0.000000e+00,
+            0.000000e+00, 0.000000e+00, 0.000000e+00]])
+
     >>> tmps = AtomTableMap(search_tp="name")
     >>> s = [{"H": 2, }, {"Po": 1}]  #[i.species.as_dict() for i in pymatgen.structure.sites]
     >>> a = tmps.convert(s)
@@ -270,15 +280,15 @@ class AtomTableMap(BinaryMap):
     >>> a = tmps.transform(s)
     ...
 
-    >>> tmps = AtomTableMap(tablename=None) or
-    >>> tmps = AtomTableMap(tablename="element_table.csv")
+    >>> tmps = AtomTableMap(tablename=None)
+    >>> tmps = AtomTableMap(tablename="ele_table.csv")
     >>> s = [{"H": 2, }, {"Pd": 1}]
     >>> b = tmps.convert(s)
     ...
 
     """
 
-    def __init__(self, tablename: Union[str, np.ndarray, pd.DataFrame] = "oe.csv",
+    def __init__(self, tablename: Union[str, np.ndarray, pd.DataFrame, None] = "oe.csv",
                  search_tp: str = "name", **kwargs):
         """
 
@@ -286,7 +296,7 @@ class AtomTableMap(BinaryMap):
         ----------
         tablename: str,np.ndarray, pd.Dateframe
             1. Name of table in bgnet.preprocessing.resources. if tablename is None,
-            use the embedding "element_table.csv".\n
+            use the embedding "ele_table.csv".\n
             2. np.ndarray, search_tp = "number".\n
             3. pd.dataframe, search_tp = "name"
 
@@ -297,13 +307,13 @@ class AtomTableMap(BinaryMap):
         super(AtomTableMap, self).__init__(search_tp=search_tp, **kwargs)
 
         if tablename is None:
-            self.da = self.get_ele_embeddings()
+            self.da = self.get_ele_embeddings("ele_table_norm.csv")
             self.dax = self.da.values
             self.da_columns = list(self.da.columns)
 
         elif isinstance(tablename, str):
-            if tablename == "element_table.csv":
-                self.da = self.get_ele_embeddings()
+            if tablename in ["ele_table.csv", "ele_table_norm.csv"]:
+                self.da = self.get_ele_embeddings(tablename)
             else:
                 self.da = self.get_csv_embeddings(tablename)
             self.dax = self.da.values
@@ -311,7 +321,7 @@ class AtomTableMap(BinaryMap):
 
         elif isinstance(tablename, np.ndarray):
             self.da_columns = None
-            self.dax = tablename.astype(np.float32)
+            self.dax = tablename.astype(np.float64)
 
         elif isinstance(tablename, pd.DataFrame):
             tablename = tablename.apply(pd.to_numeric)
@@ -329,9 +339,9 @@ class AtomTableMap(BinaryMap):
             self.ndim = 1
 
     @staticmethod
-    def get_ele_embeddings() -> pd.DataFrame:
+    def get_ele_embeddings(name="ele_table_norm.csv") -> pd.DataFrame:
         """get CSV preprocessing"""
-        oedata = pd.read_csv(os.path.join(MODULE_DIR, "data", "element_table.csv"), index_col=0, header=7, skiprows=0)
+        oedata = pd.read_csv(os.path.join(MODULE_DIR, "data", name), index_col=0, header=0, skiprows=0)
         oedata = oedata.drop(["abbrTex", "abbr"], axis=0)
         oedata = oedata.fillna(0)
         oedata = oedata.apply(pd.to_numeric, errors='ignore')
@@ -348,10 +358,21 @@ class AtomTableMap(BinaryMap):
         for atom in atoms:
             emb = 0
             for k, v in atom.items():
-                if self.weight:
-                    emb += self.da.loc[k, :].values * v
-                else:
-                    emb += self.da.loc[k, :].values
+                try:
+                    if self.weight:
+                        emb += self.da.loc[k, :].values * v
+                    else:
+                        emb += self.da.loc[k, :].values
+                except TypeError as e:
+                    emb = np.NaN
+                    print("try add {} and {}".format(emb, self.da.loc[k, :].values),
+                          "with dtype {} and {}".format(np.array(emb).dtype, np.array(self.da.loc[k, :].values).dtype),
+                          "with size {} and {}".format(np.array(emb).shape, np.array(self.da.loc[k, :].values).shape),
+                          "The preprocessing cannot be convert in to float, "
+                          "or the preprocessing after func are with different size.",
+                          "please check you func, which keep the number of results consistent.")
+                    raise e
+
             features.append(emb)
         if len(atoms) == 1:
             return np.array(features).ravel()
@@ -371,7 +392,7 @@ class AtomTableMap(BinaryMap):
                 self.dax = np.concatenate((self.dax, other.dax), axis=1)
                 self.da = None
             else:
-                self.da = pd.concat((self.dax, other.dax), axis=1)
+                self.da = pd.concat((self.da, other.da), axis=1)
                 self.dax = None
         else:
             raise TypeError("only same class can be added.")
@@ -535,11 +556,11 @@ class AtomPymatgenPropMap(BinaryMap):
         """
 
         Args:
-            prop_name:(str,list of str)
+            prop_name: (str,list of str)
                 prop name or list of prop name
-            func:(callable or list of callable)
+            func: (callable or list of callable)
                 please make sure the size of it is the same with prop_name.
-            search_tp:(str)
+            search_tp: (str)
                 location method.
                 "name" for dict
                 "number" for int.
@@ -568,7 +589,7 @@ class AtomPymatgenPropMap(BinaryMap):
             if j in after_treatment_func_map_ele:
                 self.func[i] = after_treatment_func_map_ele[j]
         self.da = [Element.from_Z(i) for i in range(1, 119)]
-        self.da.insert(0, None)  # for start from 1
+        self.da.insert(0, np.nan)  # for start from 1
         self.ele_map = []
 
     def convert_dict(self, atoms: List[Dict]) -> np.ndarray:

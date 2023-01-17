@@ -12,8 +12,8 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   featurebox.cli
    featurebox.data
    featurebox.featurizers
-   featurebox.models_geo
    featurebox.selection
    featurebox.utils

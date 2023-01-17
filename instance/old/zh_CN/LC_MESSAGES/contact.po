@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# changxin W <986798607@qq.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-06 13:49+0800\n"
+"PO-Revision-Date: 2021-08-06 06:14+0000\n"
+"Last-Translator: changxin W <986798607@qq.com>, 2021\n"
+"Language-Team: Chinese (https://www.transifex.com/ustb/teams/123473/zh/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../contact.rst:2
+msgid "Contact"
+msgstr "联系方式"
+
+#: ../../contact.rst:4
+msgid "Thanks for your reading."
+msgstr "感谢您的关注。"
+
+#: ../../contact.rst:6
+msgid ""
+"This project is one alpha version, if you have question, bugs or writing "
+"errors to feedback."
+msgstr "本项目是一个alpha版本，如果您有问题，"
+"bug或书写错误的反馈，"
+
+#: ../../contact.rst:8
+msgid "Please contact with 986798607@qq.com."
+msgstr "请联系986798607@qq.com"

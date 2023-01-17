@@ -1,0 +1,1739 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 23:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.featurizers.descriptors.rst:2
+msgid "featurebox.featurizers.descriptors package"
+msgstr ""
+
+#: featurebox.featurizers.descriptors:1 of
+msgid ""
+"This is copy from ``pyXtal_FF``. Contains atom features and bond features"
+" method."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:13
+msgid "featurebox.featurizers.descriptors.ACSF module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF:1
+#: featurebox.featurizers.descriptors.EAD.EAD:1
+#: featurebox.featurizers.descriptors.EAMD.EAMD:1
+#: featurebox.featurizers.descriptors.SO3.SO3:1
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum:1
+#: featurebox.featurizers.descriptors.SOAP.SOAP:1
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello:1
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum:1
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:1
+#: featurebox.featurizers.descriptors.lbispectrum.Assembler:1
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:1
+#: featurebox.featurizers.descriptors.wACSF.wACSF:1 of
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF:1
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello:1 of
+msgid "A class for calculating Behler-Parrinello symmetry functions."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF:3
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello:3 of
+msgid ""
+"The forms of the functions are consistent with the functions presented "
+"in: Behler, J. (2011). The Journal of Chemical Physics, 134(7), 074106."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm
+#: featurebox.featurizers.descriptors.EAD.EAD
+#: featurebox.featurizers.descriptors.EAD.EAD.calculate
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd
+#: featurebox.featurizers.descriptors.EAD.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.EAD.dij_dm_list
+#: featurebox.featurizers.descriptors.EAMD.EAMD
+#: featurebox.featurizers.descriptors.EAMD.EAMD.calculate
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd
+#: featurebox.featurizers.descriptors.EAMD.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.EAMD.dij_dm_list
+#: featurebox.featurizers.descriptors.SO3.SO3
+#: featurebox.featurizers.descriptors.SO3.SO3.calculate
+#: featurebox.featurizers.descriptors.SO3.sph_harm
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum.calculate
+#: featurebox.featurizers.descriptors.SO4.U
+#: featurebox.featurizers.descriptors.SO4.U_wD
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot
+#: featurebox.featurizers.descriptors.SO4.compute_dsfac
+#: featurebox.featurizers.descriptors.SO4.compute_sfac
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial_wD
+#: featurebox.featurizers.descriptors.SO4.init_clebsch_gordan
+#: featurebox.featurizers.descriptors.SOAP.SOAP
+#: featurebox.featurizers.descriptors.SOAP.SOAP.calculate
+#: featurebox.featurizers.descriptors.SOAP.sph_harm
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello.calculate
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum.calculate
+#: featurebox.featurizers.descriptors.bispectrum.U
+#: featurebox.featurizers.descriptors.bispectrum.U_wD
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot
+#: featurebox.featurizers.descriptors.bispectrum.compute_dsfac
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial_wD
+#: featurebox.featurizers.descriptors.bispectrum.init_clebsch_gordan
+#: featurebox.featurizers.descriptors.cutoff.Cutoff
+#: featurebox.featurizers.descriptors.lbispectrum.Assembler
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm
+#: featurebox.featurizers.descriptors.wACSF.wACSF
+#: featurebox.featurizers.descriptors.wACSF.wACSF.calculate of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF:7
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello:7
+#: featurebox.featurizers.descriptors.wACSF.wACSF:8 of
+msgid ""
+"The user-defined parameters for the symmetry functions calculations. i.e."
+" {'G2': {'eta': [0.1, 0.2,], 'Rs': [0.0, 0.1]}}"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF:10
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello:10
+#: featurebox.featurizers.descriptors.wACSF.wACSF:11 of
+msgid "The symmetry functions will be calculated within this radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF:12
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello:12
+#: featurebox.featurizers.descriptors.wACSF.wACSF:13 of
+msgid "If True, calculate the derivatives."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF:14
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello:14
+#: featurebox.featurizers.descriptors.wACSF.wACSF:15 of
+msgid "If True, calculate the virial stress contribution."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate:1
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello.calculate:1
+#: featurebox.featurizers.descriptors.wACSF.wACSF.calculate:1 of
+msgid "The symmetry functions are obtained through this `calculate` method."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate:3
+#: featurebox.featurizers.descriptors.EAD.EAD.calculate:3
+#: featurebox.featurizers.descriptors.EAMD.EAMD.calculate:3
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello.calculate:3
+#: featurebox.featurizers.descriptors.wACSF.wACSF.calculate:3 of
+msgid "ASE Structure object."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate:5
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello.calculate:5
+#: of
+msgid ""
+"A list of the crystal structures system. All elements in the list have to"
+" be integer. For example, the system of crystal structure is NaCl system."
+" Then, system should be pass as [11, 17]"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate:10
+#: featurebox.featurizers.descriptors.EAD.EAD.calculate:5
+#: featurebox.featurizers.descriptors.EAMD.EAMD.calculate:5 of
+msgid ""
+"A list of the centered atoms to be computed if None, all atoms will be "
+"considered"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm
+#: featurebox.featurizers.descriptors.EAD.EAD.calculate
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd
+#: featurebox.featurizers.descriptors.EAD.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.EAD.dij_dm_list
+#: featurebox.featurizers.descriptors.EAMD.EAMD.calculate
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd
+#: featurebox.featurizers.descriptors.EAMD.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.EAMD.dij_dm_list
+#: featurebox.featurizers.descriptors.SO3.compute_uarray_recursive
+#: featurebox.featurizers.descriptors.SO4.U
+#: featurebox.featurizers.descriptors.SO4.U_wD
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot
+#: featurebox.featurizers.descriptors.SO4.compute_dsfac
+#: featurebox.featurizers.descriptors.SO4.compute_sfac
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial_wD
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_recursive
+#: featurebox.featurizers.descriptors.SO4.init_clebsch_gordan
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello.calculate
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm
+#: featurebox.featurizers.descriptors.bispectrum.U
+#: featurebox.featurizers.descriptors.bispectrum.U_wD
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot
+#: featurebox.featurizers.descriptors.bispectrum.compute_dsfac
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial_wD
+#: featurebox.featurizers.descriptors.bispectrum.init_clebsch_gordan
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm
+#: featurebox.featurizers.descriptors.wACSF.wACSF.calculate of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate:14
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello.calculate:11
+#: of
+msgid ""
+"**all_G** -- The user-defined symmetry functions that represent the "
+"crystal. Currently, there are 3 types of symmetry functions implemented. "
+"Here are the order of the descriptors are printed out based on their "
+"symmetry parameters: - G2: [\"element\", \"Rs\", \"eta\"] - G4: "
+"[\"pair_elements\", \"eta\", \"lambda\", \"zeta\"] - G5: "
+"[\"pair_elements\", \"eta\", \"lambda\", \"zeta\"]"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.calculate
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm
+#: featurebox.featurizers.descriptors.EAD.EAD.calculate
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd
+#: featurebox.featurizers.descriptors.EAD.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.EAD.dij_dm_list
+#: featurebox.featurizers.descriptors.EAMD.EAMD.calculate
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd
+#: featurebox.featurizers.descriptors.EAMD.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.EAMD.dij_dm_list
+#: featurebox.featurizers.descriptors.SO3.compute_uarray_recursive
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot
+#: featurebox.featurizers.descriptors.SO4.compute_dsfac
+#: featurebox.featurizers.descriptors.SO4.compute_sfac
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial_wD
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_recursive
+#: featurebox.featurizers.descriptors.SO4.init_clebsch_gordan
+#: featurebox.featurizers.descriptors.behlerparrinello.BehlerParrinello.calculate
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot
+#: featurebox.featurizers.descriptors.bispectrum.compute_dsfac
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial_wD
+#: featurebox.featurizers.descriptors.bispectrum.init_clebsch_gordan
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_norm
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_vector
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm
+#: featurebox.featurizers.descriptors.wACSF.wACSF.calculate of
+msgid "Return type"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.ACSF.save_dict:1
+#: featurebox.featurizers.descriptors.EAD.EAD.save_dict:1
+#: featurebox.featurizers.descriptors.SO3.SO3.save_dict:1
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum.save_dict:1 of
+msgid "save the model as a dictionary in json"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:1
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:1 of
+msgid "Calculate G2 symmetry function for a center atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:3
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:3 of
+msgid ""
+"G2 function describes the radial feature of atoms in a crystal structure "
+"given a cutoff radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:6
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:6 of
+msgid "The array of distances for a given atom."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:8
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:7
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:8
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:10
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:8
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:10
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:13
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:13
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:8
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:7
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:8
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:10
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:8
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:10
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:13
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:9
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:9 of
+msgid "The indices of neighbors centering about atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:10
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:9
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:12
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:14
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:12
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:14
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:10
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:9
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:12
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:14
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:12
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:14 of
+msgid ""
+"The elemental indices for atoms within the unitcell. e.g. [11, 11, 11, "
+"11, 17, 17, 17, 17]"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:13
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:12
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:15
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:17
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:15
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:17
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:15
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:15
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:13
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:12
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:15
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:17
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:15
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:17
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:7
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:17
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:11
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:17
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:11
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:17 of
+msgid "The cutoff radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:15
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:14 of
+msgid ""
+"Rs: float array (n1)     The shift from the center of the G2 symmetry "
+"function. etas: float array (n2)      eta parameters of G2 symmetry "
+"function. cutoff: str     The cutoff function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:16
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:15
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:16
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:15 of
+msgid "Rs: float array (n1)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:17
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:16
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:17
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:16
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:11
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:21 of
+msgid "The shift from the center of the G2 symmetry function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:18
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:17
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:18
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:17 of
+msgid "etas: float array (n2)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:19
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:18
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:19
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:18
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:13
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:23 of
+msgid "eta parameters of G2 symmetry function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:20
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:19
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:24 of
+msgid "cutoff: str"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:21
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:20
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:25 of
+msgid "The cutoff function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2:24
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:22
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:16 of
+msgid "**G2** -- G2 symmetry value."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:1
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:1
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:1 of
+msgid "Calculate the derivative of G2 symmetry function for atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:3
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:6
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:6
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:6
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:6
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm:3
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm:6
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:3
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:6
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:6
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:6
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:6
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm:3
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm:6
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:3
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:3
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:3
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:3
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:3
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm:3
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm:6 of
+msgid "The vector distances of atom i to neighbors js."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:5
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:8
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:8
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:3
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:3
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:5
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:8
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:8
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:11
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:7
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:7 of
+msgid "The i-th atom center."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G2Prime:23
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:21 of
+msgid ""
+"**G2Prime** -- The derivative of G2 symmetry value at i-th atom. layer is"
+" the index of the atom that force is acting on."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:1
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:1
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:1
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:1
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:1
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:1 of
+msgid "Calculate G4 symmetry function for a given atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:3
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:3
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:3
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:3 of
+msgid ""
+"G4 function also describes the angular feature of atoms in a crystal "
+"structure given a cutoff radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:10
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:12
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:10
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:12
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:10
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:12
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:10
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:12 of
+msgid "The list of [j,k] pairs"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:17
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:17 of
+msgid ""
+"Rs: float array (n1) etas: float array (n2) lamBdas: float array (n3) "
+"zetas: float array (n4) cutoff: str"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4:24
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:23
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:19 of
+msgid "**G4** -- G4 symmetry value with d members."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:19
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:19 of
+msgid ""
+"zetas: float array (n1) lamBdas: float array (n2) etas: float array (n3) "
+"cutoff: str"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G4Prime:24
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:23 of
+msgid ""
+"The derivative of G4 symmetry value at i-th atom. layer is the index of "
+"the atom that force is acting on."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:1
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:1
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:1
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:1
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:1
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:1 of
+msgid "Calculate G5 symmetry function for a given atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:3
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:3
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:3
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:3 of
+msgid ""
+"G5 function also describes the angular feature of atoms in a crystal "
+"structure given a cutoff radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5:24
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:23
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:19 of
+msgid "**G5** -- G5 symmetry value with d members."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.calculate_G5Prime:25
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:24
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:25 of
+msgid ""
+"**G5Prime** -- The derivative of G5 symmetry value at i-th atom. layer is"
+" the index of the atom that force is acting on."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_norm:1
+#: featurebox.featurizers.descriptors.EAD.dRij_dRm_norm:1
+#: featurebox.featurizers.descriptors.EAMD.dRij_dRm_norm:1
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_norm:1
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_norm:1 of
+msgid ""
+"Calculate the derivative of Rij norm w. r. t. atom layer. This term "
+"affects only on i and j."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_norm:4
+#: featurebox.featurizers.descriptors.EAD.dRij_dRm_norm:4
+#: featurebox.featurizers.descriptors.EAMD.dRij_dRm_norm:4
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_norm:4
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_norm:4 of
+msgid "The vector distances of atom i to atom j."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_norm:6
+#: featurebox.featurizers.descriptors.EAD.dRij_dRm_norm:6
+#: featurebox.featurizers.descriptors.EAMD.dRij_dRm_norm:6
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_norm:6
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_norm:6 of
+msgid "Id list of center atom i, neighbors atom j, and atom layer."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_norm:9
+#: featurebox.featurizers.descriptors.EAD.dRij_dRm_norm:9
+#: featurebox.featurizers.descriptors.EAMD.dRij_dRm_norm:9
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_norm:9
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_norm:9 of
+msgid ""
+"**dRij_m** -- The derivative of pair atoms w.r.t. atom layer in x, y, z "
+"directions."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_vector:1
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_vector:1
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_vector:1 of
+msgid "Calculate the derivative of Rij vector w. r. t. atom layer."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_vector:3
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_vector:3
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_vector:3 of
+msgid "List of indices of center atom i, neighbors atom j, and atom layer."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRij_dRm_vector:6
+#: featurebox.featurizers.descriptors.behlerparrinello.dRij_dRm_vector:6
+#: featurebox.featurizers.descriptors.wACSF.dRij_dRm_vector:6 of
+msgid ""
+"The derivative of the position vector R_{ij} with respect to atom index "
+"layer in x, y, z directions."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm:1
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm:1
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm:1 of
+msgid "Calculate the derivative of R_{ab} norm with respect to atom layer."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm:5
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm:5
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm:5 of
+msgid "The vector distances of atom i to neighbors ks."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm:7
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm:7
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm:7 of
+msgid "The vector distances of atom j to atom k, where j != k."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm:9
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm:9
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm:9 of
+msgid "The combinations of atom i, neighbor j, and neighbor k indices."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm:11
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm:11 of
+msgid "the list of atoms"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dRijk_dRm:14
+#: featurebox.featurizers.descriptors.behlerparrinello.dRijk_dRm:14
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm:14 of
+msgid ""
+"**dR{ab}_dRm** -- The derivative of R_{ab} norm with respect to atom "
+"layer."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm:1
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm:1
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm:1 of
+msgid ""
+"Calculate the derivative of cosine_ijk function w. r. t. atom layer. "
+"layer must belong to one of the ijks. Otherwise, the derivative is zero. "
+"If the input Rij and Rik are (j*k)*3 dimensions, the output will be "
+"(j*k)*3*3. The extra dimension comes from looping over {i, j, k}."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm:8
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm:8
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm:8 of
+msgid "The vector distances of atom i to neighbors ks, where j != k."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm:11
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm:11
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm:11 of
+msgid ""
+"* *Derivative of cosine dot product w.r.t. the radius of an atom layer,* "
+"* **The atom layer has to be in the an array with 3 indices** (*i, j, and"
+" k.*)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm:11
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm:11
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm:11 of
+msgid "*Derivative of cosine dot product w.r.t. the radius of an atom layer,*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.ACSF.dcosijk_dRm:12
+#: featurebox.featurizers.descriptors.behlerparrinello.dcosijk_dRm:12
+#: featurebox.featurizers.descriptors.wACSF.dcosijk_dRm:12 of
+msgid ""
+"**The atom layer has to be in the an array with 3 indices** (*i, j, and "
+"k.*)"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:21
+msgid "featurebox.featurizers.descriptors.EAD module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD:1 of
+msgid ""
+"EAD is an atom-centered descriptor that is inspired by Embedded Atom "
+"method (EAM). The EAM utilizes the orbital-dependent density components. "
+"The orbital-dependent component consists of a set of local atomic density"
+" descriptions."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD:6 of
+msgid "The functional form of EAD is consistent with:"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD:6
+#: featurebox.featurizers.descriptors.EAMD.EAMD:6 of
+msgid ""
+"Zhang, Y., et. al. (2019). The Journal of Physical Chemistry Letters, "
+"10(17), 4962-4967."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD:8
+#: featurebox.featurizers.descriptors.EAMD.EAMD:8 of
+msgid ""
+"The user-defined parameters for component of local atomic density "
+"descriptions. i.e. {'L': 2, 'eta': [0.36], 'Rs': [1.0]}"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD:11 of
+msgid "The EAD will be calculated within this radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD:13
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:27 of
+msgid "If True, calculate the derivative of EAD."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD:15
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:28 of
+msgid "If True, calculate the virial stress contribution of EAD."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD.calculate:1 of
+msgid "Calculate and return the EAD."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.EAD.calculate:9 of
+msgid ""
+"**d** -- The user-defined EAD that represent the crystal. d = {'x': [N, "
+"d], 'dxdr': [N, layer, d, 3], 'rdxdr': [N, layer, d, 3, 3], 'elements': "
+"list of elements}"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:1 of
+msgid "Calculate the EAD for a center atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:5
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:9
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:11
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:11 of
+msgid "The total atoms in the crystal unit cell."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:7
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:7 of
+msgid "The vector distances of atom i to neighbors j."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:9
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:9 of
+msgid "The array of distances of i-th center atom."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:11
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:11 of
+msgid "The atomic numbers of neighbors."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:17 of
+msgid ""
+"Rs: float array (d1)     The shift from the center of the Gaussian-type "
+"orbitals. etas: float array (d2)     The width of the Gaussian-type "
+"orbitals. L: int (d3)     The total orbital angular momentum. cutoff: str"
+"     The cutoff function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:18
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:18
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:10
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:20 of
+msgid "Rs: float array (d1)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:19
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:19 of
+msgid "The shift from the center of the Gaussian-type orbitals."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:20
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:20
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:12
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:22 of
+msgid "etas: float array (d2)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:21
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:21 of
+msgid "The width of the Gaussian-type orbitals."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:22
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:22 of
+msgid "L: int (d3)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.calculate_eamd:23
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:23 of
+msgid "The total orbital angular momentum."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.dij_dm_list:1
+#: featurebox.featurizers.descriptors.EAMD.dij_dm_list:1 of
+msgid "Get the sign of the derivative of x-y-z ** lx-ly-lz."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.dij_dm_list:3
+#: featurebox.featurizers.descriptors.EAMD.dij_dm_list:3 of
+msgid "the unique index of the atom that force is acting on."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.dij_dm_list:5
+#: featurebox.featurizers.descriptors.EAMD.dij_dm_list:5 of
+msgid "The list of center atom i w.r.t. the neighbors atom j."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.dij_dm_list:8
+#: featurebox.featurizers.descriptors.EAMD.dij_dm_list:8 of
+msgid ""
+"**result** -- The signs (+ or -) for dXij_dm (YZ) * dYij_dm (XZ) * "
+"dZij_dm (XY)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAD.get_xyz:1
+#: featurebox.featurizers.descriptors.EAMD.get_xyz:1 of
+msgid "(x ** l_x) * (y ** l_y) * (z ** l_z) / (l_x! * l_y! * l_z!) ** 0.5"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:29
+msgid "featurebox.featurizers.descriptors.EAMD module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.EAMD:1 of
+msgid ""
+"EAMD is an atom-centered descriptor that is inspired by Embedded Atom "
+"method (EAM). The EAM utilizes the orbital-dependent density components. "
+"The orbital-dependent component consists of a set of local atomic density"
+" descriptions."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.EAMD:6 of
+msgid "The functional form of EAMD is consistent with:"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.EAMD:11 of
+msgid "The EAMD will be calculated within this radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.EAMD:13
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:25 of
+msgid "If True, calculate the derivative of EAMD."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.EAMD:15
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:26 of
+msgid "If True, calculate the virial stress contribution of EAMD."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.EAMD.calculate:1 of
+msgid "Calculate and return the EAMD."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.EAMD.calculate:9 of
+msgid ""
+"**d** -- The user-defined EAMD that represent the crystal. d = {'x': [N, "
+"d], 'dxdr': [N, layer, d, 3], 'rdxdr': [N, layer, d, 3, 3], 'elements': "
+"list of elements}"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:1 of
+msgid "Calculate the EAMD for a center atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.EAMD.calculate_eamd:17 of
+msgid ""
+"Rs: float array (d1)     The shift from the center of the Gaussian-type "
+"orbitals. etas: float array (d2)     The width of the Gaussian-type "
+"orbitals. L: int (d3)     The total orbital angular momentum."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:37
+msgid "featurebox.featurizers.descriptors.SO3 module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3:1
+#: featurebox.featurizers.descriptors.SOAP.SOAP:1 of
+msgid ""
+"A class to generate the SO3 power spectrum components based off of the "
+"Gaussian atomic neighbor density function defined in \"On Representing "
+"Atomic Environments\"."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3:5
+#: featurebox.featurizers.descriptors.SOAP.SOAP:5 of
+msgid "int, degree of radial expansion"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3:6
+#: featurebox.featurizers.descriptors.SOAP.SOAP:6 of
+msgid "int, degree of spherical harmonic expansion"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3:7
+#: featurebox.featurizers.descriptors.SOAP.SOAP:7 of
+msgid "float, cutoff radius for neighbor calculation"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3:8
+#: featurebox.featurizers.descriptors.SOAP.SOAP:8 of
+msgid "float, gaussian width parameter"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3:9
+#: featurebox.featurizers.descriptors.SOAP.SOAP:9 of
+msgid "bool, whether to calculate the gradient of not"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3.build_neighbor_list:1
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum.build_neighbor_list:1
+#: featurebox.featurizers.descriptors.SOAP.SOAP.build_neighbor_list:1
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum.build_neighbor_list:1
+#: of
+msgid ""
+"Builds a neighborlist for the calculation of bispectrum components for a "
+"given ASE atoms object given in the calculate method."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3.calculate:1
+#: featurebox.featurizers.descriptors.SOAP.SOAP.calculate:1 of
+msgid ""
+"Calculates the SO(3) power spectrum components of the smoothened atomic "
+"neighbor density function for given nmax, lmax, rcut, and alpha."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3.calculate:5
+#: featurebox.featurizers.descriptors.SOAP.SOAP.calculate:5 of
+msgid "an ASE atoms object corresponding to the desired atomic arrangement"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3.calculate:7
+#: featurebox.featurizers.descriptors.SOAP.SOAP.calculate:7 of
+msgid ""
+"string, specifies the method to compute the neighborlist elements, either"
+" ASE or pymatgen"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.SO3.clear_memory:1
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum.clear_memory:1
+#: featurebox.featurizers.descriptors.SOAP.SOAP.clear_memory:1
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum.clear_memory:1
+#: of
+msgid "Clears all memory that isn't an essential attribute for the calculator"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.W:1
+#: featurebox.featurizers.descriptors.SOAP.W:1 of
+msgid ""
+"Constructs the matrix of linear combination coefficients from the overlap"
+" matrix S for the polynomial basis g(r) defined below and in On "
+"Representing Chemical Environments. This normalizes this basis on the "
+"interval [0, rcut]"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.W:6
+#: featurebox.featurizers.descriptors.SOAP.W:6 of
+msgid "W = S^(-1/2)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.add_carraytot:1
+#: featurebox.featurizers.descriptors.SOAP.add_carraytot:1 of
+msgid "Add the expansion coefficient array for one neighbor to the total"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.compute_carray:1
+#: featurebox.featurizers.descriptors.SO3.compute_carray_wD:1
+#: featurebox.featurizers.descriptors.SOAP.compute_carray:1
+#: featurebox.featurizers.descriptors.SOAP.compute_carray_wD:1 of
+msgid ""
+"Get expansion coefficient for one neighbor.  Then add to the whole "
+"expansion coefficient"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.compute_dpidrj:1
+#: featurebox.featurizers.descriptors.SO3.compute_pi:1
+#: featurebox.featurizers.descriptors.SOAP.compute_dpidrj:1
+#: featurebox.featurizers.descriptors.SOAP.compute_pi:1 of
+msgid ""
+"Compute the power spectrum components by p(n1,n2,l) by summing over l "
+"There is a symmetry for interchanging n1 and n2 so we only take the "
+"unique elements of the power spectrum."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.compute_uarray_recursive:1
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_recursive:1 of
+msgid ""
+"Compute the Wigner-D matrix of order twol given an axis (x,y,z) and "
+"rotation angle 2*psi. This function constructs a unit quaternion "
+"representating a rotation of 2*psi through an axis defined by x,y,z; then"
+" populates an array of Wigner-D matrices of order twol for this rotation."
+"  The Wigner-D matrices are calculated using the recursion relations in "
+"LAMMPS. :param x: :type x: float :param the x coordinate corresponding to"
+" the axis of rotation.: :param y: :type y: float :param the y coordinate "
+"corresponding to the axis of rotation.: :param z: :type z: float :param "
+"the z coordinate corresponding to the axis of rotation: :param psi: :type"
+" psi: float :param one half of the rotation angle: :param r: :type r: "
+"float :param magnitude of the vector (x: :param y: :param z): :param "
+"twol: :type twol: integer :param order of hyperspherical expansion: "
+":param ulist: :type ulist: 1-D complex array :param array to populate "
+"with D-matrix elements: :param mathematically: :param this is a 3-D "
+"matrix: :param although we broadcast this to a 1-D: :param matrix: :param"
+" idxu_block: :type idxu_block: 1-D int array :param used to index ulist: "
+":param rootpqarray: :type rootpqarray: 2-D float array :param used for "
+"recursion relation:"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.g:1
+#: featurebox.featurizers.descriptors.SOAP.g:1 of
+msgid ""
+"Evaluate the radial basis at a given r, given the overlap matrix for the "
+"maximal n."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.get_power_spectrum_components:1 of
+msgid ""
+"Interface to SO3 class, this is the main work function for the power "
+"spectrum calculation."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.get_radial_inner_product:1
+#: featurebox.featurizers.descriptors.SOAP.get_radial_inner_product:1 of
+msgid ""
+"Chebyshev-Gauss quadrature integral calculator for the radial inner "
+"product as in *cite our paper later*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.integrand:1
+#: featurebox.featurizers.descriptors.SOAP.integrand:1 of
+msgid "The integrand of the radial inner product as in *cite our paper later*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.modifiedSphericalBessel1:1
+#: featurebox.featurizers.descriptors.SOAP.modifiedSphericalBessel1:1 of
+msgid ""
+"Modified spherical bessel functions of the first kind with and without "
+"first derivative"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.modifiedSphericalBessel1:4
+#: featurebox.featurizers.descriptors.SOAP.modifiedSphericalBessel1:4 of
+msgid ""
+"We don't have to be careful of the singularity at x=0 as the Chebyshev "
+"quadrature used will never include the point 0"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.modifiedSphericalBessel1:7
+#: featurebox.featurizers.descriptors.SOAP.modifiedSphericalBessel1:7 of
+msgid "To include GPU support here, we will need to shift to temp variables"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.phi:1
+#: featurebox.featurizers.descriptors.SOAP.phi:1 of
+msgid "See g below"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.sph_harm:1
+#: featurebox.featurizers.descriptors.SOAP.sph_harm:1 of
+msgid "Spherical harmonics from Wigner-D functions"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.sph_harm:3
+#: featurebox.featurizers.descriptors.SO3.sph_harm:4
+#: featurebox.featurizers.descriptors.SOAP.sph_harm:3
+#: featurebox.featurizers.descriptors.SOAP.sph_harm:4 of
+msgid "complex, Cayley-Klein parameter for spherical harmonic"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.sph_harm:5
+#: featurebox.featurizers.descriptors.SOAP.sph_harm:5 of
+msgid "int, index of spherical harmonic l >= 0"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.sph_harm:6
+#: featurebox.featurizers.descriptors.SOAP.sph_harm:6 of
+msgid "int, index of spherical harmonic -l <= layer <= l"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.sph_harm:8
+#: featurebox.featurizers.descriptors.SOAP.sph_harm:8 of
+msgid ""
+"The spherical harmonics are a subset of Wigner-D matrices, and can be "
+"calculated in the same manner"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO3.zero_2D_array:1
+#: featurebox.featurizers.descriptors.SO3.zero_4D_array:1
+#: featurebox.featurizers.descriptors.SOAP.zero_2D_array:1
+#: featurebox.featurizers.descriptors.SOAP.zero_4D_array:1 of
+msgid "zeros an arbitrary 2D array"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:45
+msgid "featurebox.featurizers.descriptors.SO4 module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum:1
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum:1 of
+msgid ""
+"Pyxtal implementation of SO4 bispectrum component calculator. The "
+"difference between this implementation and the SNAP implementation lies "
+"exclusively with the choice of unit quaternion (removing singularities "
+"for rotations of 0 and 2pi) and the method of calculating Wigner-U "
+"functions"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum:6
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum:6 of
+msgid ""
+"here we use a polynomial form of the Wigner-D matrices to calculate the "
+"U-functions and thus the gradients can be calculated simultaneously "
+"through differentiating the U-functions using horner form"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum.calculate:1
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum.calculate:1 of
+msgid "ASE atoms object for the corresponding structure"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum.calculate:3
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum.calculate:3 of
+msgid ""
+"returns: a dictionary with the bispectrum components, their gradients, "
+"and the elemental specie of each atom in the atoms object"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.SO4_Bispectrum.initialize_arrays:1
+#: featurebox.featurizers.descriptors.bispectrum.SO4_Bispectrum.initialize_arrays:1
+#: of
+msgid ""
+"Initialize the arrays to store the bispectrum components and their "
+"derivatives"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.U:1
+#: featurebox.featurizers.descriptors.SO4.U_wD:1
+#: featurebox.featurizers.descriptors.bispectrum.U:1
+#: featurebox.featurizers.descriptors.bispectrum.U_wD:1 of
+msgid ""
+"Computes the hyperspherical harmonic function value for given Cayley-"
+"Klein parameters and angular momentum numbers.  The hyperspherical "
+"harmonics are the elements of the Wigner-D matrices."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.U:6
+#: featurebox.featurizers.descriptors.SO4.U_wD:6
+#: featurebox.featurizers.descriptors.bispectrum.U:6
+#: featurebox.featurizers.descriptors.bispectrum.U_wD:6 of
+msgid ""
+"This function is an interface to the Wigner-D matrix function in "
+"angular_momentum.py.  The indexing and generation of the Cayley-Klein "
+"parameters is handled in the compute_uarray functions, which are handled "
+"by the SO4 bispectrum class."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.U:38
+#: featurebox.featurizers.descriptors.SO4.U_wD:38
+#: featurebox.featurizers.descriptors.bispectrum.U:38
+#: featurebox.featurizers.descriptors.bispectrum.U_wD:38 of
+msgid ""
+"* *complex, element of the Wigner-D matrix, see* * *the corresponding "
+"function in angular_momentum.py*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.U:38
+#: featurebox.featurizers.descriptors.SO4.U_wD:38
+#: featurebox.featurizers.descriptors.bispectrum.U:38
+#: featurebox.featurizers.descriptors.bispectrum.U_wD:38 of
+msgid "*complex, element of the Wigner-D matrix, see*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.U:39
+#: featurebox.featurizers.descriptors.SO4.U_wD:39
+#: featurebox.featurizers.descriptors.bispectrum.U:39
+#: featurebox.featurizers.descriptors.bispectrum.U_wD:39 of
+msgid "*the corresponding function in angular_momentum.py*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.add_uarraytot:1
+#: featurebox.featurizers.descriptors.bispectrum.add_uarraytot:1 of
+msgid ""
+"add the hyperspherical harmonic array for one neighbor to the expansion "
+"coefficient array"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot:1
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot:1 of
+msgid ""
+"Add the central atom contribution to the hyperspherical expansion "
+"coefficient array."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot:4
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot:4 of
+msgid ""
+"This initializes the expansion coefficient array with a Kroenocker delta "
+"for ma and mb."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot:7
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot:7 of
+msgid ""
+"Corresponds to the order of hyperspherical expansion in this software, "
+"the degree of expansion is defined and handled within the SO4 bispectrum "
+"class."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot:11
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot:11 of
+msgid ""
+"Each element corresponds to the first element of the expansion "
+"coefficient array ->(l,0,0) for each l.  This is handled in the "
+"SO4_Bispectrum class."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.addself_uarraytot:15
+#: featurebox.featurizers.descriptors.bispectrum.addself_uarraytot:15 of
+msgid ""
+"Array for storing hyperspherical expansion coefficients. The sizing and "
+"filling of this array is handled in the SO4_Bispectrum class."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_bi:1
+#: featurebox.featurizers.descriptors.bispectrum.compute_bi:1 of
+msgid ""
+"compute the bispectrum components from the Kronoecker product of the "
+"hermitian adjoint of the expansion coefficient array with the Z list (see"
+" compute Z_i for description)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_dbidrj:1
+#: featurebox.featurizers.descriptors.bispectrum.compute_dbidrj:1 of
+msgid "Compute the gradient of the bispectrum components"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_dsfac:1
+#: featurebox.featurizers.descriptors.bispectrum.compute_dsfac:1 of
+msgid "Calculates the derivative of the cosine cutoff for a given radii"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_dsfac:3
+#: featurebox.featurizers.descriptors.SO4.compute_dsfac:5
+#: featurebox.featurizers.descriptors.bispectrum.compute_dsfac:3
+#: featurebox.featurizers.descriptors.bispectrum.compute_dsfac:5 of
+msgid "see compute_sfac"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_sfac:1
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac:1 of
+msgid ""
+"Calculates the cosine cutoff function value given in On Representing "
+"Chemical Environments, Batrok, et al."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_sfac:4
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac:4 of
+msgid ""
+"The cosine cutoff function ensures that the hyperspherical expansion for "
+"the calculation of bispectrum coefficients goes smoothly to zero for "
+"atomic neighbors tending to the cutoff radius."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_sfac:9
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac:9 of
+msgid ""
+"The magnitude of the separation vector from an atom in the unit cell to a"
+" particular neighbor"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_sfac:12
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac:12 of
+msgid "The cutoff radius specified in the SO4_Bispectrum class"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_sfac:15
+#: featurebox.featurizers.descriptors.bispectrum.compute_sfac:15 of
+msgid "**cosine_cutoff**"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial:1
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial_wD:1
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial:1
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial_wD:1
+#: of
+msgid ""
+"Compute the Wigner-D matrix of order twol given an axis (x,y,z) and "
+"rotation angle 2*psi."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial:4
+#: featurebox.featurizers.descriptors.SO4.compute_uarray_polynomial_wD:4
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial:4
+#: featurebox.featurizers.descriptors.bispectrum.compute_uarray_polynomial_wD:4
+#: of
+msgid ""
+"This function constructs a unit quaternion representating a rotation of "
+"2*psi through an axis defined by x,y,z; then populates an array of "
+"Wigner-D matrices of order twol for this rotation.  The Wigner-D matrices"
+" are calculated using a polynomial form.  See angular_momentum.Wigner_D "
+"for details."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.compute_zi:1
+#: featurebox.featurizers.descriptors.bispectrum.compute_zi:1 of
+msgid ""
+"Precompute the Kronoecker product of two rotated expansion coefficient "
+"tensors using Clebsch-Gordan expansion"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.dudr:1
+#: featurebox.featurizers.descriptors.bispectrum.dudr:1 of
+msgid "Compute the total derivative of the hyperspherical expansion coefficients."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.get_bispectrum_components:1
+#: featurebox.featurizers.descriptors.bispectrum.get_bispectrum_components:1 of
+msgid ""
+"Calculate the bispectrum components, and their derivatives (if specified)"
+" for a given neighbor list.  This is the main work function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.init_clebsch_gordan:1
+#: featurebox.featurizers.descriptors.bispectrum.init_clebsch_gordan:1 of
+msgid ""
+"Populate an array ofpe Clebsch-Gordan coefficients needed for a "
+"bispectrum coefficient calculation"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.init_clebsch_gordan:4
+#: featurebox.featurizers.descriptors.bispectrum.init_clebsch_gordan:4 of
+msgid ""
+"Clebsch-Gordan coefficients arise in the coupling of angular momenta.  "
+"The method to calculate here is given in \"Quantum Theory of Angular "
+"Momentum\" D.A. Varshalovich. 8.2.1 (3)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.init_clebsch_gordan:8
+#: featurebox.featurizers.descriptors.bispectrum.init_clebsch_gordan:8 of
+msgid ""
+"Corresponds to the order of hyperspherical expansion in this software, "
+"the degree of expansion is defined and handled within the SO4_Bispectrum "
+"class."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SO4.init_clebsch_gordan:12
+#: featurebox.featurizers.descriptors.bispectrum.init_clebsch_gordan:12 of
+msgid "this array is handled in the SO4_Bispectrum class."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:53
+msgid "featurebox.featurizers.descriptors.SOAP module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.SOAP.get_power_spectrum_components:1 of
+msgid ""
+"Interface to SOAP class, this is the main work function for the power "
+"spectrum calculation."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:61
+msgid "featurebox.featurizers.descriptors.angular\\_momentum module"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:69
+msgid "featurebox.featurizers.descriptors.behlerparrinello module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2:15
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G2Prime:14 of
+msgid ""
+"Rs: float array (n1)     The shift from the center of the G2 symmetry "
+"function. etas: float array (n2)      eta parameters of G2 symmetry "
+"function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4:17
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5:17 of
+msgid ""
+"Rs: float array (n1) etas: float array (n2) lamBdas: float array (n3) "
+"zetas: float array (n4)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G4Prime:19
+#: featurebox.featurizers.descriptors.behlerparrinello.calculate_G5Prime:19 of
+msgid "zetas: float array (n1) lamBdas: float array (n2) etas: float array (n3)"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:77
+msgid "featurebox.featurizers.descriptors.bispectrum module"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:85
+msgid "featurebox.featurizers.descriptors.cutoff module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:1 of
+msgid ""
+"A class for computing cutoff functions (including derivatives) for atom-"
+"centered descriptors. The existing cutoff functions in PyXtal_FF can be "
+"found in: Singraber, A. (2019). J. Chem. Theory Comput., 15, 1827-1840."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:6 of
+msgid ""
+"The type of cutoff function:     1. cosine         f(x) = "
+"0.5*(cos(pi*x)+1)     2. tanh         f(x) = (tanh(1-x))**3     3. "
+"exponent         f(x) = exp(1-(1/(1-x**2)))     4. poly1         f(x) = "
+"x**2(2*x-3)+1     5. poly2         f(x) = x**3(x(15-6*x)-10)+1     6. "
+"poly3         f(x) = x**4(x(x(20*x-70)+84)-35)+1     7. poly4         "
+"f(x) = x**5(x(x(x(315-70*x)-540)+420)-126)+1  where x = R_ij/R_c"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:21 of
+msgid "The type of cutoff function:"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:8 of
+msgid "cosine"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:9 of
+msgid "f(x) = 0.5*(cos(pi*x)+1)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:10 of
+msgid "tanh"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:11 of
+msgid "f(x) = (tanh(1-x))**3"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:12 of
+msgid "exponent"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:13 of
+msgid "f(x) = exp(1-(1/(1-x**2)))"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:14 of
+msgid "poly1"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:15 of
+msgid "f(x) = x**2(2*x-3)+1"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:16 of
+msgid "poly2"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:17 of
+msgid "f(x) = x**3(x(15-6*x)-10)+1"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:18 of
+msgid "poly3"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:19 of
+msgid "f(x) = x**4(x(x(20*x-70)+84)-35)+1"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:21 of
+msgid "poly4"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:21 of
+msgid "f(x) = x**5(x(x(x(315-70*x)-540)+420)-126)+1"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.cutoff.Cutoff:23 of
+msgid "where x = R_ij/R_c"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:93
+msgid "featurebox.featurizers.descriptors.lbispectrum module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Assembler:1 of
+msgid ""
+"A class to gather all bispectrum components, including force and stress "
+"bispectrum."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Assembler:4 of
+msgid "String of all atom types in the structure, i.e. ['Na', 'Cl']"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Assembler:6 of
+msgid ""
+"Volume of a crystal structure. Volume is used to convert the stress "
+"bispectrum components from eV to GPa."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Assembler:9 of
+msgid "If true, return force bispectrum components."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Assembler:11 of
+msgid "If true, return stress bispectrum components"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:1 of
+msgid ""
+"This class prepares a lammps input file and calls the lammps executable "
+"to calculate bispectrum coefficients of a given structure."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:4 of
+msgid "Pymatgen crystal structure object."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:6 of
+msgid "Scale factor applied to all cutoff radii."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:8 of
+msgid ""
+"Elemental descriptions of each atom type in the structure. i.e. "
+"dict(Na=dict(r=0.3, w=0.9), Cl=dict(r=0.7, w=3.0))."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:11 of
+msgid "Band limit for bispectrum components."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:13 of
+msgid ""
+"diagonal value = 0 or 1 or 2 or 3. 0 = all j1, j2, j <= twojmax, j2 <= j1"
+" 1 = subset satisfying j1 == j2 2 = subset satisfying j1 == j2 == j3 3 = "
+"subset satisfying j2 <= j1 <= j"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:19 of
+msgid ""
+"Parameter in distance to angle conversion (0 < rcutfac < 1). Default "
+"value: 0.99363."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum:22 of
+msgid "Parameter in distance to angle conversion. Default value: 0."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum.calculate:1 of
+msgid "Call the LAMMPS executable to compute bispectrum coefficients."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum.get_dump:1 of
+msgid "Convert Pymatgen structure object to LAMMPS dump file."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.lbispectrum.Bispectrum.get_lammps_input:1
+#: of
+msgid "Create LAMMPS input file."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:101
+msgid "featurebox.featurizers.descriptors.utils module"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.descriptors.rst:109
+msgid "featurebox.featurizers.descriptors.wACSF module"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:1 of
+msgid "Calculate radial weighted symmetry function for a center atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:3
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:5 of
+msgid "Array of neighbors (j) distances with respect to center atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:7
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:7
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:15
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:7
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:15 of
+msgid "Array of atomic numbers of neighbors."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2:9
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:19 of
+msgid ""
+"Rs: float array (d1)     The shift from the center of the G2 symmetry "
+"function. etas: float array (d2)      eta parameters of G2 symmetry "
+"function."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:15
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:5
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:5 of
+msgid "The x, y, and z positions of atom i."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G2Prime:26 of
+msgid "**G2Prime** -- The derivative of G2 symmetry value at i-th atom."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:9
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:9 of
+msgid "The list of jk pairs."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4:13
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:19
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5:13
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:19 of
+msgid ""
+"Rs: float array (d1) etas: float array (d2) lambdas: float array (d3) "
+"zetas: float array (d4)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:13
+#: featurebox.featurizers.descriptors.wACSF.calculate_G5Prime:13 of
+msgid "The list of [j,k] pairs."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:25 of
+msgid ""
+"* **G4Prime** (*array [layer, d, 3]*) * *The derivative of G4 symmetry "
+"value at i-th atom. layer is the index of the* * *atom that force is "
+"acting on.*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:25 of
+msgid "**G4Prime** (*array [layer, d, 3]*)"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:26 of
+msgid ""
+"*The derivative of G4 symmetry value at i-th atom. layer is the index of "
+"the*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.calculate_G4Prime:27 of
+msgid "*atom that force is acting on.*"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.dRijk_dRm:11 of
+msgid "the total number of atom in the unit cell"
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.wACSF:1 of
+msgid ""
+"A class for calculating weighted atom-centered symmetry functions "
+"(wACSFs)."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.wACSF:3 of
+msgid ""
+"The forms of the functions are consistent with the functions presented "
+"in: Gastegger, M., et. al. (2018). The Journal of chemical physics, "
+"148(24), 241709."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.wACSF:6 of
+msgid "Note that this code does not implement Rs in the angular wACSF."
+msgstr ""
+
+#: featurebox.featurizers.descriptors.wACSF.wACSF.calculate:6 of
+msgid ""
+"**all_G** -- The user-defined symmetry functions that represent the "
+"crystal. Currently, there are 3 types of symmetry functions implemented. "
+"Here are the order of the descriptors are printed out based on their "
+"symmetry parameters: - G2: [\"Rs\", \"eta\"] - G4: [\"eta\", \"lambda\", "
+"\"zeta\"] - G5: [\"eta\", \"lambda\", \"zeta\"]"
+msgstr ""
+

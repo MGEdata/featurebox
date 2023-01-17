@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 23:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.utils.rst:2
+msgid "featurebox.utils package"
+msgstr ""
+
+#: ../../src/featurebox.utils.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.utils.rst:13
+msgid "featurebox.utils.general module"
+msgstr ""
+
+#: ../../src/featurebox.utils.rst:21
+msgid "featurebox.utils.predefined\\_typing module"
+msgstr ""
+
+#: featurebox.utils.predefined_typing:1 of
+msgid "Define several typing for convenient use"
+msgstr ""
+
+#: ../../src/featurebox.utils.rst:29
+msgid "featurebox.utils.quickmethod module"
+msgstr ""
+
+#: featurebox.utils.quickmethod:1 of
+msgid "This is script, copy for using, rather than call.**"
+msgstr ""
+
+#: featurebox.utils.quickmethod.dict_method_clf:1 of
+msgid "many clf method."
+msgstr ""
+
+#: featurebox.utils.quickmethod.dict_method_reg:1 of
+msgid "many reg method."
+msgstr ""
+
+#: featurebox.utils.quickmethod.method_pack:1 of
+msgid "return cv or gd."
+msgstr ""

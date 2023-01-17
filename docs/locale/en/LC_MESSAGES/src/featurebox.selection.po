@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, boliqq07
 # This file is distributed under the same license as the featurebox package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: featurebox \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 20:12+0800\n"
+"POT-Creation-Date: 2022-08-11 16:49+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../src/featurebox.selection.rst:2
 msgid "featurebox.selection package"
@@ -37,10 +37,10 @@ msgstr ""
 #: featurebox.selection.corr.Corr:1
 #: featurebox.selection.exhaustion.Exhaustion:1 featurebox.selection.ga.GA:1 of
 msgid ""
-"Bases: :class:`sklearn.base.BaseEstimator`, "
-":class:`sklearn.base.MetaEstimatorMixin`, "
-":class:`sklearn.feature_selection._base.SelectorMixin`, "
-":class:`featurebox.selection.mutibase.MutiBase`"
+"Bases: :py:class:`sklearn.base.BaseEstimator`, "
+":py:class:`sklearn.base.MetaEstimatorMixin`, "
+":py:class:`sklearn.feature_selection._base.SelectorMixin`, "
+":py:class:`featurebox.selection.multibase.multiBase`"
 msgstr ""
 
 #: featurebox.selection.backforward.BackForward:1 of
@@ -128,13 +128,14 @@ msgstr ""
 #: featurebox.selection.backforward.BackForwardStable.fit
 #: featurebox.selection.backforward.BackForwardStable.predict
 #: featurebox.selection.backforward.BackForwardStable.score
-#: featurebox.selection.corr.Corr featurebox.selection.exhaustion.Exhaustion
+#: featurebox.selection.corr.Corr featurebox.selection.corr.Corr.transform
+#: featurebox.selection.exhaustion.Exhaustion
 #: featurebox.selection.exhaustion.Exhaustion.fit
 #: featurebox.selection.exhaustion.Exhaustion.predict
 #: featurebox.selection.exhaustion.Exhaustion.score featurebox.selection.ga.GA
 #: featurebox.selection.ga.GA.predict featurebox.selection.ga.GA.score
 #: featurebox.selection.ga.GA.score_cv featurebox.selection.ga.eaSimple
-#: featurebox.selection.mutibase.MutiBase of
+#: featurebox.selection.multibase.multiBase of
 msgid "Parameters"
 msgstr ""
 
@@ -148,39 +149,44 @@ msgstr ""
 msgid "force select number max"
 msgstr ""
 
-#: featurebox.selection.backforward.BackForward:65 of
-msgid "primary features to start loop, default n_features//2."
+#: featurebox.selection.backforward.BackForward:65
+#: featurebox.selection.backforward.BackForwardStable:72 of
+msgid "force select number min"
 msgstr ""
 
-#: featurebox.selection.backforward.BackForward:67
-#: featurebox.selection.backforward.BackForwardStable:74 of
-msgid "group number"
+#: featurebox.selection.backforward.BackForward:67 of
+msgid "primary features to start loop, default n_features//2."
 msgstr ""
 
 #: featurebox.selection.backforward.BackForward:69
 #: featurebox.selection.backforward.BackForwardStable:76 of
+msgid "group number"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:71
+#: featurebox.selection.backforward.BackForwardStable:78 of
 msgid "group index"
 msgstr ""
 
-#: featurebox.selection.backforward.BackForward:70
-#: featurebox.selection.backforward.BackForwardStable:78 of
+#: featurebox.selection.backforward.BackForward:72
+#: featurebox.selection.backforward.BackForwardStable:80 of
 msgid "must selection index"
 msgstr ""
 
-#: featurebox.selection.backforward.BackForward:71 of
+#: featurebox.selection.backforward.BackForward:73 of
 msgid "tolerant for rank compare."
 msgstr ""
 
-#: featurebox.selection.backforward.BackForward:72 of
+#: featurebox.selection.backforward.BackForward:74 of
 msgid "print or not"
 msgstr ""
 
-#: featurebox.selection.backforward.BackForward:74
-#: featurebox.selection.backforward.BackForwardStable:80 of
+#: featurebox.selection.backforward.BackForward:76
+#: featurebox.selection.backforward.BackForwardStable:82 of
 msgid "random_state"
 msgstr ""
 
-#: featurebox.selection.backforward.BackForward:76 of
+#: featurebox.selection.backforward.BackForward:78 of
 msgid "refit or not. if refit, the model would use all data."
 msgstr ""
 
@@ -229,6 +235,7 @@ msgstr ""
 
 #: featurebox.selection.backforward.BackForward.predict
 #: featurebox.selection.backforward.BackForwardStable.predict
+#: featurebox.selection.corr.Corr.transform
 #: featurebox.selection.exhaustion.Exhaustion.predict
 #: featurebox.selection.ga.eaSimple of
 msgid "Returns"
@@ -242,6 +249,7 @@ msgstr ""
 
 #: featurebox.selection.backforward.BackForward.predict
 #: featurebox.selection.backforward.BackForwardStable.predict
+#: featurebox.selection.corr.Corr.transform
 #: featurebox.selection.exhaustion.Exhaustion.predict of
 msgid "Return type"
 msgstr ""
@@ -255,9 +263,9 @@ msgstr ""
 
 #: featurebox.selection.backforward.BackForwardStable:1 of
 msgid ""
-"Bases: :class:`sklearn.base.MetaEstimatorMixin`, "
-":class:`sklearn.feature_selection._base.SelectorMixin`, "
-":class:`sklearn.base.BaseEstimator`"
+"Bases: :py:class:`sklearn.base.MetaEstimatorMixin`, "
+":py:class:`sklearn.feature_selection._base.SelectorMixin`, "
+":py:class:`sklearn.base.BaseEstimator`"
 msgstr ""
 
 #: featurebox.selection.backforward.BackForwardStable:1 of
@@ -290,7 +298,7 @@ msgid "string, callable or None, optional, (default=None)"
 msgstr ""
 
 #: featurebox.selection.backforward.BackForwardStable:10
-#: featurebox.selection.backforward.BackForwardStable:82 of
+#: featurebox.selection.backforward.BackForwardStable:84 of
 msgid ""
 "A string (see model evaluation documentation) or a scorer callable object"
 " / function with signature ``scorer(estimator, X, y)``."
@@ -305,7 +313,7 @@ msgid "int, (default=0)"
 msgstr ""
 
 #: featurebox.selection.backforward.BackForwardStable:15
-#: featurebox.selection.backforward.BackForwardStable:86 of
+#: featurebox.selection.backforward.BackForwardStable:88 of
 msgid "Controls verbosity of output."
 msgstr ""
 
@@ -342,7 +350,7 @@ msgid "int or None"
 msgstr ""
 
 #: featurebox.selection.backforward.BackForwardStable:27
-#: featurebox.selection.backforward.BackForwardStable:88 of
+#: featurebox.selection.backforward.BackForwardStable:90 of
 msgid ""
 "Number of cores to run in parallel while fitting across folds. ``None`` "
 "means 1 and ``-1`` means using all processors."
@@ -354,11 +362,11 @@ msgid ""
 "the data is splited, due to the refit used all data in fit() function."
 msgstr ""
 
-#: featurebox.selection.backforward.BackForwardStable:72 of
+#: featurebox.selection.backforward.BackForwardStable:74 of
 msgid "expectation select number"
 msgstr ""
 
-#: featurebox.selection.backforward.BackForwardStable:91 of
+#: featurebox.selection.backforward.BackForwardStable:93 of
 msgid "False, with refit, the model would used all data."
 msgstr ""
 
@@ -445,7 +453,7 @@ msgid "binding_group size, calculate the correction between binding."
 msgstr ""
 
 #: featurebox.selection.corr.Corr:69 of
-msgid "the range of muti_grade:[min,max)."
+msgid "the range of multi_grade:[min,max)."
 msgstr ""
 
 #: featurebox.selection.corr.Corr:71 of
@@ -456,8 +464,30 @@ msgstr ""
 msgid "Check cof and count the number."
 msgstr ""
 
+#: featurebox.selection.corr.Corr.inverse_transform_index:1
+#: featurebox.selection.multibase.multiBase.inverse_transform_index:1 of
+msgid "inverse the selected index to origin index by support."
+msgstr ""
+
 #: featurebox.selection.corr.Corr.remove_coef:1 of
 msgid "Delete the index of feature with repeat coef."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform:1 of
+msgid "Reduce X to the selected features."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform:3 of
+msgid "The input samples."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform:6 of
+msgid "**X_r** -- The input samples with only the selected features."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform_index:1
+#: featurebox.selection.multibase.multiBase.transform_index:1 of
+msgid "Get support index."
 msgstr ""
 
 #: ../../src/featurebox.selection.rst:29
@@ -483,17 +513,17 @@ msgid "the n_select list,default,n_select=(3, 4)"
 msgstr ""
 
 #: featurebox.selection.exhaustion.Exhaustion:33
-#: featurebox.selection.mutibase.MutiBase:3 of
+#: featurebox.selection.multibase.multiBase:3 of
 msgid "binding_group size, calculate the correction between binding"
 msgstr ""
 
 #: featurebox.selection.exhaustion.Exhaustion:35
-#: featurebox.selection.mutibase.MutiBase:4 of
-msgid "the range of muti_grade:[min,max)"
+#: featurebox.selection.multibase.multiBase:4 of
+msgid "the range of multi_grade:[min,max)"
 msgstr ""
 
 #: featurebox.selection.exhaustion.Exhaustion:37
-#: featurebox.selection.mutibase.MutiBase:6 of
+#: featurebox.selection.multibase.multiBase:6 of
 msgid "the columns force to index"
 msgstr ""
 
@@ -649,14 +679,42 @@ msgid "A class:`~deap.tools.Logbook` with the statistics of the evolution"
 msgstr ""
 
 #: ../../src/featurebox.selection.rst:45
-msgid "featurebox.selection.mutibase module"
+msgid "featurebox.selection.multibase module"
 msgstr ""
 
-#: featurebox.selection.mutibase.MutiBase:1 of
-msgid "Bases: :class:`object`"
+#: featurebox.selection.multibase.multiBase:1 of
+msgid "Bases: :py:class:`object`"
 msgstr ""
 
-#: featurebox.selection.mutibase.MutiBase:1 of
+#: featurebox.selection.multibase.multiBase:1 of
 msgid "Base method for binding"
 msgstr ""
+
+#~ msgid ""
+#~ "基类：:py:class:`sklearn.base.BaseEstimator`, "
+#~ ":py:class:`sklearn.base.MetaEstimatorMixin`, "
+#~ ":py:class:`sklearn.feature_selection._base.SelectorMixin`, "
+#~ ":py:class:`featurebox.selection.multibase.multiBase`"
+#~ msgstr ""
+
+#~ msgid "实际案例"
+#~ msgstr ""
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid "返回类型"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "基类：:py:class:`sklearn.base.MetaEstimatorMixin`, "
+#~ ":py:class:`sklearn.feature_selection._base.SelectorMixin`, "
+#~ ":py:class:`sklearn.base.BaseEstimator`"
+#~ msgstr ""
+
+#~ msgid "基类：:py:class:`object`"
+#~ msgstr ""
 

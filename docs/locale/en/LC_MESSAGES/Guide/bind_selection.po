@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-18 12:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../Guide/bind_selection.rst:2
+msgid "Binding Selection"
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:4
+msgid ""
+"For material problems, some features may need to appear together to make "
+"sense. such as the hole radius and atomic radius of inner atoms."
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:7
+msgid ""
+"Or we use the depart element features to model the composition properties"
+" directly. rather than combine element features, and filter. such as "
+"A-site properties and B-site properties in AB2-type compound should be "
+"selected and dropped simultaneously."
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:11
+msgid ""
+"All the selection method of featurebox are with ``Binding``, of course, "
+"if without setting any bindings, they can degenerate to normal "
+"algorithms."
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:18
+msgid "Example:"
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:29
+msgid "The ``multi_index`` parameter means the bonded primary feature index."
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:31
+msgid ""
+"All the selection tools are ``sklearn-type``, with ``fit``, "
+"``fit_transform`` methods .etc."
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:33
+msgid "More:"
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:35
+msgid ":class:`featurebox.selection.backforward.BackForward`"
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:37
+msgid ":class:`featurebox.selection.corr.Corr`"
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:39
+msgid ":class:`featurebox.selection.exhaustion.Exhaustion`"
+msgstr ""
+
+#: ../../Guide/bind_selection.rst:41
+msgid ":class:`featurebox.selection.ga.GA`"
+msgstr ""
+

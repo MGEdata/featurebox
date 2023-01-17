@@ -1,0 +1,741 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 23:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.featurizers.rst:2
+msgid "featurebox.featurizers package"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.rst:10
+msgid "Subpackages"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.rst:22
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.rst:25
+msgid "featurebox.featurizers.base\\_feature module"
+msgstr ""
+
+#: featurebox.featurizers.base_feature:1 of
+msgid "Base"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:1 of
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:1 of
+msgid "**Using a BaseFeature Class**"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:3 of
+msgid ""
+"That means you can embed this feature directly into ``BaseFeature`` class"
+" implement. ::"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:10 of
+msgid ""
+"``BaseFeature`` implement :class:`sklearn.base.BaseEstimator` and "
+":class:`sklearn.base.TransformerMixin` that means you can use it in a "
+"scikit-learn way. ::"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:19 of
+msgid ""
+"The ``convert`` method should be rewrite to deal with single case. And "
+"the ``transform`` and ``fit_transform`` will be established for list of "
+"case automatically."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:23 of
+msgid "**Adding references**"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:25 of
+msgid ""
+"``BaseFeature`` also provide you to retrieving proper references for a "
+"feature. The ``__citations__`` returns a list of papers that should be "
+"cited. The ``__authors__`` returns a list of people who wrote the "
+"feature. Also can be accessed from property ``citations`` and "
+"``citations``."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:30 of
+msgid "These operations must be implemented for each new feature:"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:32 of
+msgid ""
+"``feature_labels`` - Generates a human-meaningful x_name for each of the "
+"features. Implement this as property."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:34 of
+msgid "which can be set by ``set_feature_labels``"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:36 of
+msgid "Also suggest to implement these two properties:"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:38 of
+msgid "``citations`` - Returns a list of citations in BibTeX format."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:39 of
+msgid "``authors`` - Returns a list of people who contributed writing a paper."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:43 of
+msgid ""
+"None of these operations should change the state of the feature. I.e., "
+"running each method twice should no produce different results, no class "
+"attributes should be changed, Running one operation should not affect the"
+" output of another."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature
+#: featurebox.featurizers.base_feature.BaseFeature.convert
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform
+#: featurebox.featurizers.base_feature.BaseFeature.transform
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip
+#: featurebox.featurizers.base_feature.ConverterCat
+#: featurebox.featurizers.base_feature.ConverterSequence
+#: featurebox.featurizers.base_feature.DummyConverter
+#: featurebox.featurizers.base_feature.DummyConverter.convert
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO
+#: featurebox.featurizers.batch_feature.BatchFeature
+#: featurebox.featurizers.batch_feature.BatchFeature.convert
+#: featurebox.featurizers.generator_geo.DatasetGEO
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo
+#: featurebox.featurizers.generator_geo.SimpleDataset
+#: featurebox.featurizers.generator_geo.SimpleDataset.shuffle of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:49
+#: featurebox.featurizers.base_feature.DummyConverter:3 of
+msgid "size of batch."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:51
+#: featurebox.featurizers.base_feature.DummyConverter:5 of
+msgid "batch_calculate or not."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:53
+#: featurebox.featurizers.base_feature.DummyConverter:7 of
+msgid "Parallel number."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:55
+#: featurebox.featurizers.base_feature.DummyConverter:9 of
+msgid ""
+"How to handle the exceptions in a feature calculations. Can be ``nan``, "
+"``keep``, ``raise``. When 'nan', return a column with np.nan. The length "
+"of column corresponding to the number of feature labs. The default is "
+"'raise' which will raise up the exception."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature:60
+#: featurebox.featurizers.base_feature.DummyConverter:14 of
+msgid ""
+"Specific the return type. Can be ``any``, ``np``,``array`` and ``df``. "
+"'array' and 'df' force return type to np.ndarray and pd.DataFrame "
+"respectively. If 'any', without type conversion . Default is 'any'"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.authors:1 of
+msgid "List of implementors of the feature."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.authors
+#: featurebox.featurizers.base_feature.BaseFeature.citations
+#: featurebox.featurizers.base_feature.BaseFeature.convert
+#: featurebox.featurizers.base_feature.BaseFeature.feature_labels
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform
+#: featurebox.featurizers.base_feature.BaseFeature.set_feature_labels
+#: featurebox.featurizers.base_feature.BaseFeature.transform
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:1
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:1
+#: featurebox.featurizers.batch_feature.BatchFeature.convert
+#: featurebox.featurizers.batch_feature.BatchFeature.feature_labels
+#: featurebox.featurizers.batch_feature.BatchFeature.set_feature_labels of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.authors:3 of
+msgid ""
+"(list) each element should either be a string with author x_name (e.g.,"
+"     \"Anubhav Jain\") or a dictionary  with required key \"x_name\" and "
+"other     keys like \"email\" or \"institution\" (e.g., {\"x_name\": "
+"\"Anubhav     Jain\", \"email\": \"ajain@lbl.gov\", \"institution\": "
+"\"LBNL\"})."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.authors:7 of
+msgid "(list) each element should either be a string with author x_name (e.g.,"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.authors:6 of
+msgid ""
+"\"Anubhav Jain\") or a dictionary  with required key \"x_name\" and other"
+" keys like \"email\" or \"institution\" (e.g., {\"x_name\": \"Anubhav "
+"Jain\", \"email\": \"ajain@lbl.gov\", \"institution\": \"LBNL\"})."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.citations:1 of
+msgid "Citation(s) and reference(s) for this feature."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.citations:3 of
+msgid ""
+"(list) each element should be a string citation,     ideally in BibTeX "
+"format."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.citations:5 of
+msgid "(list) each element should be a string citation,"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.citations:6 of
+msgid "ideally in BibTeX format."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert:1
+#: featurebox.featurizers.batch_feature.BatchFeature.convert:1 of
+msgid ""
+"Main feature function, which has to be implemented in any derived feature"
+" subclass."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert:5
+#: featurebox.featurizers.base_feature.ConverterSequence:6
+#: featurebox.featurizers.batch_feature.BatchFeature.convert:5 of
+msgid "Notes"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert:6
+#: featurebox.featurizers.batch_feature.BatchFeature.convert:6 of
+msgid "It cannot be passed np.array in default unless:"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert:8
+#: featurebox.featurizers.batch_feature.BatchFeature.convert:8 of
+msgid ""
+"1. useful for bond_converter. For np.array we check the ndim and for ndim"
+" 2, or 3. we decide whether to pass them the data to ``_converter`` "
+"together or separately by ``self.ndim`` attribute. Now max support 3d. "
+"due to for some functions, using ``ufunc`` in numpy is very efficient."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert:14
+#: featurebox.featurizers.batch_feature.BatchFeature.convert:14 of
+msgid "keep the size of data and simple the ``_convert``."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert:16
+#: featurebox.featurizers.batch_feature.BatchFeature.convert:16 of
+msgid "one input data (one sample, one case),"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert:18
+#: featurebox.featurizers.batch_feature.BatchFeature.convert:18 of
+msgid "new x."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.convert
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform
+#: featurebox.featurizers.base_feature.BaseFeature.transform
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip
+#: featurebox.featurizers.batch_feature.BatchFeature.convert of
+msgid "Return type"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.feature_labels:1
+#: featurebox.featurizers.base_feature.BaseFeature.set_feature_labels:1
+#: featurebox.featurizers.batch_feature.BatchFeature.feature_labels:1
+#: featurebox.featurizers.batch_feature.BatchFeature.set_feature_labels:1 of
+msgid "Generate attribute names."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.feature_labels:3
+#: featurebox.featurizers.base_feature.BaseFeature.set_feature_labels:3
+#: featurebox.featurizers.batch_feature.BatchFeature.feature_labels:3
+#: featurebox.featurizers.batch_feature.BatchFeature.set_feature_labels:3 of
+msgid "([str]) attribute labels."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit:1 of
+msgid "fit function in :class:`BaseFeature` are weakened and just pass parameter."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:1 of
+msgid "If `convert` takes multiple inputs, supply inputs as a list of tuples."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:3 of
+msgid ""
+"Copy from Mixin class for all transformers in scikit-learn. "
+"TransformerMixin"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:5 of
+msgid "Fit to data, then transform it."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:7 of
+msgid ""
+"Fits transformer to `X` and `y` with optional parameters `fit_params` and"
+" returns a transformed version of `X`."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:10 of
+msgid "list of case."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:12 of
+msgid "deprecated."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:14 of
+msgid ""
+"Additional fit or transform parameters. feature_labels_mark: str, mark "
+"for each feature_labes. for return_type =='pd'. x_labels: list, mark for "
+"each row. for return_type =='pd'."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.fit_transform:18 of
+msgid "result data."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.n_jobs:1 of
+msgid "int Parallel number."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.n_jobs of
+msgid "type"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.n_jobs:4 of
+msgid "n_jobs"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform:1 of
+msgid ""
+"Transform a list of entries. Each iterable element of entries is "
+"corresponding to the parameter of ``convert``, If ``convert`` takes n "
+"multiple inputs, the transform inputs should be a list or tuple (size n),"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform:4 of
+msgid "[(p1,p2),(p1,p2),(p1,p2),...,(p1,p2),(p1,p2)]"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform:6 of
+msgid "which can be from `zip`` or used the built-in ``transform_with_zip``."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform:8 of
+msgid "A list of entries to be featured."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform:11
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip:12 of
+msgid "**result** -- features for each entry."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip:1 of
+msgid "Second transform, which convert Iterables to list and run transform."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip:3 of
+msgid "first: p1s,p2s -> [(p1,p2),(p1,p2),(p1,p2),...,(p1,p2),(p1,p2)]"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip:6 of
+msgid "second: run self.transform"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.BaseFeature.transform_with_zip:9 of
+msgid "each of args must be Iterable."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterCat:1
+#: featurebox.featurizers.base_feature.ConverterSequence:1
+#: featurebox.featurizers.base_feature.DummyConverter:1
+#: featurebox.featurizers.batch_feature.BatchFeature:1 of
+msgid "Bases: :class:`featurebox.featurizers.base_feature.BaseFeature`"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterCat:1 of
+msgid ""
+"Pack the converters in to one unified approach. The same type Converter "
+"would merged and different would order to run. Thus, keeping the same "
+"type is next to each other! such as A(),A(),B(),B()."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterCat:6
+#: featurebox.featurizers.base_feature.ConverterSequence:12
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:12
+#: featurebox.featurizers.generator_geo.DatasetGEO:5
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:5
+#: featurebox.featurizers.generator_geo.SimpleDataset:6 of
+msgid "Examples"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterCat:14
+#: featurebox.featurizers.base_feature.ConverterSequence:18 of
+msgid "List of Converter"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterCat.convert:1 of
+msgid "convert and concatenate."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterCat.sums:1 of
+msgid "SUM"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterSequence:1 of
+msgid "Pack the converters in to one sequentially executed assembly approach."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterSequence:3 of
+msgid "input -> convert1 -> temp -> convert2 -> temp -> convert3 -> output"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterSequence:7 of
+msgid ""
+"There is no error checking, please make sure the ``temp`` could be passed"
+" manually !!! There is no error checking, please make sure the ``temp`` "
+"could be passed manually !!! There is no error checking, please make sure"
+" the ``temp`` could be passed manually !!!"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.ConverterSequence.convert:1 of
+msgid "convert batched"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.DummyConverter:1 of
+msgid "Dummy converter as a placeholder, Do nothing."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.DummyConverter.convert:1 of
+msgid "Dummy convert, does nothing to input."
+msgstr ""
+
+#: featurebox.featurizers.base_feature.DummyConverter.convert:3 of
+msgid "input object"
+msgstr ""
+
+#: featurebox.featurizers.base_feature.DummyConverter.convert:6 of
+msgid "Returns: d"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.rst:33
+msgid "featurebox.featurizers.base\\_graph\\_geo module"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:1 of
+msgid ""
+"Abstract classes for building graph representations consist with "
+"``pytorch-geometric``."
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:3 of
+msgid "All the Graph in this part should return data as following:"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:5 of
+msgid "Each Graph data (for each structure):"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:8
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:3
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:3 of
+msgid ""
+"``x``: Node feature matrix. np.ndarray, with shape [num_nodes, "
+"num_node_features]"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:10
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:5 of
+msgid ""
+"``edge_index``: Graph connectivity in COO format. np.ndarray, with shape "
+"[2, num_edges] and type torch.long"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:12
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:7 of
+msgid ""
+"``edge_attr``: Edge feature matrix. np.ndarray,  with shape [num_edges, "
+"num_edge_features]"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:14
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:5
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:11 of
+msgid ""
+"``pos``: Node position matrix. np.ndarray, with shape [num_nodes, "
+"num_dimensions]"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:16
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:7
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:13 of
+msgid "``y``: target. np.ndarray, shape (1, num_target) , default shape (1,)"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:18
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:15 of
+msgid "``state_attr``: state feature. np.ndarray, shape (1, num_state_features)"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:20
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:9
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:17 of
+msgid "``z``: atom numbers. np.ndarray, with shape [num_nodes,]"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo:22
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:19 of
+msgid "Where the state_attr is added newly."
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:1 of
+msgid ""
+"Bases: "
+":class:`featurebox.featurizers.base_graph_geo._BaseStructureGraphGEO`"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:20
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:35 of
+msgid ""
+"(BinaryMap) atom features converter. See Also: "
+":class:`featurebox.test_featurizers.atom.mapper.AtomTableMap` , "
+":class:`featurebox.test_featurizers.atom.mapper.AtomJsonMap` , "
+":class:`featurebox.test_featurizers.atom.mapper.AtomPymatgenPropMap`, "
+":class:`featurebox.test_featurizers.atom.mapper.AtomTableMap`"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO:23
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:41 of
+msgid ""
+"(Converter) state features converter. See Also: "
+":class:`featurebox.test_featurizers.state.state_mapper.StructurePymatgenPropMap`"
+" :mod:`featurebox.test_featurizers.state.statistics` "
+":mod:`featurebox.test_featurizers.state.union`"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:1 of
+msgid ""
+"Bases: "
+":class:`featurebox.featurizers.base_graph_geo.BaseStructureGraphGEO`"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:9 of
+msgid ""
+"``edge_weight``: Edge feature matrix. np.ndarray,  with shape [num_edges,"
+" ]"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:21 of
+msgid ""
+"Examples: >>> from torch_geometric.loader import DataLoader >>> sg1 = "
+"BaseStructureGraphGEO() >>> data_list = "
+"sg1.transform_and_to_data(structures_checked) >>> loader = "
+"DataLoader(data_list, batch_size=3) >>> for i in loader: ...     print(i)"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:30 of
+msgid ""
+"(str) NearNeighbor strategy. [\"find_points_in_spheres\", "
+"\"find_xyz_in_spheres\", \"BrunnerNN_reciprocal\", \"BrunnerNN_real\", "
+"\"BrunnerNN_relative\", \"EconNN\", \"CrystalNN\", "
+"\"MinimumDistanceNNAll\", \"find_points_in_spheres\",\"UserVoronoiNN\", "
+"\"ACSF\",\"BehlerParrinello\",\"EAD\",\"EAMD\",\"SOAP\",\"SO3\",\"SO4_Bispectrum\",\"wACSF\",]"
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:39 of
+msgid "(Converter) bond features converter, default=None."
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:47 of
+msgid "(GEONNGet, ) bond features converter."
+msgstr ""
+
+#: featurebox.featurizers.base_graph_geo.StructureGraphGEO:49 of
+msgid "(float) Whether to use depends on the ``nn_strategy``."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.rst:41
+msgid "featurebox.featurizers.batch\\_feature module"
+msgstr ""
+
+#: featurebox.featurizers.batch_feature.BatchFeature:1 of
+msgid "Script for generate batch_data, could be copied and user-defined."
+msgstr ""
+
+#: featurebox.featurizers.batch_feature.BatchFeature:3 of
+msgid "Predefined name [\"elements\", \"compositions\", \"structures\"]"
+msgstr ""
+
+#: featurebox.featurizers.batch_feature.BatchFeature:5 of
+msgid "which contain `convert` method."
+msgstr ""
+
+#: ../../src/featurebox.featurizers.rst:49
+msgid "featurebox.featurizers.generator\\_geo module"
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:1
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:1
+#: featurebox.featurizers.generator_geo.SimpleDataset:1 of
+msgid "Bases: :class:`~typing.Generic`\\ [:obj:`torch.utils.data.dataset.T_co`]"
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:1 of
+msgid ""
+"For very very huge data. load data from local disk each epoth, and stored"
+" in Memory temporary."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:12
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:12 of
+msgid ""
+"load from the independent data in different files: \"i\", load from the "
+"batch data in one overall file: \"o\"."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:15
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:15 of
+msgid ""
+"process raw data or not. if there is no raw data but processed data is "
+"offered. this parameter could be False."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:18
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:18 of
+msgid "Root directory where the dataset should be saved. (optional: :obj:`None`)"
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:21
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:21
+#: featurebox.featurizers.generator_geo.SimpleDataset:21 of
+msgid ""
+"A function/transform that takes in an :obj:`torch_geometric.data.Data` "
+"object and returns a transformed version. The data object will be "
+"transformed before every access. (default: :obj:`None`)"
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:26
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:26
+#: featurebox.featurizers.generator_geo.SimpleDataset:26 of
+msgid ""
+"A function/transform that takes in an :obj:`torch_geometric.data.Data` "
+"object and returns a transformed version. The data object will be "
+"transformed before being saved to disk. (default: :obj:`None`)"
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO:31
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:31
+#: featurebox.featurizers.generator_geo.SimpleDataset:31 of
+msgid ""
+"A function that takes in an :obj:`torch_geometric.data.Data` object and "
+"returns a boolean value, indicating whether the data object should be "
+"included in the final dataset. (default: :obj:`None`)"
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO.get:1 of
+msgid "Gets the data object at index :obj:`idx`."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO.len:1 of
+msgid "Returns the number of graphs stored in the dataset."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO.process:1
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo.process:1 of
+msgid "Processes the dataset to the :obj:`self.processed_dir` folder."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO.processed_file_names:1
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo.processed_file_names:1
+#: of
+msgid ""
+"The name of the files in the :obj:`self.processed_dir` folder that must "
+"be present in order to skip processing."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO.raw_file_names:1
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo.raw_file_names:1 of
+msgid ""
+"The name of the files in the :obj:`self.raw_dir` folder that must be "
+"present in order to skip downloading."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.DatasetGEO.re_process:1 of
+msgid "For temporary debug"
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo:1 of
+msgid ""
+"For small data <= 2000. Load data from local disk, and stored in Memory "
+"for use."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.InMemoryDatasetGeo.re_process:1 of
+msgid ""
+"Re-process for skip reset in 56 line in ``InMemoryDataset`` `self.data, "
+"self.slices = None, None` ."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.SimpleDataset:1 of
+msgid ""
+"Data list with shuffle, for small data. For small data <= 500. Load data "
+"from Memory, and stored in Memory for use."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.SimpleDataset.num_edge_features:1 of
+msgid "Returns the number of features per edge in the dataset."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.SimpleDataset.num_features:1 of
+msgid "Alias for :py:attr:`~num_node_features`."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.SimpleDataset.num_node_features:1 of
+msgid "Returns the number of features per node in the dataset."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.SimpleDataset.shuffle:1 of
+msgid "Randomly shuffles the examples in the dataset."
+msgstr ""
+
+#: featurebox.featurizers.generator_geo.SimpleDataset.shuffle:3 of
+msgid ""
+"If set to :obj:`True`, will additionally return the random permutation "
+"used to shuffle the dataset. (default: :obj:`False`)"
+msgstr ""
+

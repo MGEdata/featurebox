@@ -1,9 +1,11 @@
 """Use NearNeighbors from ``pymatgen``.
+all with ``get_all_nn_info`` method.
 
 Most in :mod:`pymatgen.analysis.local_env` or
 in :func:`pymatgen.optimization.neighbors.find_points_in_spheres`
 The costumed as following:
 """
+import copy
 from typing import Dict, List, Tuple
 
 import numpy as np
@@ -22,8 +24,11 @@ from pymatgen.core import Element
 from pymatgen.core import Molecule
 from pymatgen.core.structure import Structure
 
-from featurebox.utils.look_json import mark_classes
 from featurebox.utils.predefined_typing import StructureOrMolecule
+
+
+def mark_classes(classes: List):
+    return {i.__name__: i for i in classes}
 
 
 def _is_in_targets(site, targets):
@@ -69,6 +74,7 @@ class MinimumDistanceNNAll(NearNeighbors):
             cutoff (float): cutoff radius in Angstrom to look for trial
                 near-neighbor sites (default: 4.0).
         """
+
         self.cutoff = cutoff
 
     def get_nn_info(self, structure: Structure, n: int) -> List[Dict]:
@@ -192,25 +198,25 @@ NNDict = mark_classes([
     # Please follow the instructions at https://github.com/aoterodelaroza/critic2.
 ])
 
-for i, j in NNDict.items():
-    locals()[i] = j
 
+def get_strategy1_in_spheres(structure: StructureOrMolecule, nn_strategy: NearNeighbors,
+                             cutoff: float = 5.0, numerical_tol: float = 1e-8,
+                             pbc=True,
+                             ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    nn_strategy_ = copy.copy(nn_strategy)
 
-def get_strategy_in_spheres(structure: StructureOrMolecule, nn_strategy: NearNeighbors,
-                            cutoff: float = 5.0, numerical_tol: float = 1e-8,
-                            pbc=True,
-                            ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
-    nn_strategy.cutoff = cutoff
-    nn_strategy.tol = numerical_tol
+    nn_strategy_.cutoff = cutoff
+    nn_strategy_.tol = numerical_tol
+
     _ = pbc  # Force True
-    structure.pbc = np.array([True, True, True])
+    structure.lattice._pbc = np.array([True, True, True])
 
     center_indices = []
     neighbor_indices = []
     distances = []
     center_prop = []
     images = []
-    for n, neighbors in enumerate(nn_strategy.get_all_nn_info(structure)):
+    for n, neighbors in enumerate(nn_strategy_.get_all_nn_info(structure)):
         index2i = [neighbor["site_index"] for neighbor in neighbors]
         bondsi = [neighbor["weight"] for neighbor in neighbors]
         imagei = [list(neighbor["image"]) + list(neighbor.get("add_image", (0,))) if hasattr(neighbor, "add_image")
@@ -228,189 +234,11 @@ def get_strategy_in_spheres(structure: StructureOrMolecule, nn_strategy: NearNei
     else:
         center_prop = np.array(center_prop)
 
-    return np.array(center_indices), np.array(neighbor_indices), np.array(images), np.array(distances), \
+    distances = np.array(distances)
+
+    exclude_self = (distances > numerical_tol)
+    # exclude_self = (center_indices != neighbor_indices) | (distances > numerical_tol)
+
+    return np.array(center_indices)[exclude_self], np.array(neighbor_indices)[exclude_self], \
+           np.array(images)[exclude_self], np.array(distances)[exclude_self], \
            np.array(center_prop)
-
-
-def universe_refine_nn(center_indices, neighbor_indices, vectors, distances,
-                       center_prop=None, ele_numbers=None,
-                       fill_size=10,
-                       dis_sort=True,
-                       **kwargs):
-    """
-    Change each center atoms has fill_size neighbors.
-    More neighbors would be abandoned.
-    Insufficient neighbors would be duplicated.
-
-    Args:
-        center_indices: np.ndarray 1d
-        neighbor_indices: np.ndarray 1d
-        distances: np.ndarray 1d or np.ndarray 2d
-        vectors: np.ndarray 2d
-        center_prop:np.ndarray 2d
-        ele_numbers:np.ndarray 1d
-        fill_size: float
-        dis_sort:bool
-            sort neighbors with distance.
-
-    Returns:
-        (center_indices,center_indices,  neighbor_indices, images, distances)\n
-        center_indices: np.ndarray 1d(N,).\n
-        neighbor_indices: np.ndarray 2d(N,fill_size).\n
-        images: np.ndarray 2d(N,fill_size,l).\n
-        distance: np.ndarray 2d(N,fill_size,1).
-        center_prop: np.ndarray 1d(N,l_c).\n
-
-    where l, and l_c >= 1
-    """
-    _ = ele_numbers
-
-    neis = []
-    diss = []
-    vecs = []
-    cen = np.array(sorted(set(center_indices.tolist())))
-    for i in cen:
-        # try:
-        cidx = np.where(center_indices == i)[0]
-        nei = neighbor_indices[cidx]
-        disi = distances[cidx]
-        # if disi.ndim == 1:
-        #     print(disi)
-        if vectors is not None:
-            vec = vectors[cidx, :]
-        else:
-            vec = None
-
-        if dis_sort:
-            if disi.ndim == 2:
-                neidx = np.argsort(disi[:, 0])
-            else:
-                neidx = np.argsort(disi)
-            nei = nei[neidx]
-            disi = disi[neidx]
-            if vec is not None:
-                vec = vec[neidx, :]
-
-        if disi.shape[0] >= fill_size:
-            nei = nei[:fill_size]
-            disi = disi[:fill_size]
-            if vec is not None:
-                vec = vec[:fill_size, :]
-        else:
-            while len(disi) < fill_size:
-                nei = np.append(nei, nei[-1])
-                if disi.ndim == 2:
-                    disi = np.concatenate((disi, disi[-1].reshape(1, -1)), axis=0)
-                else:
-                    disi = np.append(disi, disi[-1])
-                if vec is not None:
-                    vec = np.concatenate((vec, vec[-1, :].reshape(1, -1)), axis=0)
-
-        neis.append(nei)
-        diss.append(disi)
-
-        if vectors is not None:
-            vecs.append(vec)
-    if vectors is not None:
-        vecs = np.array(vecs)
-    else:
-        vecs = np.array([])
-
-    cen = np.array(cen).ravel()
-    neis = np.array(neis)
-    diss = np.array(diss)
-
-    if diss.ndim == 3:
-        pass
-    elif diss.ndim == 2:
-        diss = np.array(diss)[..., np.newaxis]
-    else:
-        diss = np.array(diss)
-
-    if center_prop is None:  # must assort by rank of atom in structure before
-        return cen, neis, vecs, diss, np.array(cen).reshape(-1, 1),
-    else:
-        if center_prop.ndim == 1:
-            try:
-                center_prop = center_prop[cen]
-            except ValueError:
-                center_prop = cen.reshape(-1, 1)
-        elif center_prop.ndim == 2 and center_prop.shape[0] == cen.shape[0]:
-            center_prop = center_prop[cen]
-        else:
-            center_prop = cen.reshape(-1, 1)
-        return cen, neis, vecs, diss, center_prop
-
-
-def geo_refine_nn(center_indices, neighbor_indices, vectors, distances,
-                  center_prop=None, ele_numbers=None,
-                  fill_size=10,
-                  dis_sort=True,
-                  **kwargs):
-    """
-    Change each center atoms has fill_size neighbors.
-    More neighbors would be abandoned.
-    Insufficient neighbors would be duplicated.
-
-    Args:
-        center_indices: np.ndarray 1d
-        neighbor_indices: np.ndarray 1d
-        distances: np.ndarray 1d or np.ndarray 2d
-        vectors: np.ndarray 2d
-        center_prop:np.ndarray 2d
-        ele_numbers:np.ndarray 1d
-        fill_size: float, not use,
-        cutoff:
-        dis_sort:bool
-            sort neighbors with distance.
-
-    Returns:
-        (center_indices,center_indices,  neighbor_indices, images, distances)\n
-        center_indices: np.ndarray 1d(N,).\n
-        neighbor_indices: np.ndarray 2d(N,fill_size).\n
-        images: np.ndarray 2d(N,fill_size,l).\n
-        distance: np.ndarray 2d(N,fill_size,1).
-        center_prop: np.ndarray 1d(N,l_c).\n
-
-    where l, and l_c >= 1
-    """
-    _ = ele_numbers
-    _ = fill_size
-
-    if distances.ndim == 2:
-        neidx = np.lexsort((center_indices, distances[:, 0],))
-    else:
-        neidx = np.lexsort((center_indices, distances,))
-
-    cen_nei = center_indices[neidx]
-    nei_nei = neighbor_indices[neidx]
-    diss = distances[neidx]
-    if vectors is not None:
-        vecs = vectors[neidx, :]
-    else:
-        vecs = vectors
-
-    neis = np.vstack((cen_nei, nei_nei))
-
-    cen = np.array(sorted(set((np.concatenate((center_indices, neighbor_indices), axis=0).tolist()))))
-
-    cen = np.array(cen).ravel()
-
-    if diss.ndim == 1:
-        diss = np.array(diss)[..., np.newaxis]
-    else:
-        diss = np.array(diss)
-
-    if center_prop is None:  # must assort by rank of atom in structure before
-        return cen, neis, vecs, diss, np.array(cen).reshape(-1, 1),
-    else:
-        if center_prop.ndim == 1:
-            try:
-                center_prop = center_prop[cen]
-            except ValueError:
-                center_prop = cen.reshape(-1, 1)
-        elif center_prop.ndim == 2 and center_prop.shape[0] == cen.shape[0]:
-            center_prop = center_prop[cen]
-        else:
-            center_prop = cen.reshape(-1, 1)
-        return cen, neis, vecs, diss, center_prop

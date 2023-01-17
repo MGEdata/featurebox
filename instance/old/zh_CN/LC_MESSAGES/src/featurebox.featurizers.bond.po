@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 23:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.featurizers.bond.rst:2
+msgid "featurebox.featurizers.bond package"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.bond.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.bond.rst:13
+msgid "featurebox.featurizers.bond.expander module"
+msgstr ""
+
+#: featurebox.featurizers.bond.expander.BondGaussianConverter:1
+#: featurebox.featurizers.bond.smooth.Smooth:1 of
+msgid "Bases: :class:`featurebox.featurizers.base_feature.BaseFeature`"
+msgstr ""
+
+#: featurebox.featurizers.bond.expander.BondGaussianConverter:1 of
+msgid ""
+"For bond distance. Expand distance with Gaussian basis sit at centers and"
+" with width 0.5."
+msgstr ""
+
+#: featurebox.featurizers.bond.expander.BondGaussianConverter
+#: featurebox.featurizers.bond.smooth.Smooth of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.featurizers.bond.expander.BondGaussianConverter:4 of
+msgid "(np.array) centers for the Gaussian basis"
+msgstr ""
+
+#: featurebox.featurizers.bond.expander.BondGaussianConverter:5 of
+msgid "(float) width of Gaussian basis"
+msgstr ""
+
+#: ../../src/featurebox.featurizers.bond.rst:21
+msgid "featurebox.featurizers.bond.smooth module"
+msgstr ""
+
+#: featurebox.featurizers.bond.smooth.Smooth:1 of
+msgid "smooth."
+msgstr ""
+
+#: featurebox.featurizers.bond.smooth.Smooth:3 of
+msgid "float, strat of decrease cutoff radius."
+msgstr ""
+
+#: featurebox.featurizers.bond.smooth.Smooth:4 of
+msgid "(float) cutoff radius."
+msgstr ""
+
+#: featurebox.featurizers.bond.smooth.Smooth.convert:1 of
+msgid "d: np.ndarray, shape (N, fill_size, atom_fea_len)."
+msgstr ""
+
+#: featurebox.featurizers.bond.smooth.Smooth.convert:2 of
+msgid "``nbr_fea`` neighbor features for each center_index."
+msgstr ""

@@ -1,1 +1,1 @@
-__all__ = ["backforward", "corr", "exhaustion", "mutibase", "ga"]
+__all__ = ["backforward", "corr", "exhaustion", "multibase", "ga"]

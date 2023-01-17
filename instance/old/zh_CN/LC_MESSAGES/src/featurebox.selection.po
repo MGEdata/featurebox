@@ -1,0 +1,687 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-08 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.selection.rst:2
+msgid "featurebox.selection package"
+msgstr ""
+
+#: ../../src/featurebox.selection.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.selection.rst:13
+msgid "featurebox.selection.backforward module"
+msgstr ""
+
+#: featurebox.selection.backforward:1 of
+msgid "Forward_and_back feature elimination for feature ranking"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:1
+#: featurebox.selection.corr.Corr:1
+#: featurebox.selection.exhaustion.Exhaustion:1 featurebox.selection.ga.GA:1 of
+msgid ""
+"Bases: :class:`sklearn.base.BaseEstimator`, "
+":class:`sklearn.base.MetaEstimatorMixin`, "
+":class:`sklearn.feature_selection._base.SelectorMixin`, "
+":class:`featurebox.selection.multibase.multiBase`"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:1 of
+msgid "BackForward method to selected features."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:6 of
+msgid "``estimator``:"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:4 of
+msgid ""
+"A supervised sklearn learning estimator with a ``_fit`` method that "
+"provides information about feature importance either through a ``coef_`` "
+"attribute or through a ``feature_importances_`` attribute."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:9 of
+msgid "``n_type_feature_to_select``: int or None (default=None)"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:9 of
+msgid ""
+"The number of feature to selection. If `None`, selection the features "
+"with best score."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:12 of
+msgid "``n_feature_``: int"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:12 of
+msgid "The number of selected feature."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:15 of
+msgid "``support_``: array of shape [n_feature]"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:15
+#: featurebox.selection.backforward.BackForwardStable:21 of
+msgid "The mask of selected feature."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:18 of
+msgid "``estimator_``: object"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:18
+#: featurebox.selection.backforward.BackForwardStable:24 of
+msgid "The external estimator _fit on the reduced dataset."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:21
+#: featurebox.selection.backforward.BackForward:33
+#: featurebox.selection.backforward.BackForward:47
+#: featurebox.selection.corr.Corr:4 featurebox.selection.corr.Corr:14
+#: featurebox.selection.corr.Corr:30 featurebox.selection.corr.Corr:48
+#: featurebox.selection.exhaustion.Exhaustion:6
+#: featurebox.selection.exhaustion.Exhaustion:18 featurebox.selection.ga.GA:4
+#: of
+msgid "Examples"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:35 of
+msgid ""
+"If score and predict is used, the refit could be set True and make sure "
+"the data is splited, due to the refit"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:35 of
+msgid "used all data in fit() function."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:48
+#: featurebox.selection.backforward.BackForwardStable:54 of
+msgid "If GridSearchCV, the refit could be set True and return the cv score."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward
+#: featurebox.selection.backforward.BackForward.fit
+#: featurebox.selection.backforward.BackForward.predict
+#: featurebox.selection.backforward.BackForward.score
+#: featurebox.selection.backforward.BackForwardStable
+#: featurebox.selection.backforward.BackForwardStable.fit
+#: featurebox.selection.backforward.BackForwardStable.predict
+#: featurebox.selection.backforward.BackForwardStable.score
+#: featurebox.selection.corr.Corr featurebox.selection.corr.Corr.transform
+#: featurebox.selection.exhaustion.Exhaustion
+#: featurebox.selection.exhaustion.Exhaustion.fit
+#: featurebox.selection.exhaustion.Exhaustion.predict
+#: featurebox.selection.exhaustion.Exhaustion.score featurebox.selection.ga.GA
+#: featurebox.selection.ga.GA.predict featurebox.selection.ga.GA.score
+#: featurebox.selection.ga.GA.score_cv featurebox.selection.ga.eaSimple
+#: featurebox.selection.multibase.multiBase of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:61
+#: featurebox.selection.backforward.BackForwardStable:68 of
+msgid "sklearn.estimator"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:63
+#: featurebox.selection.backforward.BackForwardStable:70 of
+msgid "force select number max"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:65 of
+msgid "primary features to start loop, default n_features//2."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:67
+#: featurebox.selection.backforward.BackForwardStable:74 of
+msgid "group number"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:69
+#: featurebox.selection.backforward.BackForwardStable:76 of
+msgid "group index"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:70
+#: featurebox.selection.backforward.BackForwardStable:78 of
+msgid "must selection index"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:71 of
+msgid "tolerant for rank compare."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:72 of
+msgid "print or not"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:74
+#: featurebox.selection.backforward.BackForwardStable:80 of
+msgid "random_state"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward:76 of
+msgid "refit or not. if refit, the model would use all data."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.fit:2 of
+msgid "Fit the baf model and then the underlying estimator on the selected"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.fit:2 of
+msgid "feature."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.fit:4
+#: featurebox.selection.exhaustion.Exhaustion.fit:3 of
+msgid "The training input0 samples."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.fit:6
+#: featurebox.selection.backforward.BackForward.score:6
+#: featurebox.selection.backforward.BackForwardStable.score:6
+#: featurebox.selection.exhaustion.Exhaustion.fit:5
+#: featurebox.selection.exhaustion.Exhaustion.score:6
+#: featurebox.selection.ga.GA.score:5 featurebox.selection.ga.GA.score_cv:5 of
+msgid "The target values."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.predict:2 of
+msgid ""
+"Reduce X to the selected feature and then using the underlying estimator "
+"to predict."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.predict:2 of
+msgid "Only available ``refit=True``."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.predict:4
+#: featurebox.selection.backforward.BackForward.score:4
+#: featurebox.selection.backforward.BackForwardStable.predict:4
+#: featurebox.selection.backforward.BackForwardStable.score:4
+#: featurebox.selection.exhaustion.Exhaustion.predict:4
+#: featurebox.selection.exhaustion.Exhaustion.score:4
+#: featurebox.selection.ga.GA.predict:3 featurebox.selection.ga.GA.score:3
+#: featurebox.selection.ga.GA.score_cv:3 of
+msgid "The input0 samples."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.predict
+#: featurebox.selection.backforward.BackForwardStable.predict
+#: featurebox.selection.corr.Corr.transform
+#: featurebox.selection.exhaustion.Exhaustion.predict
+#: featurebox.selection.ga.eaSimple of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.predict:7
+#: featurebox.selection.backforward.BackForwardStable.predict:7
+#: featurebox.selection.exhaustion.Exhaustion.predict:7 of
+msgid "**y** -- The predicted target values."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.predict
+#: featurebox.selection.backforward.BackForwardStable.predict
+#: featurebox.selection.corr.Corr.transform
+#: featurebox.selection.exhaustion.Exhaustion.predict of
+msgid "Return type"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForward.score:1
+#: featurebox.selection.exhaustion.Exhaustion.score:1 of
+msgid ""
+"Reduce X to the selected feature and then return the score of the "
+"underlying estimator. Only available ``refit=True``."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:1 of
+msgid ""
+"Bases: :class:`sklearn.base.MetaEstimatorMixin`, "
+":class:`sklearn.feature_selection._base.SelectorMixin`, "
+":class:`sklearn.base.BaseEstimator`"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:1 of
+msgid ""
+"BackForwardStable. Run with different order for more Stable (Not "
+"guaranteed)."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:7 of
+msgid "``estimator``"
+msgstr ""
+
+#: of
+msgid "object"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:5 of
+msgid ""
+"A supervised learning estimator with a ``_fit`` method that provides "
+"information about feature importance either through a ``coef_`` attribute"
+" or through a ``feature_importances_`` attribute."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:12 of
+msgid "``scoring``"
+msgstr ""
+
+#: of
+msgid "string, callable or None, optional, (default=None)"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:10
+#: featurebox.selection.backforward.BackForwardStable:82 of
+msgid ""
+"A string (see model evaluation documentation) or a scorer callable object"
+" / function with signature ``scorer(estimator, X, y)``."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:15 of
+msgid "``verbose``"
+msgstr ""
+
+#: of
+msgid "int, (default=0)"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:15
+#: featurebox.selection.backforward.BackForwardStable:86 of
+msgid "Controls verbosity of output."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:18 of
+msgid "``n_feature_``"
+msgstr ""
+
+#: featurebox.selection.corr.Corr:73 of
+msgid "int"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:18 of
+msgid "The number of selected feature with cross-validation."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:21 of
+msgid "``support_``"
+msgstr ""
+
+#: of
+msgid "array of shape [n_feature]"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:24 of
+msgid "``estimator_``"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:66 of
+msgid "``n_jobs``"
+msgstr ""
+
+#: of
+msgid "int or None"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:27
+#: featurebox.selection.backforward.BackForwardStable:88 of
+msgid ""
+"Number of cores to run in parallel while fitting across folds. ``None`` "
+"means 1 and ``-1`` means using all processors."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:42 of
+msgid ""
+"If score and predict is used, the refit could be set True and make sure "
+"the data is splited, due to the refit used all data in fit() function."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:72 of
+msgid "expectation select number"
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable:91 of
+msgid "False, with refit, the model would used all data."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable.fit:1 of
+msgid "Fit the baf model and automatically tune the number of selected feature."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable.fit:3 of
+msgid ""
+"Training vector, where `n_samples` is the number of samples and "
+"`n_feature` is the total number of feature."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable.fit:6 of
+msgid "Target values (integers for classification, real numbers for regression)."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable.fit:9 of
+msgid ""
+"cal_group labels for the samples used while splitting the dataset into "
+"train/test set."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable.predict:1 of
+msgid ""
+"Reduce X to the selected feature and then Fit using the underlying "
+"estimator, only with refit. Only available ``refit=True``."
+msgstr ""
+
+#: featurebox.selection.backforward.BackForwardStable.score:1 of
+msgid ""
+"Reduce X to the selected feature and then return the score of the "
+"underlying estimator, only with refit. Only available ``refit=True``."
+msgstr ""
+
+#: ../../src/featurebox.selection.rst:21
+msgid "featurebox.selection.corr module"
+msgstr ""
+
+#: featurebox.selection.corr:1 of
+msgid "Calculate the the correction of columns."
+msgstr ""
+
+#: featurebox.selection.corr.Corr:1 of
+msgid "Calculate correlation. (Where the result are changed with random state.)"
+msgstr ""
+
+#: featurebox.selection.corr.Corr:11 of
+msgid "**1. Used for get group exceeding the threshold**"
+msgstr ""
+
+#: featurebox.selection.corr.Corr:25 of
+msgid "Where the (2,4), (2,4,6), (4,6) are with correlation more than 0.7."
+msgstr ""
+
+#: featurebox.selection.corr.Corr:27 of
+msgid "**2. Used for filter automatically by machine**"
+msgstr ""
+
+#: featurebox.selection.corr.Corr:43 of
+msgid "Where the remove_coef are changed with random state."
+msgstr ""
+
+#: featurebox.selection.corr.Corr:45 of
+msgid "**3. Used for binding correlation**"
+msgstr ""
+
+#: featurebox.selection.corr.Corr:62 of
+msgid "Where 4 is filtered , Corresponding to the initial feature 8."
+msgstr ""
+
+#: featurebox.selection.corr.Corr:64 of
+msgid ""
+"[0,1] -> 0; [2,3] -> 1; [4,5]->2; [6,7]->3, 8->4; 9->5; 10->6; 11->7; "
+"12->8; 13->9;"
+msgstr ""
+
+#: featurebox.selection.corr.Corr:66 of
+msgid "ranking threshold."
+msgstr ""
+
+#: featurebox.selection.corr.Corr:68 of
+msgid "binding_group size, calculate the correction between binding."
+msgstr ""
+
+#: featurebox.selection.corr.Corr:69 of
+msgid "the range of multi_grade:[min,max)."
+msgstr ""
+
+#: featurebox.selection.corr.Corr:71 of
+msgid "the columns force to index."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.count_cof:1 of
+msgid "Check cof and count the number."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.inverse_transform_index:1
+#: featurebox.selection.multibase.multiBase.inverse_transform_index:1 of
+msgid "inverse the selected index to origin index by support."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.remove_coef:1 of
+msgid "Delete the index of feature with repeat coef."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform:1 of
+msgid "Reduce X to the selected features."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform:3 of
+msgid "The input samples."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform:6 of
+msgid "**X_r** -- The input samples with only the selected features."
+msgstr ""
+
+#: featurebox.selection.corr.Corr.transform_index:1
+#: featurebox.selection.multibase.multiBase.transform_index:1 of
+msgid "Get support index."
+msgstr ""
+
+#: ../../src/featurebox.selection.rst:29
+msgid "featurebox.selection.exhaustion module"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:1 of
+msgid "Exhaustion features combination."
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:3 of
+msgid ""
+"The attribute ``estimator_`` is the model with the best feature rather "
+"than all feature combination."
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:30 of
+msgid "sklearn model or GridSearchCV"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:31 of
+msgid "the n_select list,default,n_select=(3, 4)"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:33
+#: featurebox.selection.multibase.multiBase:3 of
+msgid "binding_group size, calculate the correction between binding"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:35
+#: featurebox.selection.multibase.multiBase:4 of
+msgid "the range of multi_grade:[min,max)"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:37
+#: featurebox.selection.multibase.multiBase:6 of
+msgid "the columns force to index"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:39 of
+msgid "n_jobs"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:41 of
+msgid "refit or not, if refit the model would used all data."
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion:43 of
+msgid "if estimator is sklearn model, used cv, else pass"
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion.fit:1 of
+msgid ""
+"Fit the baf model and then the underlying estimator on the selected "
+"feature."
+msgstr ""
+
+#: featurebox.selection.exhaustion.Exhaustion.predict:1 of
+msgid ""
+"Reduce X to the selected feature and then Fit using the underlying "
+"estimator. Only available ``refit=True``."
+msgstr ""
+
+#: ../../src/featurebox.selection.rst:37
+msgid "featurebox.selection.ga module"
+msgstr ""
+
+#: featurebox.selection.ga.GA:1 of
+msgid "GA with binding. Please just passing training data."
+msgstr ""
+
+#: featurebox.selection.ga.GA:14 of
+msgid "Then ::"
+msgstr ""
+
+#: featurebox.selection.ga.GA:19 of
+msgid "sklearn estimator"
+msgstr ""
+
+#: featurebox.selection.ga.GA:20 of
+msgid "njobs"
+msgstr ""
+
+#: featurebox.selection.ga.GA:22 of
+msgid "population"
+msgstr ""
+
+#: featurebox.selection.ga.GA:24 of
+msgid "hof"
+msgstr ""
+
+#: featurebox.selection.ga.GA:26 of
+msgid "probility of cross"
+msgstr ""
+
+#: featurebox.selection.ga.GA:28 of
+msgid "probility of mutate"
+msgstr ""
+
+#: featurebox.selection.ga.GA:30 of
+msgid "generation"
+msgstr ""
+
+#: featurebox.selection.ga.GA:32 of
+msgid "\"max\",\"min\";max problem or min"
+msgstr ""
+
+#: featurebox.selection.ga.GA:34 of
+msgid "probility of mutate of each node."
+msgstr ""
+
+#: featurebox.selection.ga.GA:36 of
+msgid "max size"
+msgstr ""
+
+#: featurebox.selection.ga.GA:38 of
+msgid "min size"
+msgstr ""
+
+#: featurebox.selection.ga.GA:40 of
+msgid "randomstate"
+msgstr ""
+
+#: featurebox.selection.ga.GA:42 of
+msgid "binding grade"
+msgstr ""
+
+#: featurebox.selection.ga.GA:43 of
+msgid "binding range [min,max]"
+msgstr ""
+
+#: featurebox.selection.ga.GA.fit:1 of
+msgid "Fit data and run GA."
+msgstr ""
+
+#: featurebox.selection.ga.GA.predict:1 featurebox.selection.ga.GA.score:1
+#: featurebox.selection.ga.GA.score_cv:1 of
+msgid ""
+"Reduce X to the selected feature and then return the score of the "
+"underlying estimator."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:1 of
+msgid "This algorithm reproduce the simplest evolutionary algorithm."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:3 of
+msgid "A list of individuals."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:4 of
+msgid "A :class:`~deap.base.Toolbox` that contains the evolution operators."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:6 of
+msgid "The probability of mating two individuals."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:7 of
+msgid "The probability of mutating an individual."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:8 of
+msgid "The number of generation."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:9 of
+msgid ""
+"A :class:`~deap.tools.Statistics` object that is updated inplace, "
+"optional."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:11 of
+msgid ""
+"A :class:`~deap.tools.HallOfFame` object that will contain the best "
+"individuals, optional."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:13 of
+msgid "Whether or not to log the statistics."
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:14 of
+msgid "The final population"
+msgstr ""
+
+#: featurebox.selection.ga.eaSimple:15 of
+msgid "A class:`~deap.tools.Logbook` with the statistics of the evolution"
+msgstr ""
+
+#: ../../src/featurebox.selection.rst:45
+msgid "featurebox.selection.multibase module"
+msgstr ""
+
+#: featurebox.selection.multibase.multiBase:1 of
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: featurebox.selection.multibase.multiBase:1 of
+msgid "Base method for binding"
+msgstr ""
+

@@ -1,1 +1,1 @@
-__all__ = ["look_json", "predefined_typing", "quickmethod"]
+__all__ = ["predefined_typing", "quickmethod"]

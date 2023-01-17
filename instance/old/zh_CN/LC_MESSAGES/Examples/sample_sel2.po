@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 23:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../Examples/sample_sel2.rst:2
+msgid "Select by Corr"
+msgstr "相关系数筛选"
+
+#: ../../Examples/sample_sel2.rst:5
+msgid "Corr Automatically"
+msgstr "自动进行"
+
+#: ../../Examples/sample_sel2.rst:18
+msgid "Corr Step"
+msgstr "分步进行"
+
+#: ../../Examples/sample_sel2.rst:25
+msgid ""
+"Nn range [0,8], the features are binding in to 2 sized: "
+"[[0,1],[2,3],[4,5],[6,7]] Corresponding to the initial 13 feature. [0,1] "
+"-> 0; [2,3] -> 1; [4,5]->2; [6,7]->3, 8->4; 9->5; 10->6; 11->7; 12->8; "
+"13->9; ::"
+msgstr ""
+"特征数8, 特征被为大小为2的组: [[0,1],[2,3],[4,5],[6,7]] 对应于初始的13个特性. [0,1] -> 0; "
+"[2,3] -> 1; [4,5]->2; [6,7]->3, 8->4; 9->5; 10->6; 11->7; 12->8; 13->9; "
+"::"
+
+#: ../../Examples/sample_sel2.rst:37
+msgid ""
+"In this step, you could select manually, or filter automatically as "
+"following."
+msgstr ""
+"在此步骤中，您可以手动选择，或自动过滤。"
+"如下"
+
+#: ../../Examples/sample_sel2.rst:42
+msgid ""
+"where 2 is filtered, Corresponding to the initial feature 14. [0,1] -> 0;"
+" [2,3] -> 1; [4,5]->2; [6,7]->3, 8->4; ``[9->5]``; 10->6; 11->7; 12->8; "
+"``13->9``;"
+msgstr ""
+"其中2被过滤，对应于初始的14特征. [0,1] -> 0; [2,3] -> 1; [4,5]->2; [6,7]->3, 8->4; "
+"``[9->5]``; 10->6; 11->7; 12->8; ``13->9``;"
+
+

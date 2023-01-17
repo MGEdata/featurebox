@@ -9,10 +9,10 @@ featurebox.utils package
 Submodules
 ----------
 
-featurebox.utils.look\_json module
-----------------------------------
+featurebox.utils.general module
+-------------------------------
 
-.. automodule:: featurebox.utils.look_json
+.. automodule:: featurebox.utils.general
    :members:
    :undoc-members:
    :show-inheritance:

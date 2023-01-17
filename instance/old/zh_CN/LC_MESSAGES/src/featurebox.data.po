@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-06 15:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.data.rst:2
+msgid "featurebox.data package"
+msgstr ""
+
+#: featurebox.data:1 of
+msgid "**Data tools**."
+msgstr ""
+
+#: featurebox.data:3 of
+msgid ""
+"Embedded data: \"ele_table.csv\", \"ele_megnet.json\", "
+"\"ie.json\", \"oe.csv\""
+msgstr ""
+
+#: ../../src/featurebox.data.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.data.rst:13
+msgid "featurebox.data.check\\_data module"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:1
+#: featurebox.data.mp_access.MpAccess:1 featurebox.data.namesplit.NameSplit:1
+#: of
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:1 of
+msgid "Check the element in available elements or not."
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:4 of
+msgid "AVAILABLE_ELE_NUMBER:"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:4 of
+msgid "(1~84) + (89, 90, 91, 92)."
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:8 of
+msgid "AVAILABLE_ELE_NAME:"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:7 of
+msgid "('H'~'Bi') + ('Ac', 'Th', 'Pa', 'U')."
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements
+#: featurebox.data.check_data.CheckElements.check
+#: featurebox.data.mp_access.MpAccess
+#: featurebox.data.mp_access.MpAccess.data_fetcher
+#: featurebox.data.namesplit.NameSplit.transform of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:10 of
+msgid "Check by number or name of element. Optional (\"name\",\"number\")"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:12 of
+msgid ""
+"Processing for elements. Such as for element in pymatgen:  >>> func = "
+"lambda x: [x.Z, ] >>> func2 = lambda x: [x.name, ]"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:12 of
+msgid "Processing for elements. Such as for element in pymatgen:"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements:20
+#: featurebox.data.check_data.CheckElements:35
+#: featurebox.data.mp_access.MpAccess:4
+#: featurebox.data.mp_access.MpAccess.get_ids:9
+#: featurebox.data.namesplit.NameSplit:12 of
+msgid "Examples"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements.check:1 of
+msgid "Names or numbers, or list of pymatgen.Structure"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements.check
+#: featurebox.data.mp_access.MpAccess.data_fetcher
+#: featurebox.data.namesplit.NameSplit.transform of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements.check:4 of
+msgid "**result** -- List of filtered structures."
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements.check
+#: featurebox.data.mp_access.MpAccess.data_fetcher
+#: featurebox.data.namesplit.NameSplit.transform of
+msgid "Return type"
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements.from_list:1 of
+msgid "Get checker for list of name or number."
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements.from_pymatgen_structures:1 of
+msgid "Get checker for list of pymatgen.Structure."
+msgstr ""
+
+#: featurebox.data.check_data.CheckElements.passed_idx:1 of
+msgid "The mark for all structures, return np.ndarray index."
+msgstr ""
+
+#: ../../src/featurebox.data.rst:21
+msgid "featurebox.data.mp\\_access module"
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess:1 of
+msgid "API for pymatgen database, access pymatgen to get data."
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess:13 of
+msgid "pymatgen key."
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.cifs_to_structures:1 of
+msgid "Get structures from cifs"
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.data_fetcher:1 of
+msgid "Fetch file from pymatgen."
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.data_fetcher:3 of
+msgid ""
+"prop_name=['band_gap','density',\"icsd_ids\"'volume','material_id','pretty_formula','elements',\"energy\","
+" "
+"'efermi','e_above_hull','formation_energy_per_atom','final_energy_per_atom','unit_cell_formula',"
+" "
+"'spacegroup','nelements'\"nsites\",\"final_structure\",\"cif\",\"piezo\",\"diel\"]"
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.data_fetcher:7 of
+msgid "list of MP id of pymatgen."
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.data_fetcher:9 of
+msgid "prop_names"
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.data_fetcher:11 of
+msgid "obtain elasticity or not."
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.data_fetcher:14 of
+msgid "properties Table."
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.get_ids:1 of
+msgid "Search id by criteria."
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.get_ids:3 of
+msgid ""
+"support_property = ['energy', 'energy_per_atom', 'volume', "
+"'formation_energy_per_atom', 'nsites', "
+"'unit_cell_formula','pretty_formula', 'is_hubbard', 'elements', "
+"'nelements', 'e_above_hull', 'hubbards', 'is_compatible', 'spacegroup', "
+"'task_ids',  'band_gap', 'density', 'icsd_id', 'icsd_ids', 'cif', "
+"'total_magnetization','material_id', 'oxide_type', 'tags', 'elasticity']"
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.get_ids:24 of
+msgid ""
+"where, ``\"$gt\"`` >,  ``\"$gte\"`` >=,  ``\"$lt\"`` <,  ``\"$lte\"`` <=,"
+"  ``\"$ne\"`` !=,  ``\"$in\"``,  ``\"$nin\"`` (not in), ``\"$or\"``,  "
+"``\"$and\"``,  ``\"$not\"``,  ``\"$nor\"`` ,  ``\"$all\"``"
+msgstr ""
+
+#: featurebox.data.mp_access.MpAccess.get_ids_from_web_table:1 of
+msgid ""
+"This is a add method to read csv file download from web,the file name is "
+"'_Materials Project.csv', which contains \"Materials Id\" columns."
+msgstr ""
+
+#: ../../src/featurebox.data.rst:29
+msgid "featurebox.data.namesplit module"
+msgstr ""
+
+#: featurebox.data.namesplit.NameSplit:1 of
+msgid "Split the name to table, return ``expand.csv`` and ``folds.csv``."
+msgstr ""
+
+#: featurebox.data.namesplit.NameSplit:5 of
+msgid ""
+"Make sure the number below the element or (), For situation that the "
+"number of () before the (), such as \"0.9(BaZr)+0.1(BaZrO3)\"."
+msgstr ""
+
+#: featurebox.data.namesplit.NameSplit:8 of
+msgid ""
+"Please set the bracket_follow=True, and for this situation make sure the "
+"first number below ``)`` have ``+`` !!!."
+msgstr ""
+
+#: featurebox.data.namesplit.NameSplit.transform:1 of
+msgid "composition names list."
+msgstr ""
+
+#: featurebox.data.namesplit.NameSplit.transform:3 of
+msgid "return name, default is 'folds.csv'"
+msgstr ""
+
+#: featurebox.data.namesplit.NameSplit.transform:5 of
+msgid "return name, default is 'expands.csv'"
+msgstr ""
+
+#: featurebox.data.namesplit.NameSplit.transform:8 of
+msgid "return tables.csv."
+msgstr ""
+

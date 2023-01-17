@@ -1,0 +1,804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-08 11:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../src/featurebox.models_geo.rst:2
+msgid "featurebox.models\\_geo package"
+msgstr ""
+
+#: ../../src/featurebox.models_geo.rst:10
+msgid "Submodules"
+msgstr ""
+
+#: ../../src/featurebox.models_geo.rst:13
+msgid "featurebox.models\\_geo.basemodel module"
+msgstr ""
+
+#: featurebox.models_geo.basemodel:1 of
+msgid "This part contains base model for crystal problem and tools."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.AddEdge:1
+#: featurebox.models_geo.basemodel.GaussianSmearing:1
+#: featurebox.models_geo.basemodel.NormalizeEdgeAttr:1
+#: featurebox.models_geo.basemodel.NormalizeStateAttr:1
+#: featurebox.models_geo.basemodel.NormalizeX:1
+#: featurebox.models_geo.flow_geo.AverageMeter:1
+#: featurebox.models_geo.flow_geo.LearningFlow:1
+#: featurebox.models_geo.log_model.HookGradientLayer:1
+#: featurebox.models_geo.log_model.HookGradientModule:1
+#: featurebox.models_geo.log_model.LogModule:1 of
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: featurebox.models_geo.basemodel.AddEdge:1 of
+msgid ""
+"For (BaseStructureGraphGEO) without edge index, this is one lazy way to "
+"calculate edge ."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:1
+#: featurebox.models_geo.basemodel.GeneralReadOutLayer:1
+#: featurebox.models_geo.basemodel.GeoResNet:1
+#: featurebox.models_geo.basemodel.ReadOutLayer:1
+#: featurebox.models_geo.basemodel.ShiftedSoftplus:1
+#: featurebox.models_geo.rotnet.GLayer:1 featurebox.models_geo.rotnet.SLayer:1
+#: of
+msgid "Bases: :class:`torch.nn.modules.module.Module`"
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:1 of
+msgid "Base model for crystal problem."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:3
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:3
+#: featurebox.models_geo.rotnet.RotateNet:3 of
+msgid "Model for crystal problem."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet
+#: featurebox.models_geo.flow_geo.LearningFlow
+#: featurebox.models_geo.flow_geo.LearningFlow.predict
+#: featurebox.models_geo.flow_geo.LearningFlow.run
+#: featurebox.models_geo.flow_geo.mae featurebox.models_geo.general.check_shape
+#: featurebox.models_geo.general.fast_label_binarize
+#: featurebox.models_geo.general.train_test_pack
+#: featurebox.models_geo.log_model.make_dot_
+#: featurebox.models_geo.rotnet.RotateNet of
+msgid "Parameters"
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:5
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:5
+#: featurebox.models_geo.rotnet.RotateNet:5 of
+msgid "(int) input number of node feature (atom feature)."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:6
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:6
+#: featurebox.models_geo.rotnet.RotateNet:6 of
+msgid ""
+"(int) input number of bond feature. if ``num_edge_gaussians` offered, "
+"this parameter is neglect."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:7
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:7
+#: featurebox.models_geo.rotnet.RotateNet:7 of
+msgid "(int) input number of state feature."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:8
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:8
+#: featurebox.models_geo.rotnet.RotateNet:8 of
+msgid ""
+"(int) number of embeddings, For generate the initial embedding matrix to "
+"on behalf of node feature."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:9
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:9
+#: featurebox.models_geo.rotnet.RotateNet:9 of
+msgid "(int) num_node_hidden_channels for node feature."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:10
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:10
+#: featurebox.models_geo.rotnet.RotateNet:10 of
+msgid "(int) channels for node feature."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:11
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:11
+#: featurebox.models_geo.rotnet.RotateNet:11 of
+msgid "(int) conv number."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:12
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:12
+#: featurebox.models_geo.rotnet.RotateNet:12 of
+msgid ""
+"(int) number of gaussian Smearing number for radius. deprecated, keep "
+"this compact with your bond data."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:13
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:13
+#: featurebox.models_geo.rotnet.RotateNet:13 of
+msgid "(float) cutoff for calculate neighbor bond."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:14
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:14
+#: featurebox.models_geo.rotnet.RotateNet:14 of
+msgid "(str) Merge node method. such as \"add\",\"mean\",\"max\",\"mean\"."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:15
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:15
+#: featurebox.models_geo.rotnet.RotateNet:15 of
+msgid "(float) mean for y."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:16
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:16
+#: featurebox.models_geo.rotnet.RotateNet:16 of
+msgid "(float) std for y."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:17
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:17
+#: featurebox.models_geo.rotnet.RotateNet:17 of
+msgid "(bool) False or True norm for y."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:18
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:18
+#: featurebox.models_geo.rotnet.RotateNet:18 of
+msgid ""
+"(torch.tensor shape (120,1)) properties for atom. such as target y is "
+"volumes of compound, atom_ref could be the atom volumes of all atom "
+"(H,H,He,Li,...). And you could copy the first term to make sure the `H` "
+"index start form 1."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:21
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:21
+#: featurebox.models_geo.rotnet.RotateNet:21 of
+msgid "(bool,str) just used \"z\" or used \"x\" to calculate."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:22
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:22
+#: featurebox.models_geo.rotnet.RotateNet:22 of
+msgid ""
+"(Callable) torch module for interactions dynamically: pass the torch "
+"module to interactions parameter.static: re-define the "
+"``get_interactions_layer`` and keep this parameter is None. the forward "
+"input is (h, edge_index, edge_weight, edge_attr, data=data)"
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:24
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:24
+#: featurebox.models_geo.rotnet.RotateNet:24 of
+msgid ""
+"(Callable) torch module for interactions  dynamically: pass the torch "
+"module to interactions parameter. static: re-define the "
+"``get_interactions_layer`` and keep this parameter is None. the forward "
+"input is (out,)"
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:25
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:25
+#: featurebox.models_geo.rotnet.RotateNet:25 of
+msgid "(bool) add state attribute before output."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel:26
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:26
+#: featurebox.models_geo.rotnet.RotateNet:26 of
+msgid ""
+"(int) number of out size. for regression,is 1 and for classification "
+"should be defined."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel.forward:1
+#: featurebox.models_geo.basemodel.GeneralReadOutLayer.forward:1
+#: featurebox.models_geo.basemodel.GeoResNet.forward:1
+#: featurebox.models_geo.basemodel.ReadOutLayer.forward:1
+#: featurebox.models_geo.basemodel.ShiftedSoftplus.forward:1
+#: featurebox.models_geo.rotnet.GLayer.forward:1
+#: featurebox.models_geo.rotnet.SLayer.forward:1 of
+msgid "Defines the computation performed at every call."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel.forward:3
+#: featurebox.models_geo.basemodel.GeneralReadOutLayer.forward:3
+#: featurebox.models_geo.basemodel.GeoResNet.forward:3
+#: featurebox.models_geo.basemodel.ReadOutLayer.forward:3
+#: featurebox.models_geo.basemodel.ShiftedSoftplus.forward:3
+#: featurebox.models_geo.rotnet.GLayer.forward:3
+#: featurebox.models_geo.rotnet.SLayer.forward:3 of
+msgid "Should be overridden by all subclasses."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel.forward:6
+#: featurebox.models_geo.basemodel.GeneralReadOutLayer.forward:6
+#: featurebox.models_geo.basemodel.GeoResNet.forward:6
+#: featurebox.models_geo.basemodel.ReadOutLayer.forward:6
+#: featurebox.models_geo.basemodel.ShiftedSoftplus.forward:6
+#: featurebox.models_geo.rotnet.GLayer.forward:6
+#: featurebox.models_geo.rotnet.SLayer.forward:6 of
+msgid ""
+"Although the recipe for forward pass needs to be defined within this "
+"function, one should call the :class:`Module` instance afterwards instead"
+" of this since the former takes care of running the registered hooks "
+"while the latter silently ignores them."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel.get_interactions_layer:1
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet.get_interactions_layer:1
+#: featurebox.models_geo.rotnet.RotateNet.get_interactions_layer:1 of
+msgid "This part shloud re-defined. And must add the ``interactions`` attribute."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel.get_interactions_layer:3
+#: featurebox.models_geo.basemodel.BaseCrystalModel.get_readout_layer:3
+#: featurebox.models_geo.basemodel.BaseCrystalModel.get_readout_layer:7
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet.get_interactions_layer:3
+#: featurebox.models_geo.rotnet.RotateNet.get_interactions_layer:3 of
+msgid "Examples::"
+msgstr ""
+
+#: featurebox.models_geo.basemodel.BaseCrystalModel.get_readout_layer:1 of
+msgid "This part shloud re-defined. And must add the ``readout_layer`` attribute."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.GaussianSmearing:1 of
+msgid ""
+"Smear the radius shape (num_node,1) to shape (num_node, "
+"num_edge_gaussians)."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.GeneralReadOutLayer:1 of
+msgid "General Merge node layer."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.GeneralReadOutLayer:4
+#: featurebox.models_geo.basemodel.GeoResNet:3
+#: featurebox.models_geo.basemodel.ReadOutLayer:3
+#: featurebox.models_geo.basemodel.ShiftedSoftplus:3
+#: featurebox.models_geo.cgcnn.CGConvNew:1
+#: featurebox.models_geo.rotnet.GLayer:1 featurebox.models_geo.rotnet.RotNet:1
+#: featurebox.models_geo.rotnet.SLayer:1 of
+msgid ""
+"Initializes internal Module state, shared by both nn.Module and "
+"ScriptModule."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.GeoResNet:1 of
+msgid "Simple ResNet"
+msgstr ""
+
+#: featurebox.models_geo.basemodel.ReadOutLayer:1 of
+msgid "Merge node layer."
+msgstr ""
+
+#: featurebox.models_geo.basemodel.ShiftedSoftplus:1 of
+msgid "Softplus with one log2 intercept."
+msgstr ""
+
+#: ../../src/featurebox.models_geo.rst:21
+msgid "featurebox.models\\_geo.cgcnn module"
+msgstr ""
+
+#: featurebox.models_geo.cgcnn:1 featurebox.models_geo.rotnet:1 of
+msgid ""
+"This is one general script. For different data, you should re-write this "
+"and tune."
+msgstr ""
+
+#: featurebox.models_geo.cgcnn.CGConvNew:1 of
+msgid "Bases: :class:`torch_geometric.nn.conv.cg_conv.CGConv`"
+msgstr ""
+
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:1
+#: featurebox.models_geo.rotnet.RotateNet:1 of
+msgid "Bases: :class:`featurebox.models_geo.basemodel.BaseCrystalModel`"
+msgstr ""
+
+#: featurebox.models_geo.cgcnn.CrystalGraphConvNet:1
+#: featurebox.models_geo.rotnet.RotateNet:1 of
+msgid "CrystalGraph."
+msgstr ""
+
+#: ../../src/featurebox.models_geo.rst:29
+msgid "featurebox.models\\_geo.flow\\_geo module"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.AverageMeter:1 of
+msgid "Computes and stores the average and current value"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:1 of
+msgid "LearningFlow for training."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:4
+#: featurebox.models_geo.general.train_test_pack:39 of
+msgid "Examples"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:48 of
+msgid ""
+"where the dataset could from "
+":class:`featurebox.test_featurizers.base_graph_geo.StructureGraphGEO`"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:56 of
+msgid "such as \"cuda:0\",\"cpu\""
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:60 of
+msgid "under exploit......"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:62
+#: featurebox.models_geo.flow_geo.LearningFlow:64
+#: featurebox.models_geo.flow_geo.LearningFlow:66
+#: featurebox.models_geo.flow_geo.LearningFlow:68
+#: featurebox.models_geo.flow_geo.LearningFlow:72 of
+msgid "see more in torch"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:70 of
+msgid "save checkpoint or not."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:73 of
+msgid "print frequency"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:75 of
+msgid "\"all\",\"train\",\"test\" log."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:77 of
+msgid "scheduler, see more in torch"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow:78 of
+msgid "function to get y/label."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.mae_score:1 of
+msgid "Return MAE score."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:1 of
+msgid "Just predict by model,and add one forward hook to get put."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:3 of
+msgid "MGEDataLoader, the target_y could be ``None``."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:5 of
+msgid "if return_y_true, return (y_preds, y_true)"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:7 of
+msgid ""
+"if add_hook, the model must contain torch native nn.ModuleList named "
+"``fcs`` such as ``self.fcs = nn.ModuleList(...)`` in module."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:10 of
+msgid "user-defined hook layer name."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict
+#: featurebox.models_geo.general.fast_label_binarize of
+msgid "Returns"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:13 of
+msgid "* **y_pred** (*tensor*) * **y_true** (*tensor*) -- if return_y_true"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:13 of
+msgid "**y_pred** (*tensor*)"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.predict:14 of
+msgid "**y_true** (*tensor*) -- if return_y_true"
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.run:1 of
+msgid "run loop."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.run:3 of
+msgid "epoch."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.LearningFlow.run:5 of
+msgid ""
+"The name of resume file, 'checkpoint.pth.tar' or 'model_best.pth.tar' If "
+"warm_start, try to resume from local disk."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.class_eval:1 of
+msgid "Classification."
+msgstr ""
+
+#: featurebox.models_geo.flow_geo.mae:1 of
+msgid "Computes the mean absolute error between prediction and target"
+msgstr ""
+
+#: ../../src/featurebox.models_geo.rst:37
+msgid "featurebox.models\\_geo.general module"
+msgstr ""
+
+#: featurebox.models_geo.general:1 of
+msgid "Operation utilities on lists and arrays, for torch,"
+msgstr ""
+
+#: featurebox.models_geo.general:5 of
+msgid "Notes"
+msgstr ""
+
+#: featurebox.models_geo.general:4 of
+msgid "just for network."
+msgstr ""
+
+#: featurebox.models_geo.general.check_shape:1 of
+msgid ""
+"Check if array complies with shape. Shape is a sequence of integer that "
+"may end with None. If None is at the end of shape, then any shapes in "
+"array after that dimension will match with shape."
+msgstr ""
+
+#: featurebox.models_geo.general.check_shape:6 of
+msgid ""
+"Example: array with shape [10, 20, 30, 40] matches with [10, 20, None], "
+"but"
+msgstr ""
+
+#: featurebox.models_geo.general.check_shape:6 of
+msgid "does not match with shape [10, 20, 30, 20]"
+msgstr ""
+
+#: featurebox.models_geo.general.check_shape:8 of
+msgid "array to be checked"
+msgstr ""
+
+#: featurebox.models_geo.general.check_shape:10 of
+msgid "integer array shape, it may ends with None"
+msgstr ""
+
+#: featurebox.models_geo.general.check_shape:13 of
+msgid "Returns: bool"
+msgstr ""
+
+#: featurebox.models_geo.general.collect_edge_attr_jump:1 of
+msgid "From MessagePassing.__collect__, jump edge_attr from adj"
+msgstr ""
+
+#: featurebox.models_geo.general.fast_label_binarize:1 of
+msgid "Faster version of label binarize"
+msgstr ""
+
+#: featurebox.models_geo.general.fast_label_binarize:3 of
+msgid ""
+"`label_binarize` from scikit-learn is slow when run 1 label at a time. "
+"`label_binarize` also is efficient for large numbers of classes, which is"
+" not common in `megnet`"
+msgstr ""
+
+#: featurebox.models_geo.general.fast_label_binarize:7 of
+msgid "Value to encode"
+msgstr ""
+
+#: featurebox.models_geo.general.fast_label_binarize:8 of
+msgid "Possible class values"
+msgstr ""
+
+#: featurebox.models_geo.general.fast_label_binarize:11 of
+msgid "List of integers"
+msgstr ""
+
+#: featurebox.models_geo.general.fast_label_binarize of
+msgid "Return type"
+msgstr ""
+
+#: featurebox.models_geo.general.get_ptr:1 of
+msgid "Trans batch index to ptr"
+msgstr ""
+
+#: featurebox.models_geo.general.getter_arr:1 of
+msgid "Get prop."
+msgstr ""
+
+#: featurebox.models_geo.general.lift_jump_index_select:1 of
+msgid "From MessagePassing.__lift__, jump edge_attr from adj"
+msgstr ""
+
+#: featurebox.models_geo.general.sparse_eg_single:1 of
+msgid "From:"
+msgstr ""
+
+#: featurebox.models_geo.general.sparse_eg_single:3 of
+msgid "import torch_geometric.transforms as T T.ToSparseTensor()"
+msgstr ""
+
+#: featurebox.models_geo.general.sparse_eg_single:6 of
+msgid ""
+"Make sure all the edge prop is spared together!!! for example "
+"edge_index,edge_weight,edge_attr...,due to index is resort"
+msgstr ""
+
+#: featurebox.models_geo.general.to_list:1 of
+msgid "If x is not a list, convert it to list"
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:1 of
+msgid "Split arrays or matrices into random train and test subsets"
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:3 of
+msgid ""
+"Quick utility that wraps input validation and "
+"``next(ShuffleSplit().split(X, y))`` and application to input data into a"
+" single call for splitting (and optionally subsampling) data in a "
+"oneliner."
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:8 of
+msgid ""
+"Allowed inputs are lists, numpy arrays, scipy-sparse matrices or pandas "
+"dataframes."
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:11 of
+msgid ""
+"If float, should be between 0.0 and 1.0 and represent the proportion of "
+"the dataset to include in the test split. If int, represents the absolute"
+" number of test samples. If None, the value is set to the complement of "
+"the train size. If ``train_size`` is also None, it will be set to 0.25."
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:17 of
+msgid ""
+"If float, should be between 0.0 and 1.0 and represent the proportion of "
+"the dataset to include in the train split. If int, represents the "
+"absolute number of train samples. If None, the value is automatically set"
+" to the complement of the test size."
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:22 of
+msgid ""
+"Controls the shuffling applied to the data before applying the split. "
+"Pass an int for reproducible output across multiple function calls."
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:25 of
+msgid ""
+"Whether or not to shuffle the data before splitting. If shuffle=False "
+"then stratify must be None."
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:28 of
+msgid ""
+"If not None, data is split in a stratified fashion, using this as the "
+"class labels."
+msgstr ""
+
+#: featurebox.models_geo.general.train_test_pack:31 of
+msgid ""
+"pack the pack to format, pack=None: (0:n-1) pack=0: (0:n-1:2, 1:n:2) "
+"pack=1: (0:n-3:2, -2, 1:n-2:2, -1) pack=2: (0:n-5:2, -4, -2, 1:n-4:2, -3,"
+" -1)"
+msgstr ""
+
+#: ../../src/featurebox.models_geo.rst:45
+msgid "featurebox.models\\_geo.log\\_model module"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:1 of
+msgid "Produces Graphviz representation of PyTorch autograd graph."
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:8 of
+msgid "First install graphviz:"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:4 of
+msgid ""
+"https://forum.graphviz.org/t/new-simplified-installation-procedure-on-"
+"windows/224  (windows)"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:6 of
+msgid "yum install graphviz (centos)"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:8 of
+msgid "apt-get install graphviz (centos)"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:12 of
+msgid "Second:"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:11 of
+msgid "pip install graphviz pip install torchviz"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:16 of
+msgid "use:"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:18 of
+msgid ""
+"If a node represents a backward function, it is gray. Otherwise, the node"
+" represents a tensor and is either blue, orange, or green:"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:21 of
+msgid "Blue: reachable leaf tensors that requires grad (tensors whose `.grad`"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:22 of
+msgid "fields will be populated during `.backward()`)"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:23 of
+msgid "Orange: saved tensors of custom autograd functions as well as those"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:24 of
+msgid "saved by built-in backward nodes"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:25 of
+msgid "Green: tensor passed in as outputs"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:27 of
+msgid "Dark green: if any output is a view, we represent its base tensor with"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:27 of
+msgid "a dark green node."
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:29 of
+msgid "output tensor"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:30 of
+msgid ""
+"dict of (name, tensor) to add names to node that requires grad "
+"params=dict(model.named_parameters()"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:32 of
+msgid ""
+"whether to display non-tensor attributes of backward nodes (Requires "
+"PyTorch version >= 1.9)"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:34 of
+msgid ""
+"whether to display saved tensor nodes that are not by custom autograd "
+"functions. Saved tensor nodes for custom functions, if present, are "
+"always displayed. (Requires PyTorch version >= 1.9)"
+msgstr ""
+
+#: featurebox.models_geo.log_model.make_dot_:37 of
+msgid ""
+"if show_attrs is `True`, sets max number of characters to display for any"
+" given attribute."
+msgstr ""
+
+#: ../../src/featurebox.models_geo.rst:53
+msgid "featurebox.models\\_geo.rotnet module"
+msgstr ""
+
+#: featurebox.models_geo.rotnet.RotNet:1 of
+msgid "Bases: :class:`torch_geometric.nn.conv.message_passing.MessagePassing`"
+msgstr ""
+
+#: featurebox.models_geo.rotnet.RotNet.message_and_aggregate:1 of
+msgid ""
+"Fuses computations of :func:`message` and :func:`aggregate` into a single"
+" function. If applicable, this saves both time and memory since messages "
+"do not explicitly need to be materialized. This function will only gets "
+"called in case it is implemented and propagation takes place based on a "
+":obj:`torch_sparse.SparseTensor`."
+msgstr ""
+
+#~ msgid "featurebox.models\\_geo.cggat module"
+#~ msgstr ""
+
+#~ msgid "CrystalGraph with GAT."
+#~ msgstr ""
+
+#~ msgid "Bases: :class:`torch_geometric.nn.conv.gat_conv.GATConv`"
+#~ msgstr ""
+
+#~ msgid "featurebox.models\\_geo.cggcn module"
+#~ msgstr ""
+
+#~ msgid "CrystalGraph with GCN."
+#~ msgstr ""
+
+#~ msgid "Bases: :class:`torch_geometric.nn.conv.gcn_conv.GCNConv`"
+#~ msgstr ""
+
+#~ msgid "featurebox.models\\_geo.cggcn2 module"
+#~ msgstr ""
+
+#~ msgid "CrystalGraph with GCN2."
+#~ msgstr ""
+
+#~ msgid "Bases: :class:`torch_geometric.nn.conv.gcn2_conv.GCN2Conv`"
+#~ msgstr ""
+
+#~ msgid "featurebox.models\\_geo.cggrunet module"
+#~ msgstr ""
+
+#~ msgid "CrystalGraph with CGGRUN. weight_decay=0.001, best."
+#~ msgstr ""
+
+#~ msgid "Bases: :class:`torch_geometric.nn.conv.nn_conv.NNConv`"
+#~ msgstr ""
+
+#~ msgid "Bases: :class:`torch_geometric.nn.glob.set2set.Set2Set`"
+#~ msgstr ""
+
+#~ msgid "Examples:"
+#~ msgstr ""
+
+#~ msgid "x"
+#~ msgstr ""
+
+#~ msgid "featurebox.models\\_geo.megnet module"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a simple version for "
+#~ "mgenet, where the bond update iteration"
+#~ " is omitted."
+#~ msgstr ""
+
+#~ msgid "featurebox.models\\_geo.schnet module"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a reconstitution version from"
+#~ "  pytorch_geometric/ torch_geometric / nn /"
+#~ " models_geo / schnet.py."
+#~ msgstr ""
+
+#~ msgid "SchNet."
+#~ msgstr ""
+

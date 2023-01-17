@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, boliqq07
+# This file is distributed under the same license as the featurebox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: featurebox \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-05 00:05+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../Guide/geo_data.rst:2
+msgid "Crystal Structure Data"
+msgstr "晶体结构数据"
+
+#: ../../Guide/geo_data.rst:4
+msgid ""
+"Crystal structure data is not a 2D numpy data, but a cluster of tuple "
+"data."
+msgstr ""
+"晶体结构数据对应于计算机领域图神经网络的Graph数据，每个化合物对应于一个Graph。对于单个2维numpy数据，如原子特征或者化合物整体特征等，我们可以直接使用"
+" ``sklearn`` 建模，但通常晶体结构数据不是单个2维numpy数据，而是包含多个数据的元组 （包含原子，原子键，化合物整体等所有信息）。"
+
+#: ../../Guide/geo_data.rst:6
+msgid "Therefore, it suit for ``torch`` network rather than ``sklearn``."
+msgstr "因此，它适合于 ``torch`` 网络，而不是 ``sklearn`` 。"
+
+#: ../../Guide/geo_data.rst:8
+msgid ""
+"For unification with ``torch_geometrics``, the Crystal Structure Data "
+"(Graph neural network data) use the following name."
+msgstr "为了与 ``torch_geometrics`` 统一，在 ``featurebox`` 中，晶体结构数据（Graph数据）使用以下名称。"
+
+#: ../../Guide/geo_data.rst:14
+msgid "Each Graph data (for each structure) contains:"
+msgstr "每个Graph数据包含:"
+
+#: ../../Guide/geo_data.rst:16
+msgid "``x``: Node feature matrix.  with shape [num_nodes, num_node_features]"
+msgstr "``x``: （节点）原子特征. 形状[num_nodes, num_node_features]。"
+
+#: ../../Guide/geo_data.rst:18
+msgid "alias atom features."
+msgstr "即，原子的特征。"
+
+#: ../../Guide/geo_data.rst:20
+msgid ""
+"``edge_index``: Graph connectivity in COO format. with shape [2, "
+"num_edges] and type torch.long"
+msgstr "``edge_index``: 键索引对，形状[2, num_edges] 数据类型torch.long。"
+
+#: ../../Guide/geo_data.rst:22
+msgid ""
+"``edge_attr``: Edge feature matrix. with shape [num_edges, "
+"num_edge_features]"
+msgstr "``edge_attr``: 键特征，形状[num_edges, num_edge_features]。"
+
+#: ../../Guide/geo_data.rst:24
+msgid "alias bond features."
+msgstr "即：键特征。"
+
+#: ../../Guide/geo_data.rst:26
+msgid "``edge_weight``: Edge feature matrix. with shape [num_edges, ]"
+msgstr "``edge_weight``: 键长，形状 [num_edges, ]。"
+
+#: ../../Guide/geo_data.rst:28
+msgid "alias bond length."
+msgstr "即，键长。"
+
+#: ../../Guide/geo_data.rst:30
+msgid "``pos``: Node position matrix. with shape [num_nodes, num_dimensions]"
+msgstr "``pos``: 节点（原子）位置矩阵，形状[num_nodes, num_dimensions]。"
+
+#: ../../Guide/geo_data.rst:32
+msgid "``y``: target. np.ndarray, shape [1, num_target], default shape [1,]"
+msgstr "``y``: 目标量，形状 [1, num_target], 默认形状 [1,]。"
+
+#: ../../Guide/geo_data.rst:34
+msgid "``state_attr``: state feature. shape [1, num_state_features]"
+msgstr "``state_attr``: 状态（化合物整体）特征，形状 [1, num_state_features]。"
+
+#: ../../Guide/geo_data.rst:36
+msgid "alias state features."
+msgstr "即，状态特征。"
+
+#: ../../Guide/geo_data.rst:38
+msgid "``z``: atom numbers. np.ndarray, with shape [num_nodes,]"
+msgstr "``z``: 原子序号，形状[num_nodes,]。"
+
+#: ../../Guide/geo_data.rst:40
+msgid "Where the state_attr is added newly."
+msgstr "其中state_attr状态特征是 ``torch_geometrics`` 不具有的。"
+
+#: ../../Guide/geo_data.rst:44
+msgid "Name alias::"
+msgstr "名称别名::"
+
+#: ../../Guide/geo_data.rst:43
+msgid "``\"node\"`` <-> ``\"atom\"``, ``\"edge\"`` <-> ``\"bond\"``"
+msgstr "``\"node\"`` <-> ``\"atom\"``, ``\"edge\"`` <-> ``\"bond\"``"
+
+#: ../../Guide/geo_data.rst:47
+msgid "Access"
+msgstr "应用"
+
+#: ../../Guide/geo_data.rst:49
+msgid "Example:"
+msgstr "举例："
+
+#: ../../Guide/geo_data.rst:55
+msgid ""
+"and the ``x``, ( ``atom features`` ) get by "
+":mod:`featurebox.featurizers.atom.mapper` , and the "
+"``edge_weight``,``edge_attr``(``bond features``) get by "
+":mod:`featurebox.featurizers.envir.environment` ."
+msgstr ""
+"``x``, (atom features) 来自 :mod:`featurebox.featurizers.atom.mapper`,  "
+"``edge_weight`` , ``edge_attr`` (bond features) 来自 "
+":mod:`featurebox.featurizers.envir.environment` 。``state_attr``, ( state "
+"feature) 来自 :mod:`featurebox.featurizers.state` 。 "
+
+#: ../../Guide/geo_data.rst:59
+msgid ":doc:`../Examples/sample_fea3`"
+msgstr ""
+
+#: ../../Guide/geo_data.rst:61
+msgid ""
+"The usage of Graph data could find in `torch geometrics <https://pytorch-"
+"geometric.readthedocs.io/en/latest/>`_ and examples: "
+":doc:`../Examples/sample_stru2`, :doc:`../Examples/sample_stru3` ."
+msgstr ""
+"Graph数据的使用参考 `torch geometrics <https://pytorch-"
+"geometric.readthedocs.io/en/latest/>`_ ，参考示例: "
+":doc:`../Examples/sample_stru2`, :doc:`../Examples/sample_stru3` 。"
+

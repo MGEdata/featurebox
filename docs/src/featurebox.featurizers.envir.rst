@@ -6,6 +6,14 @@ featurebox.featurizers.envir package
    :undoc-members:
    :show-inheritance:
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   featurebox.featurizers.envir.descriptors
+
 Submodules
 ----------
 

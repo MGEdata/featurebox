@@ -81,7 +81,7 @@ def dict_method_clf():
     me6 = DecisionTreeClassifier(
         criterion='gini', splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1,
         min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None,
-        min_impurity_decrease=0.0, min_impurity_split=None, class_weight="balanced", presort=False)
+        min_impurity_decrease=0.0, class_weight="balanced")
     cv6 = StratifiedKFold(5, shuffle=False)
     scoring6 = 'accuracy'
     param_grid6 = [{'max_depth': [3, 4, 5, 6, 7, 8, 9, 10], 'min_samples_split': [2, 3, 4]}]
@@ -93,10 +93,10 @@ def dict_method_clf():
         subsample=1.0, criterion='friedman_mse', min_samples_split=2,
         min_samples_leaf=1, min_weight_fraction_leaf=0.,
         max_depth=3, min_impurity_decrease=0.,
-        min_impurity_split=None, init=None,
+        init=None,
         random_state=None, max_features=None, verbose=0,
         max_leaf_nodes=None, warm_start=False,
-        presort='auto')
+    )
     cv7 = StratifiedKFold(5, shuffle=False)
     scoring7 = 'balanced_accuracy'
     param_grid7 = [{'n_estimators': [50, 100, 200, 500], 'max_depth': [3, 4, 5, 6, 7, 8, 9, 10],
@@ -107,7 +107,7 @@ def dict_method_clf():
     me8 = RandomForestClassifier(n_estimators=100, criterion="gini", max_depth=None,
                                  min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.,
                                  max_features="auto", max_leaf_nodes=None, min_impurity_decrease=0.,
-                                 min_impurity_split=None, bootstrap=True, oob_score=False,
+                                 bootstrap=True, oob_score=False,
                                  random_state=None, verbose=0, warm_start=False,
                                  class_weight="balanced")
     cv8 = StratifiedKFold(5, shuffle=False)
@@ -126,12 +126,12 @@ def dict_method_clf():
                     'min_samples_split': [2, 3, 4], 'learning_rate': [0.1, 0.05]}]
     dict_method.update({"AdaBC-em": [me9, cv9, scoring9, param_grid9]})
 
-    # 3nd
+    # the 3rd
 
     "Per"
     me14 = Perceptron(penalty="l1", alpha=0.0001, fit_intercept=True, max_iter=None, tol=None,
                       shuffle=True, verbose=0, eta0=1.0, random_state=0,
-                      class_weight=None, warm_start=False, n_iter=None)
+                      class_weight=None, warm_start=False)
     cv14 = StratifiedKFold(5, shuffle=False)
     scoring14 = 'accuracy'
     param_grid14 = [{'alpha': [0.0001, 0.001, 0.01]}, ]
@@ -150,7 +150,7 @@ def dict_method_clf():
                         fit_intercept=True, max_iter=None, tol=None, shuffle=True,
                         verbose=0, epsilon=0.1, random_state=0,
                         learning_rate='optimal', eta0=0.0, power_t=0.5,
-                        class_weight="balanced", warm_start=False, average=False, n_iter=None)
+                        class_weight="balanced", warm_start=False, average=False)
     cv3 = StratifiedKFold(5, shuffle=False)
     scoring3 = 'accuracy'
 
@@ -204,7 +204,7 @@ def dict_method_reg():
     """6RFR"""
     me7 = RandomForestRegressor(n_estimators=500, max_depth=None, min_samples_split=2, min_samples_leaf=1,
                                 min_weight_fraction_leaf=0.0, max_leaf_nodes=None, min_impurity_decrease=0.0,
-                                min_impurity_split=None, bootstrap=True, oob_score=False,
+                                bootstrap=True, oob_score=False,
                                 random_state=None, verbose=0, warm_start=False)
     cv7 = 5
     scoring7 = 'r2'
@@ -216,7 +216,7 @@ def dict_method_reg():
                                     subsample=1.0, criterion='friedman_mse', min_samples_split=2,
                                     min_samples_leaf=1, min_weight_fraction_leaf=0.,
                                     max_depth=3, min_impurity_decrease=0.,
-                                    min_impurity_split=None, init=None, random_state=None,
+                                    init=None, random_state=None,
                                     max_features=None, alpha=0.9, verbose=0, max_leaf_nodes=None,
                                     warm_start=False, )
     cv8 = 5
@@ -245,7 +245,7 @@ def dict_method_reg():
         random_state=0,
         max_leaf_nodes=None,
         min_impurity_decrease=0.,
-        min_impurity_split=None,
+
     )
     cv10 = 5
     scoring10 = 'r2'

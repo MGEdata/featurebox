@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, boliqq07
 # This file is distributed under the same license as the featurebox package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: featurebox \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 20:12+0800\n"
+"POT-Creation-Date: 2022-08-11 16:49+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../src/featurebox.featurizers.atom.rst:2
 msgid "featurebox.featurizers.atom package"
@@ -35,14 +35,14 @@ msgstr ""
 
 #: featurebox.featurizers.atom.mapper:3 of
 msgid ""
-"Embedded data: \"element_table.csv\", \"elemental_MEGNet.json\", "
-"\"ie.json\", \"oe.csv\""
+"Embedded data: \"ele_table.csv\", \"ele_megnet.json\", \"ie.json\", "
+"\"oe.csv\""
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomJsonMap:1
 #: featurebox.featurizers.atom.mapper.AtomPymatgenPropMap:1
 #: featurebox.featurizers.atom.mapper.AtomTableMap:1 of
-msgid "Bases: :class:`featurebox.featurizers.atom.mapper.BinaryMap`"
+msgid "Bases: :py:class:`featurebox.featurizers.atom.mapper.BinaryMap`"
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomJsonMap:1 of
@@ -70,9 +70,9 @@ msgstr ""
 msgid ""
 "(str,dict) Name of file or dict,element to element vector dictionary  "
 "Provides the pre-trained elemental embeddings using formation energies, "
-"which can be used to speed up the training of other models_geo. The "
-"embeddings are also extremely useful elemental descriptors that encode "
-"chemical similarity that may be used in other ways."
+"which can be used to speed up the training. The embeddings are also "
+"extremely useful elemental descriptors that encode chemical similarity "
+"that may be used in other ways."
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomJsonMap:16 of
@@ -82,9 +82,9 @@ msgstr ""
 #: featurebox.featurizers.atom.mapper.AtomJsonMap:19 of
 msgid ""
 "Provides the pre-trained elemental embeddings using formation energies, "
-"which can be used to speed up the training of other models_geo. The "
-"embeddings are also extremely useful elemental descriptors that encode "
-"chemical similarity that may be used in other ways."
+"which can be used to speed up the training. The embeddings are also "
+"extremely useful elemental descriptors that encode chemical similarity "
+"that may be used in other ways."
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomJsonMap.convert_dict:1
@@ -99,7 +99,7 @@ msgid "convert list of number to data"
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomMap:1 of
-msgid "Bases: :class:`featurebox.featurizers.base_transform.BaseFeature`"
+msgid "Bases: :py:class:`featurebox.featurizers.base_feature.BaseFeature`"
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomMap:1 of
@@ -130,9 +130,9 @@ msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomMap:14 of
 msgid ""
-"Specific the return type. Can be ``any``, ``array`` and ``df``. 'array' "
-"and 'df' force return type to np.ndarray and pd.DataFrame respectively. "
-"If 'any', without type conversion . Default is 'any'"
+"Specific the return type. Can be ``any``, ``np``,``array`` and ``df``. "
+"'array' and 'df' force return type to np.ndarray and pd.DataFrame "
+"respectively. If 'any', without type conversion . Default is 'any'"
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.AtomMap.get_csv_embeddings:1 of
@@ -245,28 +245,28 @@ msgstr ""
 msgid "Be"
 msgstr ""
 
-#: featurebox.featurizers.atom.mapper.AtomTableMap:40 of
+#: featurebox.featurizers.atom.mapper.AtomTableMap:50 of
 msgid ""
 "1. Name of table in bgnet.preprocessing.resources. if tablename is None, "
-"use the embedding \"element_table.csv\".  2. np.ndarray, search_tp = "
+"use the embedding \"ele_table.csv\".  2. np.ndarray, search_tp = "
 "\"number\".  3. pd.dataframe, search_tp = \"name\""
 msgstr ""
 
-#: featurebox.featurizers.atom.mapper.AtomTableMap:41 of
+#: featurebox.featurizers.atom.mapper.AtomTableMap:51 of
 msgid ""
 "1. Name of table in bgnet.preprocessing.resources. if tablename is None, "
-"use the embedding \"element_table.csv\"."
+"use the embedding \"ele_table.csv\"."
 msgstr ""
 
-#: featurebox.featurizers.atom.mapper.AtomTableMap:44 of
+#: featurebox.featurizers.atom.mapper.AtomTableMap:54 of
 msgid "np.ndarray, search_tp = \"number\"."
 msgstr ""
 
-#: featurebox.featurizers.atom.mapper.AtomTableMap:46 of
+#: featurebox.featurizers.atom.mapper.AtomTableMap:56 of
 msgid "pd.dataframe, search_tp = \"name\""
 msgstr ""
 
-#: featurebox.featurizers.atom.mapper.AtomTableMap:48 of
+#: featurebox.featurizers.atom.mapper.AtomTableMap:58 of
 msgid "Name"
 msgstr ""
 
@@ -279,7 +279,7 @@ msgid "get CSV preprocessing"
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.BinaryMap:1 of
-msgid "Bases: :class:`featurebox.featurizers.atom.mapper.AtomMap`"
+msgid "Bases: :py:class:`featurebox.featurizers.atom.mapper.AtomMap`"
 msgstr ""
 
 #: featurebox.featurizers.atom.mapper.BinaryMap:1 of
@@ -355,4 +355,22 @@ msgstr ""
 #: featurebox.featurizers.atom.mapper.process_uni:1 of
 msgid "Post-processing for bool preprocessing General properties."
 msgstr ""
+
+#~ msgid "基类：:py:class:`featurebox.featurizers.atom.mapper.BinaryMap`"
+#~ msgstr ""
+
+#~ msgid "实际案例"
+#~ msgstr ""
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid "基类：:py:class:`featurebox.featurizers.base_feature.BaseFeature`"
+#~ msgstr ""
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid "基类：:py:class:`featurebox.featurizers.atom.mapper.AtomMap`"
+#~ msgstr ""
 
